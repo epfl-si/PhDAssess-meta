@@ -1,0 +1,715 @@
+commit 3f1aab2e374186854a09d8d7e21d31d8a27f7ee3
+Author: JD
+Date:   Thu Nov 17 16:25:29 2022 +0100
+
+    Fix missing message on Activity_Notify_Thesis_Codirector_PhDStudent_Filled
+
+commit b0dd274e457d6702017b8a57931932c81ab82b9e
+Author: LV
+Date:   Tue Nov 8 16:27:41 2022 +0100
+
+    chnage notification from programAssistantEmail to doctoralProgramEmail
+
+commit edc38e8761af786ec18f110a353c4095e38e6f28
+Author: LV
+Date:   Fri Sep 16 14:08:02 2022 +0200
+
+    modify notifications INC0503056
+
+commit 59ce4e77d27c1d03ef92ef20f57ffef737222e45
+Author: JD
+Date:   Mon Sep 12 15:13:46 2022 +0200
+
+    Fix typo projet -> project
+
+commit 18173c9468c707f6ae3413d386a632e2c4d80c6c
+Author: JD
+Date:   Tue Sep 6 10:35:51 2022 +0200
+
+    Change 3rd year radiobox value from '3rd year ' to '3rd year'
+
+commit b086af99a6fa6fa8dd8549cc83c9a931a16e4b2e
+Author: JD
+Date:   Mon May 16 19:40:47 2022 +0200
+
+    Fix retry number for jobs, being 0 is not well recieved when there are network problem that need a retry
+
+commit dbfee131e76bbe399da0bec8410972306c09eb25
+Author: JD
+Date:   Fri Mar 11 13:58:36 2022 +0100
+
+    Set pdf generation to be confined in the tasks group
+
+commit af06ab220ac6bb9fcf4b992e58c6baebdf4b0c85
+Author: JD
+Date:   Fri Mar 11 11:34:34 2022 +0100
+
+    Set PDF value to empty string after sending the "intermediates" pdf by email
+
+commit fde75d8ce4904979c8b4b4a01ee5cb2046a06bcb
+Author: LV
+Date:   Wed Mar 2 13:58:19 2022 +0100
+
+    set enableTime to false
+
+commit 0b5e1aecec2d3c28b3ac6af64b8d33f16355f4a7
+Merge: 3d16d98 5a4099e
+Author: LV
+Date:   Wed Mar 2 13:30:04 2022 +0100
+
+    Merge branch 'provisional_pdf'
+
+commit 5a4099e9763794e60f1bfeb3e7093be74877974a
+Author: LV
+Date:   Wed Mar 2 11:06:54 2022 +0100
+
+    PHDAR-29 error date in future
+
+commit 3d0dccd551e6e6870d9f69378a763243663b2c57
+Author: JD
+Date:   Wed Feb 23 10:22:30 2022 +0100
+
+    Fix default value for 1st year
+
+commit 89d8d38c65968776b705741256288dd31663a1a8
+Author: JD
+Date:   Tue Feb 22 15:55:48 2022 +0100
+
+    Remove default value for year selection
+
+commit 949616eec0713dfb481081d6d1ef1348eeba07ec
+Author: LV
+Date:   Fri Feb 18 17:29:17 2022 +0100
+
+    modify notification PHDAR-85, PHDAR-89 and add PDF variable to null
+
+commit 54b9810b6c3da0854e4cb664c9edce10052c79e6
+Author: LV
+Date:   Fri Feb 18 10:49:55 2022 +0100
+
+    add pdf name
+
+commit 4e73beac98b033309146764dc8d4102730c3670e
+Author: LV
+Date:   Fri Feb 18 09:32:26 2022 +0100
+
+    add provisinal build pdf
+
+commit 7fa9c52f4e2f4136bd695acba7b8909810b48d1b
+Author: LV
+Date:   Tue Feb 15 16:47:48 2022 +0100
+
+    PHDAR-87 add (tick only if candidacy exam not yet passed) for mentor form
+
+commit 6c60f1cb4da37515f62c4eb5bf26f637937bbb97
+Author: LV
+Date:   Tue Feb 15 13:29:26 2022 +0100
+
+    assigneeSciper typo ( ) instead of [ ]
+
+commit e1037dfd39df31feb73667c2c7b6533d56988aa8
+Author: LV
+Date:   Tue Feb 15 11:14:25 2022 +0100
+
+    PHDAR-92 modif forms for phd and mentor notification
+
+commit 11557c527c90ac095ce95acd305a18e9cf64cd63
+Author: LV
+Date:   Tue Feb 15 10:22:02 2022 +0100
+
+    revert PHDAR-84 message notification to phd
+
+commit 076a25b7f01ddd069e6d9cb3fdc45b6c7a01f4da
+Author: LV
+Date:   Tue Feb 15 10:20:11 2022 +0100
+
+    PHDAR-91 add assistant to sign
+
+commit 3f738a69a1ddfdf155fd5450e8dbe476309b9a40
+Author: LV
+Date:   Tue Feb 15 10:10:50 2022 +0100
+
+    PHDAR-87 remove typo
+
+commit bf46306b7ec3e38eb105b9ad7ef052eccd873a9f
+Author: LV
+Date:   Tue Feb 15 10:06:23 2022 +0100
+
+    revert mentor forms PHDAR-84
+
+commit 814d5d7e930aea73afbb464e01a326ba3e2c903c
+Author: LV
+Date:   Mon Feb 14 08:24:28 2022 +0100
+
+    PHDAR-87 add text after 1st year
+
+commit 956b7d1ea44d8d302aa7d7025602361cb5075c20
+Author: LV
+Date:   Tue Feb 8 18:44:32 2022 +0100
+
+    PHDAR-84 release 2 with change php form and phd notification
+
+commit 1135ee8a8492e2543de40cb84590b400b0871f38
+Author: LV
+Date:   Mon Feb 7 21:35:57 2022 +0100
+
+    PHDAR-84 change mentor form and notification
+
+commit a6a856110b2c1773128b2a272d100bb9db7250cd
+Author: JD
+Date:   Wed Jan 26 16:21:18 2022 +0100
+
+    Fix the condition to check the existence of the PhdStudentSciper
+
+commit 4ecf53dadd667d053deddf7d30b587474b7d4a45
+Author: LV
+Date:   Fri Jan 21 10:10:34 2022 +0100
+
+    test if after start process has participant prefilled
+
+commit 42fa6d997a6a5164411951f6e165fda9f9f8acdc
+Author: LV
+Date:   Fri Jan 21 09:39:28 2022 +0100
+
+    modifiy GED archive notification
+
+commit a2fc6a995b835051197970b2d9cc0800627e2304
+Author: JD
+Date:   Tue Nov 30 17:43:14 2021 +0100
+
+    Set some ID on generic ones
+
+commit ace0a5aa4dc44eb655c64ee828b6a98ccbc8d8da
+Author: JD
+Date:   Mon Nov 22 14:51:19 2021 +0100
+
+    Adding the ged deposit task
+
+commit 08182e8f16d4dc1b95815cc475dc4994cb12b778
+Author: LV
+Date:   Tue Nov 16 21:09:03 2021 +0100
+
+    PHDAR-66 new appraisal exceeds expectations
+
+commit 82e4e2ae28f3999801f0a59e7f09e8cd6c26a71f
+Author: LV
+Date:   Mon Nov 15 21:58:43 2021 +0100
+
+    PHDAR-65 change mentor explications with bullet point
+
+commit facbd3d3908de6c84a19070f589a517405844f30
+Author: LV
+Date:   Mon Nov 15 16:47:14 2021 +0100
+
+    PHDAR-64 new version of mentor explications
+
+commit 4cf8f366079a00062ac4b8d744346c460cddbd31
+Author: LV
+Date:   Mon Nov 15 12:15:21 2021 +0100
+
+    Typo case sensitive
+
+commit df751a7281b627b9abbfa103641b9a0f8b7f0a08
+Author: LV
+Date:   Mon Nov 15 12:08:38 2021 +0100
+
+    PHDAR-64 mentor description role
+
+commit 8dfc8ef09e81ec7c7e6d8eceaa79f50688c816cf
+Author: LV
+Date:   Fri Nov 12 17:18:01 2021 +0100
+
+    PHDAR-54 typo add space
+
+commit 8f17900705b6629ea9bb5a6bdca5cc7dd28f28fa
+Author: LV
+Date:   Fri Nov 12 17:15:06 2021 +0100
+
+    PHDAR-63 typo case sensitive sciper
+
+commit 1df4d4b97504dfe1173b64bdd21178350128ae7d
+Author: LV
+Date:   Fri Nov 12 11:19:45 2021 +0100
+
+    PHDAR-56 bug with year
+
+commit 2edffd594557926c8b36c793810f5447934a5202
+Author: LV
+Date:   Thu Nov 11 22:25:23 2021 +0100
+
+    PHDAR-55 typo case sensitive
+
+commit 17270011c235e399eb95e17a4f746d580d4c8dd3
+Author: LV
+Date:   Thu Nov 11 22:00:57 2021 +0100
+
+    PHDAR-54 change notification message
+
+commit a64ce2f3a4031c880c12e1aacc89303c0dc97704
+Author: LV
+Date:   Wed Nov 10 22:34:18 2021 +0100
+
+    Change values of year with space
+
+commit d0d6155847c1cb508defdae0c04e12cab00b2e17
+Author: LV
+Date:   Wed Nov 10 22:14:20 2021 +0100
+
+    PHDAR-29 don't allow date of enrolment in the futur
+
+commit 1bc036bbbc9286d3554881969b6948fb3841de0d
+Author: LV
+Date:   Fri Nov 5 11:38:19 2021 +0100
+
+    [BUG] if condition to send PDF notification to coDirector
+
+commit f25a44293ebdeaa12e5517d8f1049257554737b4
+Author: LV
+Date:   Thu Nov 4 17:14:08 2021 +0100
+
+    PHDAR-48bis + invert PDF notifictions
+
+commit fbd9993095d3089b3cd1712fa6574e572c09d5aa
+Author: LV
+Date:   Wed Nov 3 17:39:29 2021 +0100
+
+    PHDAR-50
+
+commit 7888ae133334e6874f95e76e1da7e36f548e763f
+Author: LV
+Date:   Wed Nov 3 13:44:58 2021 +0100
+
+    Conditional test if co-direct exist to send PDF notification
+
+commit 84c0e27ec7e8b9ff0a0c8ff6d9566dc91ca4c823
+Author: LV
+Date:   Wed Nov 3 13:29:46 2021 +0100
+
+    PHDAR-43 + PHDAR-49 + PHDAR-48
+
+commit 818518d7f8fa77c9de9b661a1c9b67da1b7246fb
+Author: LV
+Date:   Wed Nov 3 09:32:33 2021 +0100
+
+    PHDAR-43
+
+commit f064087f64ed74f19ff94dfa54827b12e0d9d011
+Author: LV
+Date:   Tue Nov 2 15:09:13 2021 +0100
+
+    PHDAR-41
+
+commit c1359d8e02ce9ca26e764354f427ca65b17bfd08
+Author: LV
+Date:   Tue Nov 2 12:12:10 2021 +0100
+
+    Program Director form change layout
+
+commit f7b83ca12abcb8a4e549822409dc6992d10423df
+Author: LV
+Date:   Tue Nov 2 10:51:15 2021 +0100
+
+    PHDAR-45
+
+commit f24d758953790bbe220b4d57e55632c7ccc3a1e6
+Author: LV
+Date:   Mon Nov 1 16:54:33 2021 +0100
+
+    PHDAR-44
+
+commit 4b6d52b3878b1a869f06d2b59f7f61ca5acd2075
+Author: LV
+Date:   Mon Nov 1 16:31:41 2021 +0100
+
+    PHDAR-41
+
+commit 19dee705466b528d5df4e6fd3ecf0df1dd839be3
+Author: LV
+Date:   Mon Nov 1 13:57:09 2021 +0100
+
+    Rename tasks name
+
+commit 8723ce1e2245a69e9c298a7797fe846b2634f179
+Author: JD
+Date:   Fri Oct 29 15:17:49 2021 +0200
+
+    Change phd student label to doctoral student
+
+commit 6ae7cf04125e91adda1cee81a930ae9b99c8dd90
+Author: JD
+Date:   Thu Oct 28 18:41:54 2021 +0200
+
+    Fix activity name
+
+commit d2c9dd12a5b7780d21b67b2bf9565a2de0e4f9cb
+Author: JD
+Date:   Thu Oct 28 12:31:03 2021 +0200
+
+    Add some label; set better activity names; set 'sign' to 'signs'
+
+commit cb4c1af2aba4fd4d644ce8f9ebdf43e7e111123a
+Author: JD
+Date:   Mon Oct 25 11:36:37 2021 +0200
+
+    Normalize activity names
+
+commit a1191610daf105f0135719dbff550795f845ebd5
+Author: JD
+Date:   Fri Oct 22 16:56:05 2021 +0200
+
+    Fix topicss title having multiple ss and not being correctly tagged
+
+commit cf63ce80f0f249384ba57087b7e80e2f34dfaf6f
+Author: JD
+Date:   Fri Oct 22 16:13:47 2021 +0200
+
+    Set mentor name visibility for a specific step, by using it as input from mentorName to nameOfMentor;
+    Fix showing the current user instead of the phdStudentName
+
+commit b2f48faa2a3645a1301d9cdbaa8ce404bafda02d
+Author: JD
+Date:   Fri Oct 22 14:33:38 2021 +0200
+
+    Change name of candidate, take the one coming from the User API, not the Meteor.user
+
+commit cbf7aba2f1a077caa45a437445232906bae2b525
+Author: LV
+Date:   Thu Oct 21 11:30:47 2021 +0200
+
+    Change <h3> to <h4><b> Discussion topics
+
+commit e77b5c98b1dbdec7b1bf4564a9b25df7821e2a7d
+Author: LV
+Date:   Wed Oct 20 21:40:40 2021 +0200
+
+    Jira PHDAR-29 date of enrolment
+
+commit f0b43d8a9df8d3e4edd2efcd931e543e5df3cce0
+Author: LV
+Date:   Wed Oct 20 16:12:00 2021 +0200
+
+    Jira PHDAR-28: title in bold
+
+commit a8d2573650505c7a718ff938b004aecf1249ac23
+Author: LV
+Date:   Wed Oct 20 10:07:48 2021 +0200
+
+    remove Phd before Thesis Director
+
+commit 999aaab9bef17f62e2902e4c1996260b5d0cc117
+Author: LV
+Date:   Tue Oct 19 11:36:38 2021 +0200
+
+    rename bpmn & formio variables
+
+commit 92b8f3610e14a557c75747f0e4e692afaa610945
+Author: LV
+Date:   Mon Oct 18 10:00:44 2021 +0200
+
+    new cosmetic messages modification
+
+commit 61a65ae9b6450ad9ca549cf0b95b10a68e30d13b
+Author: LV
+Date:   Mon Oct 18 09:06:17 2021 +0200
+
+    new notification messages
+
+commit fb4004908df046e6f77b17797f7537e1f692e270
+Author: LV
+Date:   Mon Oct 4 16:13:11 2021 +0200
+
+    Cosmetic changes
+
+commit 32ad2aa1beb544f60bbada9503ad6eb377c33c5b
+Author: LV
+Date:   Fri Oct 1 16:23:21 2021 +0200
+
+    Correct PHDAR-22
+
+commit 2f1948472336f988a653ab8e8e9be1ca704a4e21
+Author: LV
+Date:   Fri Oct 1 14:57:59 2021 +0200
+
+    Cosemetic changes
+
+commit 55867dca775db0a2f008e375d7c677f9dcb6437b
+Author: LV
+Date:   Wed Sep 29 13:02:37 2021 +0200
+
+    Modify notification messages
+
+commit db83400c6259b3e0ae39a4611168919550a88aaf
+Author: LV
+Date:   Wed Sep 29 10:47:33 2021 +0200
+
+    Remove logic to required fields planned courses
+
+commit 6e505ab4b2166cc79cc86eb57d51532553d6fc95
+Author: LV
+Date:   Wed Sep 29 10:41:00 2021 +0200
+
+    Uppercase doctoral program + auto generatate email office
+
+commit 38bd1f112e635ea4164ac824948cbaf9cc2fc3df
+Author: LV
+Date:   Wed Sep 29 10:32:04 2021 +0200
+
+    Bug with program director signature
+
+commit bb6e9729ff522be20d1e2a7b248e044e742d6749
+Author: LV
+Date:   Tue Sep 28 19:08:09 2021 +0200
+
+    Modify date of signature
+
+commit b46d484b491d83aea9dce47393d918e9782a1b50
+Author: LV
+Date:   Mon Sep 27 09:11:59 2021 +0200
+
+    Parallel notif to Program Director + corrections Foms after Juliane review
+
+commit 128187baa7c5156d813f7004336d77430c6496d1
+Author: LV
+Date:   Fri Sep 24 15:58:22 2021 +0200
+
+    Bug with program director form
+
+commit 818674853b7f81c1781426beff9f8c3f4c59f01c
+Author: LV
+Date:   Fri Sep 24 12:45:08 2021 +0200
+
+    change choicesjs to html5
+
+commit dc40410ce10d7bc9b16e2adf239b28bd55df8204
+Author: LV
+Date:   Fri Sep 24 09:20:10 2021 +0200
+
+    Add combox semestre
+
+commit f5e4b173881ff59b0d43d4b98db5a885b783d242
+Author: LV
+Date:   Wed Sep 22 19:17:29 2021 +0200
+
+    change agree message
+
+commit 0c60d30b92262a5f4dd42e4e56c049bc5aab1e11
+Author: LV
+Date:   Wed Sep 22 16:01:05 2021 +0200
+
+    minor bugs
+
+commit 3e7e320181cdec424234bf1e4e883e49cf1b68b3
+Author: LV
+Date:   Tue Sep 21 18:36:00 2021 +0200
+
+    Reverting to 2d2e9eee8ee6a14b96fda76e4e48897da1c85558
+
+commit 77b0e383649832ba5e1155c871397db589f56591
+Author: LV
+Date:   Tue Sep 21 18:10:09 2021 +0200
+
+    Doctoral program name required
+
+commit 2d2e9eee8ee6a14b96fda76e4e48897da1c85558
+Author: LV
+Date:   Tue Sep 21 18:09:37 2021 +0200
+
+    Doctoral program name required
+
+commit 0d1dc1f36ebfacb3f7a4007106b319a8704d9ca4
+Author: LV
+Date:   Tue Sep 21 18:07:31 2021 +0200
+
+    typo message
+
+commit 33c1c1c6a6dfecdee48a53607d545bbe1d2a8428
+Author: LV
+Date:   Tue Sep 21 16:12:40 2021 +0200
+
+    Change notification email
+
+commit 812504ce7dd04989405e246a84230097273860b4
+Author: LV
+Date:   Tue Sep 21 15:43:58 2021 +0200
+
+    Change doctoralProgram variable
+
+commit 1d461196b1ffef1343b9556c7070f7fa9cee5a0c
+Author: LV
+Date:   Tue Sep 21 15:41:48 2021 +0200
+
+    Change nameOfCandidate variable
+
+commit cf9e653dd5d2a6e372fe51ce85a66f43b6e4bd50
+Author: LV
+Date:   Tue Sep 21 15:09:23 2021 +0200
+
+    Corrections after Lorraine review2
+
+commit c6cc3e47d936c1290c5d17abcc91ca5ed8dd5a50
+Author: LV
+Date:   Tue Sep 21 09:21:24 2021 +0200
+
+    Corrections after Lorraine review
+
+commit 5c789ff141edea4889b71eb8cc69b8ff752baecb
+Author: LV
+Date:   Fri Sep 17 16:29:22 2021 +0200
+
+    Add all notification message
+
+commit e7a0beb37c1e89e86b7c90fe2ed9f7318023c7c3
+Author: LV
+Date:   Fri Sep 17 09:49:38 2021 +0200
+
+    Modifiy logic for display CoDirector comments
+
+commit edcb3ab863eded68f3e5df6d8cdfe7034ea9883e
+Author: LV
+Date:   Thu Sep 16 11:18:22 2021 +0200
+
+    Change nofification param for PHD
+
+commit 4f1b126e4a7b1bcaeec8a1a3fae9c81f715902f2
+Author: LV
+Date:   Wed Sep 15 16:55:22 2021 +0200
+
+    Cosmetic program assistant form
+
+commit e8b2fdc29aea7a826e7c7a740db1d87afe0d1ef7
+Author: LV
+Date:   Wed Sep 15 16:43:04 2021 +0200
+
+    Modify notification fields
+
+commit 7e847b8a3e016dfbaa67e1ba375884717d21c756
+Author: LV
+Date:   Wed Sep 15 16:32:43 2021 +0200
+
+    Modify program assistant form with email and name
+
+commit 20298e9dc6c31802bc1b5b1d48a58acbb3a8c179
+Author: LV
+Date:   Wed Sep 15 15:09:02 2021 +0200
+
+    Modify notification to phd student
+
+commit 45841fc7e371fae07a7b3d6db4c0cec67b01ec18
+Author: LV
+Date:   Wed Sep 15 10:16:31 2021 +0200
+
+    Modify program assistant form
+
+commit ab51402427c773a4d8a5043ff587d32ed0454815
+Author: LV
+Date:   Mon Sep 13 21:48:10 2021 +0200
+
+    Modify title for fill co-diretor section C
+
+commit 3df7ceea6895abe8b5d86c695fa6b0652fde29db
+Author: LV
+Date:   Mon Sep 13 21:27:07 2021 +0200
+
+    Modify parallel task for co-director
+
+commit ea91f761717f2c4e91009a519f018c7945f0b775
+Author: JD
+Date:   Mon Sep 13 13:42:27 2021 +0200
+
+    Fix bpmn about the multiple sequence flow
+
+commit d62c51df63143a3400a285f9af1fcf00a47ac39d
+Author: LV
+Date:   Thu Sep 9 16:00:33 2021 +0200
+
+    modified program director form
+
+commit 7fbb94af24037a25f3b9ab38a7a7ed0a0a96498a
+Author: LV
+Date:   Thu Sep 9 11:03:57 2021 +0200
+
+    changed mentor form
+
+commit eaaf6ed08d08dca1fba22c596da1611e184ed858
+Author: LV
+Date:   Wed Sep 8 22:58:14 2021 +0200
+
+    new workflow
+
+commit ee5f16e0b00cee66fddb439ae9a7784472020652
+Author: JD
+Date:   Fri Aug 13 11:12:37 2021 +0200
+
+    Removed empty childLaneSet that crashes the bpmnlinter
+
+commit 94acb19b046eea5a8eb65e4934b6ec2cd4e5c022
+Author: JD
+Date:   Fri Aug 13 11:05:59 2021 +0200
+
+    Rename and remove some infos
+
+commit 3632bc43ad315f2fa769d6ff034d70b1d4ed5b9c
+Author: LV
+Date:   Wed Aug 11 17:18:42 2021 +0200
+
+    modify forms with new validation logic
+
+commit 48fe287545855a125bdf4934066d784de48a8bfd
+Author: LV
+Date:   Mon Aug 2 14:24:03 2021 +0200
+
+    modify forms to have read only sections
+
+commit 0b95b97c09a370e5967a6d23bea9acc51ac6fb40
+Author: LV
+Date:   Fri Jul 30 09:56:48 2021 +0200
+
+    change exculsive gateway configuration
+
+commit 8ac18fbcf28ec20142658f9acdc2314f8baaa82c
+Author: LV
+Date:   Wed Jul 28 15:01:23 2021 +0200
+
+    rename header key name
+
+commit 629ad4d1015d2200cef149ffcbb58f7ecffed9c6
+Author: LV
+Date:   Wed Jul 28 11:26:57 2021 +0200
+
+    change Process id name to phdAssessProcess
+
+commit 1ba25fd1ab2077a0c1d7f46115b1e85f98613cd1
+Author: LV
+Date:   Wed Jul 28 11:14:22 2021 +0200
+
+    remove BPMN error gateway et defaut name
+
+commit 85c5e14175ac92c7cd266697be05bc9a38b7d295
+Author: LV
+Date:   Wed Jul 28 11:02:26 2021 +0200
+
+    remove empty message
+
+commit bd87a08501b1368d0b72366917067477fa8b17ba
+Author: LV
+Date:   Tue Jul 27 21:03:24 2021 +0200
+
+    BPMN modification to use exclisve gateway and new forms
+
+commit 4df8d7c79a9a0821ba3d3147879cb34a833363b7
+Author: JD
+Date:   Fri Jul 9 17:05:01 2021 +0200
+
+    Add pdf sending activity
+
+commit 3804c79e5e67fd84b331a94d453517a92eb4cd5c
+Author: JD
+Date:   Wed Jun 30 17:16:43 2021 +0200
+
+    Update timer and workflow
+
+commit 8d4988a1c679487a04ebefc7fde031bc427556be
+Author: JD
+Date:   Mon Jun 28 14:52:26 2021 +0200
+
+    Rework bpmn doc
