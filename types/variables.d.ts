@@ -4,20 +4,6 @@
 import {ParticipantsVariables} from "./participants";
 
 
-interface listBelowObtainedCredit {
-  courseNumberNameObtained: string | undefined;
-  creditsObtained: string | undefined;
-  semestreObtained: string | undefined;
-  yearObtained: string | undefined;
-}
-
-interface listBelowPlannedCourse {
-  courseNumberNamePlanned: string | undefined;
-  creditsPlanned: string | undefined;
-  semestrePlanned: string | undefined;
-  yearPlanned: string | undefined;
-}
-
 interface _PhDAssessVariables {
   activityLogs: string | undefined;
   agreePhd: string | undefined;
@@ -45,8 +31,6 @@ interface _PhDAssessVariables {
   generalAppraisalOfTheProgress: string | undefined;
   goalsOfTheThesis: string | undefined;
   haveTheObjectivesChangedInThePastYearIfSoWhyAndHow: string | undefined;
-  listBelowObtainedCredits: listBelowObtainedCredit[];
-  listBelowPlannedCourses: listBelowPlannedCourse[];
   mentorDate: string | undefined;
   notAgree: string | undefined;
   PDF: string | undefined;
