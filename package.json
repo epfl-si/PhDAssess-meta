@@ -9,7 +9,7 @@
   "author": "",
   "types": "index",
   "devDependencies": {
-    "typescript": "^4.9.5",
-    "zeebe-node": "^8.1.5"
+    "typescript": "^5.0.4",
+    "zeebe-node": "^8.2.1"
   }
 }
