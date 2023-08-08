@@ -2,7 +2,13 @@
  * All the known fields saved as variables into the zeebe process instance.
  */
 import {ParticipantsVariables} from "./participants";
+import {StepsDefinition} from "./dashboards";
 
+
+// these are created at the start of the all instances
+interface _PhDAssessStartEventVariables {
+  dashboardDefinition: StepsDefinition | undefined;  // defines the rules/flow of the dashboard
+}
 
 interface _PhDAssessVariables {
   activityLogs: string | undefined;
@@ -74,10 +80,12 @@ interface _PhDAssessVariables {
   timelineOfThePlannedWorkForTheNextYear: string | undefined;
   totalCreditsObtained: string | undefined;
   totalCreditsPlanned: string | undefined;
+  uuid: string | undefined;
   updated_at: string | undefined;
   year: string | undefined;
 }
 
-
 export interface PhDAssessVariables extends
-  _PhDAssessVariables, ParticipantsVariables {}
+  _PhDAssessStartEventVariables,
+  _PhDAssessVariables,
+  ParticipantsVariables {}
