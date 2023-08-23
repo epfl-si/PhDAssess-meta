@@ -1,7 +1,8 @@
 interface StepBase {
   id: string;  // identify the step
   label: string;  // column header label
-  parentIds?: string[];  // to manage the advancing flow, meaning we know the parents should be green
+  alias?: string[]; // identify the other step that have got be finished to get a green color
+  parents?: string[];  // to manage the advancing flow, meaning we know the parents should be green
 }
 
 interface StepWithStaticContent extends StepBase {
