@@ -2,20 +2,12 @@
  * All the known fields saved as variables into the zeebe process instance.
  */
 import {ParticipantsVariables} from "./participants";
+import {StepsDefinition} from "./dashboards";
 
 
-interface listBelowObtainedCredit {
-  courseNumberNameObtained: string | undefined;
-  creditsObtained: string | undefined;
-  semestreObtained: string | undefined;
-  yearObtained: string | undefined;
-}
-
-interface listBelowPlannedCourse {
-  courseNumberNamePlanned: string | undefined;
-  creditsPlanned: string | undefined;
-  semestrePlanned: string | undefined;
-  yearPlanned: string | undefined;
+// these are created at the start of the all instances
+interface _PhDAssessStartEventVariables {
+  dashboardDefinition: StepsDefinition | undefined;  // defines the rules/flow of the dashboard
 }
 
 interface _PhDAssessVariables {
@@ -45,8 +37,6 @@ interface _PhDAssessVariables {
   generalAppraisalOfTheProgress: string | undefined;
   goalsOfTheThesis: string | undefined;
   haveTheObjectivesChangedInThePastYearIfSoWhyAndHow: string | undefined;
-  listBelowObtainedCredits: listBelowObtainedCredit[];
-  listBelowPlannedCourses: listBelowPlannedCourse[];
   mentorDate: string | undefined;
   notAgree: string | undefined;
   PDF: string | undefined;
@@ -90,10 +80,12 @@ interface _PhDAssessVariables {
   timelineOfThePlannedWorkForTheNextYear: string | undefined;
   totalCreditsObtained: string | undefined;
   totalCreditsPlanned: string | undefined;
+  uuid: string | undefined;
   updated_at: string | undefined;
   year: string | undefined;
 }
 
-
 export interface PhDAssessVariables extends
-  _PhDAssessVariables, ParticipantsVariables {}
+  _PhDAssessStartEventVariables,
+  _PhDAssessVariables,
+  ParticipantsVariables {}
