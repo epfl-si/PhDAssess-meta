@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.10.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <bpmn:collaboration id="Collaboration_13he9tk">
     <bpmn:participant id="Participant_0f1vwfj" name="PhD Assess" processRef="phdAssessProcess" />
   </bpmn:collaboration>
   <bpmn:process id="phdAssessProcess" name="PhD Assess" isExecutable="true">
     <bpmn:laneSet id="LaneSet_15bmgqu">
       <bpmn:lane id="Lane_1k7ll7j" name="Program Assistant">
-        <bpmn:flowNodeRef>Event_PhD_Assess_Start</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_Program_Assistant_Assigns_Participants</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_1stz7w5</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_1vxeb07</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Build_PDF</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_With_PDF_ProgramDirector_And_Office</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_With_PDF_PhDStudent</bpmn:flowNodeRef>
@@ -22,12 +18,14 @@
         <bpmn:flowNodeRef>Event_PhD_Assess_Done</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_GED_Deposit_Student_Folder_Unfindable_Error</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_GED_Deposit_Unreachable_Error</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_PhD_Assess_Start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_Program_Assistant_Assigns_Participants</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1stz7w5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1vxeb07</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1kybckv" name="Thesis director">
         <bpmn:flowNodeRef>Activity_Thesis_Director_fills_annual_report</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_Thesis_Director_Check1</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_1eaw25w</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_Notify_Thesis_Director_PhDStudent_Filled</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0w5d3x0</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_Thesis_Director_Check2</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1qftu4l</bpmn:flowNodeRef>
@@ -39,12 +37,12 @@
         <bpmn:flowNodeRef>Activity_0yid7oj</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0aga7ka</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1rxjsuw</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_17oqgla</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_1gxye5u</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_Notify_Thesis_Director_PhDStudent_Filled</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1eaw25w</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_17oqgla</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0wb948r" name="PhD Student">
-        <bpmn:flowNodeRef>Gateway_1vk6wu2</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_PHD_fills_annual_report_1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_PHD_fills_annual_report_2</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1hndi1s</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_PHD_Signs</bpmn:flowNodeRef>
@@ -53,14 +51,16 @@
         <bpmn:flowNodeRef>Gateway_1f2dd1w</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_145opmc</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0nc5ulp</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0ykymbd</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1vk6wu2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_PHD_fills_annual_report_1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_PhDStudent_Filled</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_0g64tds</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_0ykymbd</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1e7w1ps" name="Mentor">
-        <bpmn:flowNodeRef>Activity_Notify_Mentor_PostMeeting_To_Do</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_1vkk1yr</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Post_Mentor_Meeting_Mentor_Signs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1vkk1yr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_Notify_Mentor_PostMeeting_To_Do</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_03v74ka</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1w3ugn8" name="Program Director">
@@ -81,62 +81,12 @@
         <bpmn:flowNodeRef>Event_0o6lsaa</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0kmegd1" name="Thesis co-director">
-        <bpmn:flowNodeRef>Activity_Notify_Thesis_Codirector_PhDStudent_Filled</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Thesis_Co_Director_fills_annual_report</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0wl0pjp</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_1yux775</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_Notify_Thesis_Codirector_PhDStudent_Filled</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:startEvent id="Event_PhD_Assess_Start" name="Yearly assessment start&#10;">
-      <bpmn:extensionElements>
-        <zeebe:ioMapping>
-          <zeebe:output source="=[&#10;  {&#10;    &#34;id&#34;: &#34;Activity_PHD_fills_annual_report_1&#34;,&#10;    &#34;label&#34;: &#34;Phd fills annual report&#34;,&#10;    &#34;parents&#34;: [],&#10;    &#34;alias&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report_2&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Co_Director_fills_annual_report&#34;,&#10;    &#34;label&#34;: &#34;Co-Dir fills annual report&#34;,&#10;    &#34;dependsOn&#34;: {&#10;      &#34;field&#34;: &#34;thesisCoDirectorSciper&#34;,&#10;      &#34;contentOnFail&#34;: &#34;n/a&#34;&#10;    },&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report_1&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Director_fills_annual_report&#34;,&#10;    &#34;label&#34;: &#34;Thesis Dir fills annual report&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report_1&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Director_Collaborative_Review_Signs&#34;,&#10;    &#34;label&#34;: &#34;Collaborative review&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report_1&#34;,&#10;      &#34;Activity_Thesis_Co_Director_fills_annual_report&#34;,&#10;      &#34;Activity_Thesis_Director_fills_annual_report&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Co_Director_Signs&#34;,&#10;    &#34;label&#34;: &#34;Co-Dir signature&#34;,&#10;    &#34;content&#34;: &#34;n/a&#34;&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Director_Signs&#34;,&#10;    &#34;label&#34;: &#34;Thesis Dir signature&#34;,&#10;    &#34;content&#34;: &#34;n/a&#34;&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_PHD_Signs&#34;,&#10;    &#34;label&#34;: &#34;PhD signature&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_Thesis_Director_Collaborative_Review_Signs&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Post_Mentor_Meeting_Mentor_Signs&#34;,&#10;    &#34;label&#34;: &#34;Mentor signature&#34;,&#10;    &#34;dependsOn&#34;: {&#10;      &#34;field&#34;: &#34;mentorDate&#34;&#10;    }&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Post_Mentor_Meeting_PHD_Signs&#34;,&#10;    &#34;label&#34;: &#34;PhD signature after mentor&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_Signs&#34;&#10;    ],&#10;    &#34;content&#34;: &#34;n/a&#34;&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Program_Director_Signs&#34;,&#10;    &#34;label&#34;: &#34;Program Director signature&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_Post_Mentor_Meeting_Mentor_Signs&#34;,&#10;      &#34;Activity_PHD_Signs&#34;&#10;    ]&#10;  }&#10;]&#10;" target="dashboardDefinition" />
-        </zeebe:ioMapping>
-      </bpmn:extensionElements>
-      <bpmn:outgoing>Flow_0ighe3r</bpmn:outgoing>
-    </bpmn:startEvent>
-    <bpmn:parallelGateway id="Gateway_1vk6wu2">
-      <bpmn:incoming>Flow_1lvnxkq</bpmn:incoming>
-      <bpmn:outgoing>Flow_16matth</bpmn:outgoing>
-      <bpmn:outgoing>Flow_1nr857v</bpmn:outgoing>
-      <bpmn:outgoing>Flow_16da4ed</bpmn:outgoing>
-    </bpmn:parallelGateway>
-    <bpmn:serviceTask id="Activity_PHD_fills_annual_report_1" name="PhD fills the annual report part 1/2">
-      <bpmn:extensionElements>
-        <zeebe:taskHeaders>
-          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;6094ea003614a90bb3112cc5&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a091e390b9fa6e626d355&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Annual Progress Report&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [         &#34;605a093a1964dcf6c669c8dd&#34;,         &#34;605a093a1964dc7db769c8de&#34;,         &#34;605a093a1964dcd89969c8df&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     }   ],   &#34;submissionAccess&#34;: [],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;annualProgressReport&#34;,   &#34;path&#34;: &#34;annualprogressreport&#34;,   &#34;project&#34;: &#34;605a093a1964dca89369c8dc&#34;,   &#34;created&#34;: &#34;2021-05-07T07:19:28.829Z&#34;,   &#34;modified&#34;: &#34;2021-05-11T15:57:35.231Z&#34;,   &#34;machineName&#34;: &#34;mcvvtebnveuvysz:annualProgressReport&#34;,   &#34;components&#34;: [     {       &#34;title&#34;: &#34;&#60;b&#62;Annual Report&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;panel1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Panel&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Doctoral Program:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;doctoralProgramName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of enrolment:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true,             &#34;custom&#34;: &#34;let m = moment();\nlet p = moment(input, \&#34;DD.MM.YYYY\&#34;);\nvalid = (m &#62; p) ? true : \&#34;date must not be in the future\&#34;;&#34;           },           &#34;key&#34;: &#34;dateOfEnrolment&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Annual report of&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;1st year (tick only if candidacy exam not yet passed)&#34;,               &#34;value&#34;: &#34;1st year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;2nd year&#34;,               &#34;value&#34;: &#34;2nd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;3rd year&#34;,               &#34;value&#34;: &#34;3rd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;4th year&#34;,               &#34;value&#34;: &#34;4th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;5th year&#34;,               &#34;value&#34;: &#34;5th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;6th year&#34;,               &#34;value&#34;: &#34;6th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;year&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Basic information&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;panel&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section A: Basic information New title&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Name of doctoral candidate:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = Meteor.user().tequila.displayname;&#34;,           &#34;key&#34;: &#34;phdStudentName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Tentative thesis title:&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;tentativeThesisTitle&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of candidacy exam:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfCandidacyExam&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;TA duties: Activities done: &#60;br&#62;&#60;i&#62;Estimated hours and/or courses completed, supervision of project, ...&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;taDutiesHoursAndOrCoursesCompleted&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Credits needed for this program:&#34;,           &#34;inputMask&#34;: &#34;99&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;persistent&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;creditsNeeded&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits obtained:&#34;,           &#34;mask&#34;: false,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;totalCreditsObtained&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits planned for the coming year:&#34;,           &#34;mask&#34;: false,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;key&#34;: &#34;totalCreditsPlanned&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Research progress&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionBResearchProgress1&#34;,       &#34;conditional&#34;: {         &#34;show&#34;: false,         &#34;when&#34;: &#34;year&#34;,         &#34;eq&#34;: &#34;1st year&#34;       },       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section B: Research progress&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;To be completed first by the doctoral candidate and then discussed with the thesis director (and co-director if applicable) during a meeting (collaborative review).  Future objectives are meant to provide guidance in the thesis and should thus be as realistic as possible. Achieved and planned objectives should be discussed and agreed upon by the doctoral candidate and thesis director(s) before approving the Annual Report.&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;1. Overall goals of the thesis&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;goalsOfTheThesis&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;2. Research progress during the past year &#60;br&#62;&#60;i&#62;(i.e. describe which objectives are completed and elaborate if any difficulties have been encountered since the last annual report)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchProgressDuringThePastYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;3. Have the objectives changed in the past year? If so, why and how? &#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;haveTheObjectivesChangedInThePastYearIfSoWhyAndHow&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;4. Research objectives for the next year&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchObjectivesForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;5. Timeline of the planned work for the next year&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;timelineOfThePlannedWorkForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;6. Scientific output&#60;br&#62;&#60;i&#62;(journal and conference papers, patents, software, etc. published, submitted or in preparation)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;scientificOutput&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;7. Educational activities&#60;br&#62;&#60;i&#62;(i.e. mention oral or poster presentations, outreach and any specific training)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;educationalActivities&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
-          <zeebe:header key="title" value="Annual report to be completed part 1/2" />
-        </zeebe:taskHeaders>
-        <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
-        <zeebe:ioMapping>
-          <zeebe:input source="= phdStudentSciper" target="assigneeSciper" />
-        </zeebe:ioMapping>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_16matth</bpmn:incoming>
-      <bpmn:outgoing>Flow_08cun4v</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_Program_Assistant_Assigns_Participants" name="Assigns participants">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
-        <zeebe:taskHeaders>
-          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;608a65b2fa8cfbee1a2179d1&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a08952f89aa06c9e1d17a&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Choose participants&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;read_own&#34;     },     {       &#34;roles&#34;: [         &#34;6086b4372f560010780a0f7e&#34;,         &#34;6086b4382f56006d660a0f84&#34;,         &#34;6086b4382f5600137f0a0f86&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_read&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_write&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_admin&#34;     }   ],   &#34;submissionAccess&#34;: [     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;read_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;read_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_read&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_write&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_admin&#34;     }   ],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;chooseParticipants&#34;,   &#34;path&#34;: &#34;chooseparticipants&#34;,   &#34;project&#34;: &#34;6086b4372f560027570a0f78&#34;,   &#34;created&#34;: &#34;2021-04-29T07:52:18.208Z&#34;,   &#34;modified&#34;: &#34;2021-05-06T14:02:50.982Z&#34;,   &#34;machineName&#34;: &#34;zqtizxixjkxqkfi:chooseParticipants&#34;,   &#34;components&#34;: [     {       &#34;label&#34;: &#34;Program assistant sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;customDefaultValue&#34;: &#34;value = Meteor.user()._id;&#34;,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;programAssistantSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Doctoral program&#34;,       &#34;placeholder&#34;: &#34;ED__&#34;,       &#34;tableView&#34;: true,       &#34;case&#34;: &#34;uppercase&#34;,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 4,         &#34;maxLength&#34;: 4       },       &#34;key&#34;: &#34;doctoralProgramName&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Doctoral program’s administrative office email&#34;,       &#34;customClass&#34;: &#34;form-control:disabled&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;case&#34;: &#34;lowercase&#34;,       &#34;clearOnHide&#34;: false,       &#34;calculateValue&#34;: &#34;value = data.doctoralProgramName.toLowerCase() + \&#34;@epfl.ch\&#34;;&#34;,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;doctoralProgramEmail&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;altInput&#34;: true,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Link to annual report documentation&#34;,       &#34;placeholder&#34;: &#34;example : https://www.epfl.ch/education/phd/edam-advanced-manufacturing/edam-annual-report/&#34;,       &#34;tableView&#34;: true,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;docLinkAnnualReport&#34;,       &#34;type&#34;: &#34;url&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Doctoral candidate sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;phdStudentSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Thesis director sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;thesisDirectorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Thesis co-director sciper&#34;,       &#34;tableView&#34;: true,       &#34;validate&#34;: {         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 7       },       &#34;key&#34;: &#34;thesisCoDirectorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Program director sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;programDirectorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Mentor sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;mentorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Credits needed for this program:&#34;,       &#34;inputMask&#34;: &#34;99&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;creditsNeeded&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
-          <zeebe:header key="title" value="Assigning participants" />
-          <zeebe:header key="assigneeSciper" value="programAssistantSciper" />
-        </zeebe:taskHeaders>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_1p551fj</bpmn:incoming>
-      <bpmn:outgoing>Flow_1bi0oxc</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:exclusiveGateway id="Gateway_1stz7w5">
-      <bpmn:incoming>Flow_1bi0oxc</bpmn:incoming>
-      <bpmn:incoming>Flow_1abdc6g</bpmn:incoming>
-      <bpmn:outgoing>Flow_1lvnxkq</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:exclusiveGateway id="Gateway_1vxeb07" name="Has participant prefilled ?" default="Flow_1p551fj">
-      <bpmn:incoming>Flow_0ighe3r</bpmn:incoming>
-      <bpmn:outgoing>Flow_1p551fj</bpmn:outgoing>
-      <bpmn:outgoing>Flow_1abdc6g</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
     <bpmn:serviceTask id="Activity_Thesis_Director_fills_annual_report" name="Thesis director fills the annual report">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
@@ -156,39 +106,6 @@
       <bpmn:outgoing>Flow_1qnxt97</bpmn:outgoing>
       <bpmn:outgoing>Flow_0g6z3sg</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:parallelGateway id="Gateway_1eaw25w">
-      <bpmn:incoming>Flow_0g6z3sg</bpmn:incoming>
-      <bpmn:outgoing>Flow_1crcs3x</bpmn:outgoing>
-      <bpmn:outgoing>Flow_00kh14p</bpmn:outgoing>
-    </bpmn:parallelGateway>
-    <bpmn:serviceTask id="Activity_Notify_Thesis_Codirector_PhDStudent_Filled" name="Notify the Thesis co-director">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="notification" />
-        <zeebe:taskHeaders>
-          <zeebe:header key="subject" value="Annual report of {{ phdStudentName }} (sciper {{ phdStudentSciper }}) to be completed" />
-          <zeebe:header key="message" value="&#60;p&#62;Dear thesis co-Director,&#60;/p&#62;  &#60;p&#62;The doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, you co-supervise has submitted the annual report. Please review the information provided and complete your progress evaluation by logging in via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;br&#62; Please note that once started, the form cannot be saved nor edited. Your progress evaluation is not confidential. It will be revealed to all parties (thesis director, and co-director if applicable, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;   &#60;p&#62;Then, a meeting will be held between the doctoral candidate, the thesis director and you as thesis co-Director to review the information, discuss goals achieved and planned, and evaluate overall progress.&#60;/p&#62;  &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find all the useful information for completing the annual report via the tool: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
-        </zeebe:taskHeaders>
-        <zeebe:ioMapping>
-          <zeebe:input source="= thesisCoDirectorEmail" target="to" />
-        </zeebe:ioMapping>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_02hkb0w</bpmn:incoming>
-      <bpmn:outgoing>Flow_0w00d67</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_Notify_Thesis_Director_PhDStudent_Filled" name="Notify the Thesis director">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="notification" />
-        <zeebe:ioMapping>
-          <zeebe:input source="= thesisDirectorEmail" target="to" />
-        </zeebe:ioMapping>
-        <zeebe:taskHeaders>
-          <zeebe:header key="subject" value="Annual report of {{ phdStudentName }} (sciper {{ phdStudentSciper }}) to be completed" />
-          <zeebe:header key="message" value="&#60;p&#62;Dear thesis Director,&#60;/p&#62;  &#60;p&#62;Your doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, has submitted the annual report. Please review the information provided and complete your progress evaluation by logging in via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;br&#62; Please note that once started, the form cannot be saved nor edited. Your progress evaluation is not confidential. It will be revealed to all parties (thesis director, and co-director if applicable, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;  &#60;p&#62;If the thesis is co-supervised, the co-Director will be notified to complete the progress evaluation after you.&#60;/p&#62;  &#60;p&#62;Once all parties have completed their section, please meet with your doctoral candidate (and the co-Director if applicable) to review the information, discuss goals achieved and planned, and evaluate overall progress.&#60;/p&#62;  &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find all the useful information for completing the annual report via the tool: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
-        </zeebe:taskHeaders>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_00kh14p</bpmn:incoming>
-      <bpmn:outgoing>Flow_0ek8xqq</bpmn:outgoing>
-    </bpmn:serviceTask>
     <bpmn:serviceTask id="Activity_Thesis_Co_Director_fills_annual_report" name="Thesis co-director fills the annual report">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
@@ -328,33 +245,14 @@
       <bpmn:incoming>Flow_08cun4v</bpmn:incoming>
       <bpmn:outgoing>Flow_1dtzfv5</bpmn:outgoing>
       <bpmn:outgoing>Flow_0n5j6j2</bpmn:outgoing>
-    </bpmn:parallelGateway>
-    <bpmn:serviceTask id="Activity_Notify_Mentor_PostMeeting_To_Do" name="Notify the Mentor">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="notification" />
-        <zeebe:taskHeaders>
-          <zeebe:header key="subject" value="Annual Report: meeting mentor-doctoral candidate {{ phdStudentName }} (sciper {{ phdStudentSciper }})" />
-          <zeebe:header key="message" value="&#60;p&#62;Dear Mentor,&#60;/p&#62;  &#60;p&#62;Regarding the annual report of the doctoral candidate  {{ phdStudentName }}, sciper {{ phdStudentSciper }}, mentored by you, please meet to discuss this report and assessment of progress. This discussion is always kept &#60;em&#62;confidential.&#60;/em&#62;&#60;/p&#62;   &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find useful information on the tool: {{ docLinkAnnualReport }}.&#60;/p&#62;  &#60;p&#62;You can access the report by connecting to the tool via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;. Thank you for confirming that the meeting has taken place, by checking the dedicated box in the tool.&#60;/p&#62;   &#60;p&#62;We kindly inform you that once the annual report process is complete, you will receive a PDF copy of the report by email.&#60;/p&#62;    &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName  }} doctoral program Director&#60;/p&#62;" />
-        </zeebe:taskHeaders>
-        <zeebe:ioMapping>
-          <zeebe:input source="= mentorEmail" target="to" />
-          <zeebe:input source="= null" target="PDF" />
-        </zeebe:ioMapping>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_09aqxdl</bpmn:incoming>
-      <bpmn:outgoing>Flow_10ir786</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:parallelGateway id="Gateway_1vkk1yr">
-      <bpmn:incoming>Flow_1nr857v</bpmn:incoming>
-      <bpmn:outgoing>Flow_0393j0o</bpmn:outgoing>
-      <bpmn:outgoing>Flow_09aqxdl</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0aj96s2</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:serviceTask id="Activity_Post_Mentor_Meeting_Mentor_Signs" name="Post-meeting Mentor Signs">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
         <zeebe:taskHeaders>
           <zeebe:header key="title" value="Mentor confirmation of the Mentor-doctoral candidate meeting" />
-          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;6094ea003614a90bb3112cc5&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a091e390b9fa6e626d355&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Annual Progress Report&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [         &#34;605a093a1964dcf6c669c8dd&#34;,         &#34;605a093a1964dc7db769c8de&#34;,         &#34;605a093a1964dcd89969c8df&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     }   ],   &#34;submissionAccess&#34;: [],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;annualProgressReport&#34;,   &#34;path&#34;: &#34;annualprogressreport&#34;,   &#34;project&#34;: &#34;605a093a1964dca89369c8dc&#34;,   &#34;created&#34;: &#34;2021-05-07T07:19:28.829Z&#34;,   &#34;modified&#34;: &#34;2021-05-11T15:57:35.231Z&#34;,   &#34;machineName&#34;: &#34;mcvvtebnveuvysz:annualProgressReport&#34;,   &#34;components&#34;: [     {       &#34;title&#34;: &#34;&#60;b&#62;Annual meeting with the mentor (confidential)&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Panel&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Doctoral Program:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;doctoralProgramName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of enrolment:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfEnrolment&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Basic information&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section A: Basic information&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Name of doctoral candidate:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = Meteor.user().tequila.displayname;&#34;,           &#34;key&#34;: &#34;phdStudentName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Mentor signs&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionDOverallAppraisalAndSignatures&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section D: Overall appraisal and signatures&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;The role of the mentor is to provide confidential advice from an independent/different angle to the doctoral candidate on how best to progress in the PhD studies. The mentor and mentee meet once a year (or more often if the doctoral candidate/mentor so desires and agrees upon) and discuss the annual report/evaluation.&#60;/p&#62;\n&#60;p&#62;The following topics could be discussed between mentor and mentee:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62; Advancing as a researcher (what has gone well, less well, how to improve, goal setting, which resources are needed, …)&#60;/li&#62;\n&#60;li&#62; Facets of career-building (contributions to the community, conferences, awards, networking opportunities, participating in possible soft skill courses on writing, communicating, managing, spin-off training, …)&#60;/li&#62;\n&#60;li&#62; Work-life balance&#60;/li&#62;\n&#60;li&#62; Communication (within the laboratory, with the thesis director(s) and other lab members, matching expectations in terms of progress and future goals, ...)&#60;/li&#62;\n&#60;li&#62; Life after the PhD (what kind of career options are there and how to explore them, ...)&#60;/li&#62;\n&#60;/ul&#62;\n&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html8&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Mentor date of confirmation:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: false,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = moment().format(&#39;DD.MM.YYYY&#39;);&#34;,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;mentorDate&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Yes we have met&#34;,           &#34;tableView&#34;: false,           &#34;defaultValue&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;mentorSignature&#34;,           &#34;type&#34;: &#34;checkbox&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;label&#34;: &#34;Section C: Progress assessment&#34;,       &#34;refreshOnChange&#34;: false,       &#34;key&#34;: &#34;sectionCProgressAssessment&#34;,       &#34;type&#34;: &#34;content&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Section B: Research progress&#34;,       &#34;refreshOnChange&#34;: false,       &#34;key&#34;: &#34;sectionBResearchProgress&#34;,       &#34;type&#34;: &#34;content&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
+          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;6094ea003614a90bb3112cc5&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a091e390b9fa6e626d355&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Annual Progress Report&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [         &#34;605a093a1964dcf6c669c8dd&#34;,         &#34;605a093a1964dc7db769c8de&#34;,         &#34;605a093a1964dcd89969c8df&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     }   ],   &#34;submissionAccess&#34;: [],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;annualProgressReport&#34;,   &#34;path&#34;: &#34;annualprogressreport&#34;,   &#34;project&#34;: &#34;605a093a1964dca89369c8dc&#34;,   &#34;created&#34;: &#34;2021-05-07T07:19:28.829Z&#34;,   &#34;modified&#34;: &#34;2021-05-11T15:57:35.231Z&#34;,   &#34;machineName&#34;: &#34;mcvvtebnveuvysz:annualProgressReport&#34;,   &#34;components&#34;: [     {       &#34;title&#34;: &#34;&#60;b&#62;Annual meeting with the mentor (confidential)&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Panel&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Name of doctoral candidate:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = Meteor.user().tequila.displayname;&#34;,           &#34;key&#34;: &#34;phdStudentName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Annual Report&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Panel&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Doctoral Program:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;doctoralProgramName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of enrolment:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfEnrolment&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Annual report of&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;1st year (tick only if candidacy exam not yet passed)&#34;,               &#34;value&#34;: &#34;1st year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;2nd year&#34;,               &#34;value&#34;: &#34;2nd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;3rd year&#34;,               &#34;value&#34;: &#34;3rd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;4th year&#34;,               &#34;value&#34;: &#34;4th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;5th year&#34;,               &#34;value&#34;: &#34;5th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;6th year&#34;,               &#34;value&#34;: &#34;6th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;year&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Basic information&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section A: Basic information&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Tentative thesis title:&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;tentativeThesisTitle&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of candidacy exam:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfCandidacyExam&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;TA duties: Activities done: &#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;taDutiesHoursAndOrCoursesCompleted&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Credits needed for this program:&#34;,           &#34;inputMask&#34;: &#34;99&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;persistent&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;creditsNeeded&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits obtained:&#34;,           &#34;mask&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;totalCreditsObtained&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits planned for the coming year:&#34;,           &#34;mask&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;key&#34;: &#34;totalCreditsPlanned&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Mentor signs&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionDOverallAppraisalAndSignatures&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section D: Overall appraisal and signatures&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;The role of the mentor is to provide confidential advice from an independent/different angle to the doctoral candidate on how best to progress in the PhD studies. The mentor and mentee meet once a year (or more often if the doctoral candidate/mentor so desires and agrees upon) and discuss the annual report/evaluation.&#60;/p&#62;\n&#60;p&#62;The following topics could be discussed between mentor and mentee:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62; Advancing as a researcher (what has gone well, less well, how to improve, goal setting, which resources are needed, …)&#60;/li&#62;\n&#60;li&#62; Facets of career-building (contributions to the community, conferences, awards, networking opportunities, participating in possible soft skill courses on writing, communicating, managing, spin-off training, …)&#60;/li&#62;\n&#60;li&#62; Work-life balance&#60;/li&#62;\n&#60;li&#62; Communication (within the laboratory, with the thesis director(s) and other lab members, matching expectations in terms of progress and future goals, ...)&#60;/li&#62;\n&#60;li&#62; Life after the PhD (what kind of career options are there and how to explore them, ...)&#60;/li&#62;\n&#60;/ul&#62;\n&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html8&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Mentor date of confirmation:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: false,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = moment().format(&#39;DD.MM.YYYY&#39;);&#34;,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;mentorDate&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Yes we have met&#34;,           &#34;tableView&#34;: false,           &#34;defaultValue&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;mentorSignature&#34;,           &#34;type&#34;: &#34;checkbox&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:input source="= mentorSciper" target="assigneeSciper" />
@@ -576,20 +474,6 @@
       <bpmn:incoming>Flow_1no9et7</bpmn:incoming>
       <bpmn:outgoing>Flow_1fl8szj</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:serviceTask id="Activity_Notify_PhDStudent_Filled" name="Notify the PhD Student">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="notification" />
-        <zeebe:taskHeaders>
-          <zeebe:header key="subject" value="Annual report to be completed" />
-          <zeebe:header key="message" value="&#60;p&#62;Dear {{ phdStudentName }},&#60;/p&#62;  &#60;p&#62;Each year, you are required to submit a report to your thesis Director (and co-Director if applicable) on the state of progress of your work (art. 10 of the &#60;a href=&#34;https://www.epfl.ch/education/phd/regulations/&#34;&#62;Ordinance on the doctorate&#60;/a&#62;). You are requested to fill in three sections with your basic information, the research progress and self-assessment of your progress, by connecting via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;br&#62; Please note that once started, the form cannot be saved nor edited. The content you fill in is not confidential. It will be revealed to all parties (thesis director, and co-director if applicable, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;  &#60;p&#62;Once you have completed and submitted all three sections, your thesis Director (and co-Director if applicable) will submit their assessment of your progress. They will then contact you to arrange a meeting to review the information, discuss goals achieved and planned, and evaluate overall progress.&#60;/p&#62;  &#60;p&#62;On your doctoral program&#39;s webpage, you will find all the information you need to help you write your annual report: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;br&#62; &#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours sincerely,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
-        </zeebe:taskHeaders>
-        <zeebe:ioMapping>
-          <zeebe:input source="= phdStudentEmail" target="to" />
-        </zeebe:ioMapping>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_16da4ed</bpmn:incoming>
-      <bpmn:outgoing>Flow_195mym0</bpmn:outgoing>
-    </bpmn:serviceTask>
     <bpmn:exclusiveGateway id="Gateway_1rxjsuw" name="needs improvement ?" default="Flow_0mjuqeo">
       <bpmn:incoming>Flow_1l5o5tz</bpmn:incoming>
       <bpmn:outgoing>Flow_0mjuqeo</bpmn:outgoing>
@@ -626,17 +510,9 @@
       <bpmn:incoming>Flow_0cktx9y</bpmn:incoming>
       <bpmn:outgoing>Flow_0557sk9</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:parallelGateway id="Gateway_0wl0pjp">
-      <bpmn:incoming>Flow_1qnxt97</bpmn:incoming>
-      <bpmn:outgoing>Flow_02hkb0w</bpmn:outgoing>
-      <bpmn:outgoing>Flow_00vwbvq</bpmn:outgoing>
-    </bpmn:parallelGateway>
     <bpmn:endEvent id="Event_PhD_Assess_Done" name="Yearly PhD Assessment done">
       <bpmn:incoming>Flow_03a8yu5</bpmn:incoming>
       <bpmn:terminateEventDefinition id="TerminateEventDefinition_0pb4dwm" />
-    </bpmn:endEvent>
-    <bpmn:endEvent id="Event_0g64tds" name="End_Activity_Notify_PhDStudent_Filled">
-      <bpmn:incoming>Flow_195mym0</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:boundaryEvent id="Event_GED_Deposit_Student_Folder_Unfindable_Error" name="GED Student folder unfindable" attachedToRef="Activity_GED_Deposit">
       <bpmn:outgoing>Flow_0ytaj1j</bpmn:outgoing>
@@ -646,17 +522,7 @@
       <bpmn:outgoing>Flow_1no9et7</bpmn:outgoing>
       <bpmn:errorEventDefinition id="ErrorEventDefinition_1r65m7t" errorRef="Error_0ysg2s5" />
     </bpmn:boundaryEvent>
-    <bpmn:sequenceFlow id="Flow_0ighe3r" sourceRef="Event_PhD_Assess_Start" targetRef="Gateway_1vxeb07" />
-    <bpmn:sequenceFlow id="Flow_1lvnxkq" sourceRef="Gateway_1stz7w5" targetRef="Gateway_1vk6wu2" />
-    <bpmn:sequenceFlow id="Flow_16matth" sourceRef="Gateway_1vk6wu2" targetRef="Activity_PHD_fills_annual_report_1" />
-    <bpmn:sequenceFlow id="Flow_1nr857v" sourceRef="Gateway_1vk6wu2" targetRef="Gateway_1vkk1yr" />
-    <bpmn:sequenceFlow id="Flow_16da4ed" sourceRef="Gateway_1vk6wu2" targetRef="Activity_Notify_PhDStudent_Filled" />
     <bpmn:sequenceFlow id="Flow_08cun4v" sourceRef="Activity_PHD_fills_annual_report_1" targetRef="Gateway_1hndi1s" />
-    <bpmn:sequenceFlow id="Flow_1p551fj" name="no" sourceRef="Gateway_1vxeb07" targetRef="Activity_Program_Assistant_Assigns_Participants" />
-    <bpmn:sequenceFlow id="Flow_1bi0oxc" sourceRef="Activity_Program_Assistant_Assigns_Participants" targetRef="Gateway_1stz7w5" />
-    <bpmn:sequenceFlow id="Flow_1abdc6g" name="yes" sourceRef="Gateway_1vxeb07" targetRef="Gateway_1stz7w5">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=not(phdStudentSciper=null)</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1crcs3x" sourceRef="Gateway_1eaw25w" targetRef="Activity_Thesis_Director_fills_annual_report" />
     <bpmn:sequenceFlow id="Flow_1q4fi07" sourceRef="Activity_Thesis_Director_fills_annual_report" targetRef="Gateway_Thesis_Director_Check2" />
     <bpmn:sequenceFlow id="Flow_0n5j6j2" sourceRef="Gateway_1hndi1s" targetRef="Gateway_Thesis_Director_Check1" />
@@ -687,7 +553,6 @@
     <bpmn:sequenceFlow id="Flow_08398id" sourceRef="Gateway_1kh591k" targetRef="Activity_0yid7oj" />
     <bpmn:sequenceFlow id="Flow_0xa0id0" sourceRef="Activity_0yid7oj" targetRef="Activity_Notify_Thesis_Director_Collaborative_Review_To_Do" />
     <bpmn:sequenceFlow id="Flow_1dtzfv5" sourceRef="Gateway_1hndi1s" targetRef="Activity_PHD_fills_annual_report_2" />
-    <bpmn:sequenceFlow id="Flow_09aqxdl" sourceRef="Gateway_1vkk1yr" targetRef="Activity_Notify_Mentor_PostMeeting_To_Do" />
     <bpmn:sequenceFlow id="Flow_0393j0o" sourceRef="Gateway_1vkk1yr" targetRef="Activity_Post_Mentor_Meeting_Mentor_Signs" />
     <bpmn:sequenceFlow id="Flow_1vcraeo" sourceRef="Activity_Post_Mentor_Meeting_Mentor_Signs" targetRef="Gateway_08kccwb" />
     <bpmn:sequenceFlow id="Flow_16mxiow" sourceRef="Gateway_00y6ag1" targetRef="Activity_PHD_Signs" />
@@ -723,19 +588,12 @@
     <bpmn:sequenceFlow id="Flow_0mjuqeo" sourceRef="Gateway_1rxjsuw" targetRef="Gateway_0aga7ka" />
     <bpmn:sequenceFlow id="Flow_1no9et7" sourceRef="Event_GED_Deposit_Unreachable_Error" targetRef="Gateway_0s2fnb8" />
     <bpmn:sequenceFlow id="Flow_0ytaj1j" sourceRef="Event_GED_Deposit_Student_Folder_Unfindable_Error" targetRef="Gateway_0s2fnb8" />
-    <bpmn:sequenceFlow id="Flow_195mym0" sourceRef="Activity_Notify_PhDStudent_Filled" targetRef="Event_0g64tds" />
     <bpmn:sequenceFlow id="Flow_04ae09c" name="Yes" sourceRef="Gateway_1rxjsuw" targetRef="Activity_1pwsglk">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=needsImprovement!= ""</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0cktx9y" sourceRef="Activity_1pwsglk" targetRef="Activity_Notify_Program_Director_NeedsImprovement" />
-    <bpmn:endEvent id="Event_17oqgla" name="End_Activity_Notify_Thesis_Director_PhDStudent_Filled">
-      <bpmn:incoming>Flow_0ek8xqq</bpmn:incoming>
-    </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_0ek8xqq" sourceRef="Activity_Notify_Thesis_Director_PhDStudent_Filled" targetRef="Event_17oqgla" />
     <bpmn:sequenceFlow id="Flow_0w00d67" sourceRef="Activity_Notify_Thesis_Codirector_PhDStudent_Filled" targetRef="Event_1yux775" />
-    <bpmn:endEvent id="Event_1yux775" name="End_Activity_Notify_Thesis_Codirector_PhDStudent_Filled">
-      <bpmn:incoming>Flow_0w00d67</bpmn:incoming>
-    </bpmn:endEvent>
     <bpmn:endEvent id="Event_1gxye5u" name="End_Activity_Notify_Thesis_Director_Collaborative_Review_To_Do">
       <bpmn:incoming>Flow_0nks6u8</bpmn:incoming>
     </bpmn:endEvent>
@@ -760,10 +618,152 @@
       <bpmn:incoming>Flow_1lal03r</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1lal03r" sourceRef="Activity_Notify_PhDStudent_For_Signing" targetRef="Event_0ykymbd" />
+    <bpmn:startEvent id="Event_PhD_Assess_Start" name="Yearly assessment start&#10;">
+      <bpmn:extensionElements>
+        <zeebe:ioMapping>
+          <zeebe:output source="=[&#10;  {&#10;    &#34;id&#34;: &#34;Activity_PHD_fills_annual_report_1&#34;,&#10;    &#34;label&#34;: &#34;Phd fills annual report&#34;,&#10;    &#34;parents&#34;: [],&#10;    &#34;alias&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report_2&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Co_Director_fills_annual_report&#34;,&#10;    &#34;label&#34;: &#34;Co-Dir fills annual report&#34;,&#10;    &#34;dependsOn&#34;: {&#10;      &#34;field&#34;: &#34;thesisCoDirectorSciper&#34;,&#10;      &#34;contentOnFail&#34;: &#34;n/a&#34;&#10;    },&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report_1&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Director_fills_annual_report&#34;,&#10;    &#34;label&#34;: &#34;Thesis Dir fills annual report&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report_1&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Director_Collaborative_Review_Signs&#34;,&#10;    &#34;label&#34;: &#34;Collaborative review&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report_1&#34;,&#10;      &#34;Activity_Thesis_Co_Director_fills_annual_report&#34;,&#10;      &#34;Activity_Thesis_Director_fills_annual_report&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Co_Director_Signs&#34;,&#10;    &#34;label&#34;: &#34;Co-Dir signature&#34;,&#10;    &#34;content&#34;: &#34;n/a&#34;&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Director_Signs&#34;,&#10;    &#34;label&#34;: &#34;Thesis Dir signature&#34;,&#10;    &#34;content&#34;: &#34;n/a&#34;&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_PHD_Signs&#34;,&#10;    &#34;label&#34;: &#34;PhD signature&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_Thesis_Director_Collaborative_Review_Signs&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Post_Mentor_Meeting_Mentor_Signs&#34;,&#10;    &#34;label&#34;: &#34;Mentor signature&#34;,&#10;    &#34;dependsOn&#34;: {&#10;      &#34;field&#34;: &#34;mentorDate&#34;&#10;    }&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Post_Mentor_Meeting_PHD_Signs&#34;,&#10;    &#34;label&#34;: &#34;PhD signature after mentor&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_Signs&#34;&#10;    ],&#10;    &#34;content&#34;: &#34;n/a&#34;&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Program_Director_Signs&#34;,&#10;    &#34;label&#34;: &#34;Program Director signature&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_Post_Mentor_Meeting_Mentor_Signs&#34;,&#10;      &#34;Activity_PHD_Signs&#34;&#10;    ]&#10;  }&#10;]&#10;" target="dashboardDefinition" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_0ighe3r</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:parallelGateway id="Gateway_1vk6wu2">
+      <bpmn:incoming>Flow_1lvnxkq</bpmn:incoming>
+      <bpmn:outgoing>Flow_16matth</bpmn:outgoing>
+      <bpmn:outgoing>Flow_16da4ed</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:serviceTask id="Activity_PHD_fills_annual_report_1" name="PhD fills the annual report part 1/2">
+      <bpmn:extensionElements>
+        <zeebe:taskHeaders>
+          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;6094ea003614a90bb3112cc5&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a091e390b9fa6e626d355&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Annual Progress Report&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [         &#34;605a093a1964dcf6c669c8dd&#34;,         &#34;605a093a1964dc7db769c8de&#34;,         &#34;605a093a1964dcd89969c8df&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     }   ],   &#34;submissionAccess&#34;: [],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;annualProgressReport&#34;,   &#34;path&#34;: &#34;annualprogressreport&#34;,   &#34;project&#34;: &#34;605a093a1964dca89369c8dc&#34;,   &#34;created&#34;: &#34;2021-05-07T07:19:28.829Z&#34;,   &#34;modified&#34;: &#34;2021-05-11T15:57:35.231Z&#34;,   &#34;machineName&#34;: &#34;mcvvtebnveuvysz:annualProgressReport&#34;,   &#34;components&#34;: [     {       &#34;title&#34;: &#34;&#60;b&#62;Annual Report&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;panel1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Panel&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Doctoral Program:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;doctoralProgramName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of enrolment:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true,             &#34;custom&#34;: &#34;let m = moment();\nlet p = moment(input, \&#34;DD.MM.YYYY\&#34;);\nvalid = (m &#62; p) ? true : \&#34;date must not be in the future\&#34;;&#34;           },           &#34;key&#34;: &#34;dateOfEnrolment&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Annual report of&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;1st year (tick only if candidacy exam not yet passed)&#34;,               &#34;value&#34;: &#34;1st year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;2nd year&#34;,               &#34;value&#34;: &#34;2nd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;3rd year&#34;,               &#34;value&#34;: &#34;3rd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;4th year&#34;,               &#34;value&#34;: &#34;4th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;5th year&#34;,               &#34;value&#34;: &#34;5th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;6th year&#34;,               &#34;value&#34;: &#34;6th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;year&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Basic information&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;panel&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section A: Basic information New title&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Name of doctoral candidate:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = Meteor.user().tequila.displayname;&#34;,           &#34;key&#34;: &#34;phdStudentName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Tentative thesis title:&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;tentativeThesisTitle&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of candidacy exam:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfCandidacyExam&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;TA duties: Activities done: &#60;br&#62;&#60;i&#62;Estimated hours and/or courses completed, supervision of project, ...&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;taDutiesHoursAndOrCoursesCompleted&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Credits needed for this program:&#34;,           &#34;inputMask&#34;: &#34;99&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;persistent&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;creditsNeeded&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits obtained:&#34;,           &#34;mask&#34;: false,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;totalCreditsObtained&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits planned for the coming year:&#34;,           &#34;mask&#34;: false,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;key&#34;: &#34;totalCreditsPlanned&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Research progress&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionBResearchProgress1&#34;,       &#34;conditional&#34;: {         &#34;show&#34;: false,         &#34;when&#34;: &#34;year&#34;,         &#34;eq&#34;: &#34;1st year&#34;       },       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section B: Research progress&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;To be completed first by the doctoral candidate and then discussed with the thesis director (and co-director if applicable) during a meeting (collaborative review).  Future objectives are meant to provide guidance in the thesis and should thus be as realistic as possible. Achieved and planned objectives should be discussed and agreed upon by the doctoral candidate and thesis director(s) before approving the Annual Report.&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;1. Overall goals of the thesis&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;goalsOfTheThesis&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;2. Research progress during the past year &#60;br&#62;&#60;i&#62;(i.e. describe which objectives are completed and elaborate if any difficulties have been encountered since the last annual report)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchProgressDuringThePastYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;3. Have the objectives changed in the past year? If so, why and how? &#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;haveTheObjectivesChangedInThePastYearIfSoWhyAndHow&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;4. Research objectives for the next year&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchObjectivesForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;5. Timeline of the planned work for the next year&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;timelineOfThePlannedWorkForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;6. Scientific output&#60;br&#62;&#60;i&#62;(journal and conference papers, patents, software, etc. published, submitted or in preparation)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;scientificOutput&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;7. Educational activities&#60;br&#62;&#60;i&#62;(i.e. mention oral or poster presentations, outreach and any specific training)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;educationalActivities&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
+          <zeebe:header key="title" value="Annual report to be completed part 1/2" />
+        </zeebe:taskHeaders>
+        <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
+        <zeebe:ioMapping>
+          <zeebe:input source="= phdStudentSciper" target="assigneeSciper" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_16matth</bpmn:incoming>
+      <bpmn:outgoing>Flow_08cun4v</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_Program_Assistant_Assigns_Participants" name="Assigns participants">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;608a65b2fa8cfbee1a2179d1&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a08952f89aa06c9e1d17a&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Choose participants&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;read_own&#34;     },     {       &#34;roles&#34;: [         &#34;6086b4372f560010780a0f7e&#34;,         &#34;6086b4382f56006d660a0f84&#34;,         &#34;6086b4382f5600137f0a0f86&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_read&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_write&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_admin&#34;     }   ],   &#34;submissionAccess&#34;: [     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;read_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;read_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_read&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_write&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_admin&#34;     }   ],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;chooseParticipants&#34;,   &#34;path&#34;: &#34;chooseparticipants&#34;,   &#34;project&#34;: &#34;6086b4372f560027570a0f78&#34;,   &#34;created&#34;: &#34;2021-04-29T07:52:18.208Z&#34;,   &#34;modified&#34;: &#34;2021-05-06T14:02:50.982Z&#34;,   &#34;machineName&#34;: &#34;zqtizxixjkxqkfi:chooseParticipants&#34;,   &#34;components&#34;: [     {       &#34;label&#34;: &#34;Program assistant sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;customDefaultValue&#34;: &#34;value = Meteor.user()._id;&#34;,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;programAssistantSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Doctoral program&#34;,       &#34;placeholder&#34;: &#34;ED__&#34;,       &#34;tableView&#34;: true,       &#34;case&#34;: &#34;uppercase&#34;,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 4,         &#34;maxLength&#34;: 4       },       &#34;key&#34;: &#34;doctoralProgramName&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Doctoral program’s administrative office email&#34;,       &#34;customClass&#34;: &#34;form-control:disabled&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;case&#34;: &#34;lowercase&#34;,       &#34;clearOnHide&#34;: false,       &#34;calculateValue&#34;: &#34;value = data.doctoralProgramName.toLowerCase() + \&#34;@epfl.ch\&#34;;&#34;,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;doctoralProgramEmail&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;altInput&#34;: true,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Link to annual report documentation&#34;,       &#34;placeholder&#34;: &#34;example : https://www.epfl.ch/education/phd/edam-advanced-manufacturing/edam-annual-report/&#34;,       &#34;tableView&#34;: true,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;docLinkAnnualReport&#34;,       &#34;type&#34;: &#34;url&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Doctoral candidate sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;phdStudentSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Thesis director sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;thesisDirectorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Thesis co-director sciper&#34;,       &#34;tableView&#34;: true,       &#34;validate&#34;: {         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 7       },       &#34;key&#34;: &#34;thesisCoDirectorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Program director sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;programDirectorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Mentor sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;mentorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Credits needed for this program:&#34;,       &#34;inputMask&#34;: &#34;99&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;creditsNeeded&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
+          <zeebe:header key="title" value="Assigning participants" />
+          <zeebe:header key="assigneeSciper" value="programAssistantSciper" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1p551fj</bpmn:incoming>
+      <bpmn:outgoing>Flow_1bi0oxc</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_1stz7w5">
+      <bpmn:incoming>Flow_1bi0oxc</bpmn:incoming>
+      <bpmn:incoming>Flow_1abdc6g</bpmn:incoming>
+      <bpmn:outgoing>Flow_1lvnxkq</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_1vxeb07" name="Has participant prefilled ?" default="Flow_1p551fj">
+      <bpmn:incoming>Flow_0ighe3r</bpmn:incoming>
+      <bpmn:outgoing>Flow_1p551fj</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1abdc6g</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="Activity_Notify_PhDStudent_Filled" name="Notify the PhD Student">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="notification" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="subject" value="Annual report to be completed" />
+          <zeebe:header key="message" value="&#60;p&#62;Dear {{ phdStudentName }},&#60;/p&#62;  &#60;p&#62;Each year, you are required to submit a report to your thesis Director (and co-Director if applicable) on the state of progress of your work (art. 10 of the &#60;a href=&#34;https://www.epfl.ch/education/phd/regulations/&#34;&#62;Ordinance on the doctorate&#60;/a&#62;). You are requested to fill in three sections with your basic information, the research progress and self-assessment of your progress, by connecting via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;br&#62; Please note that once started, the form cannot be saved nor edited. The content you fill in is not confidential. It will be revealed to all parties (thesis director, and co-director if applicable, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;  &#60;p&#62;Once you have completed and submitted all three sections, your thesis Director (and co-Director if applicable) will submit their assessment of your progress. They will then contact you to arrange a meeting to review the information, discuss goals achieved and planned, and evaluate overall progress.&#60;/p&#62;  &#60;p&#62;On your doctoral program&#39;s webpage, you will find all the information you need to help you write your annual report: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;br&#62; &#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours sincerely,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
+        </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:input source="= phdStudentEmail" target="to" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_16da4ed</bpmn:incoming>
+      <bpmn:outgoing>Flow_195mym0</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_0g64tds" name="End_Activity_Notify_PhDStudent_Filled">
+      <bpmn:incoming>Flow_195mym0</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0ighe3r" sourceRef="Event_PhD_Assess_Start" targetRef="Gateway_1vxeb07" />
+    <bpmn:sequenceFlow id="Flow_1lvnxkq" sourceRef="Gateway_1stz7w5" targetRef="Gateway_1vk6wu2" />
+    <bpmn:sequenceFlow id="Flow_16matth" sourceRef="Gateway_1vk6wu2" targetRef="Activity_PHD_fills_annual_report_1" />
+    <bpmn:sequenceFlow id="Flow_16da4ed" sourceRef="Gateway_1vk6wu2" targetRef="Activity_Notify_PhDStudent_Filled" />
+    <bpmn:sequenceFlow id="Flow_1p551fj" name="no" sourceRef="Gateway_1vxeb07" targetRef="Activity_Program_Assistant_Assigns_Participants" />
+    <bpmn:sequenceFlow id="Flow_1bi0oxc" sourceRef="Activity_Program_Assistant_Assigns_Participants" targetRef="Gateway_1stz7w5" />
+    <bpmn:sequenceFlow id="Flow_1abdc6g" name="yes" sourceRef="Gateway_1vxeb07" targetRef="Gateway_1stz7w5">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=not(phdStudentSciper=null)</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_195mym0" sourceRef="Activity_Notify_PhDStudent_Filled" targetRef="Event_0g64tds" />
+    <bpmn:sequenceFlow id="Flow_0aj96s2" sourceRef="Gateway_1hndi1s" targetRef="Gateway_1vkk1yr" />
+    <bpmn:sequenceFlow id="Flow_09aqxdl" sourceRef="Gateway_1vkk1yr" targetRef="Activity_Notify_Mentor_PostMeeting_To_Do" />
+    <bpmn:sequenceFlow id="Flow_10ir786" sourceRef="Activity_Notify_Mentor_PostMeeting_To_Do" targetRef="Event_03v74ka" />
+    <bpmn:parallelGateway id="Gateway_0wl0pjp">
+      <bpmn:incoming>Flow_1qnxt97</bpmn:incoming>
+      <bpmn:outgoing>Flow_02hkb0w</bpmn:outgoing>
+      <bpmn:outgoing>Flow_00vwbvq</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:endEvent id="Event_1yux775" name="End_Activity_Notify_Thesis_Codirector_PhDStudent_Filled">
+      <bpmn:incoming>Flow_0w00d67</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="Activity_Notify_Thesis_Codirector_PhDStudent_Filled" name="Notify the Thesis co-director">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="notification" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="subject" value="Annual report of {{ phdStudentName }} (sciper {{ phdStudentSciper }}) to be completed" />
+          <zeebe:header key="message" value="&#60;p&#62;Dear thesis co-Director,&#60;/p&#62;  &#60;p&#62;The doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, you co-supervise has submitted the annual report. Please review the information provided and complete your progress evaluation by logging in via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;br&#62; Please note that once started, the form cannot be saved nor edited. Your progress evaluation is not confidential. It will be revealed to all parties (thesis director, and co-director if applicable, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;   &#60;p&#62;Then, a meeting will be held between the doctoral candidate, the thesis director and you as thesis co-Director to review the information, discuss goals achieved and planned, and evaluate overall progress.&#60;/p&#62;  &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find all the useful information for completing the annual report via the tool: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
+        </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:input source="= thesisCoDirectorEmail" target="to" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_02hkb0w</bpmn:incoming>
+      <bpmn:outgoing>Flow_0w00d67</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_Notify_Thesis_Director_PhDStudent_Filled" name="Notify the Thesis director">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="notification" />
+        <zeebe:ioMapping>
+          <zeebe:input source="= thesisDirectorEmail" target="to" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="subject" value="Annual report of {{ phdStudentName }} (sciper {{ phdStudentSciper }}) to be completed" />
+          <zeebe:header key="message" value="&#60;p&#62;Dear thesis Director,&#60;/p&#62;  &#60;p&#62;Your doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, has submitted the annual report. Please review the information provided and complete your progress evaluation by logging in via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;br&#62; Please note that once started, the form cannot be saved nor edited. Your progress evaluation is not confidential. It will be revealed to all parties (thesis director, and co-director if applicable, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;  &#60;p&#62;If the thesis is co-supervised, the co-Director will be notified to complete the progress evaluation after you.&#60;/p&#62;  &#60;p&#62;Once all parties have completed their section, please meet with your doctoral candidate (and the co-Director if applicable) to review the information, discuss goals achieved and planned, and evaluate overall progress.&#60;/p&#62;  &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find all the useful information for completing the annual report via the tool: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_00kh14p</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ek8xqq</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:parallelGateway id="Gateway_1eaw25w">
+      <bpmn:incoming>Flow_0g6z3sg</bpmn:incoming>
+      <bpmn:outgoing>Flow_1crcs3x</bpmn:outgoing>
+      <bpmn:outgoing>Flow_00kh14p</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:endEvent id="Event_17oqgla" name="End_Activity_Notify_Thesis_Director_PhDStudent_Filled">
+      <bpmn:incoming>Flow_0ek8xqq</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:parallelGateway id="Gateway_1vkk1yr">
+      <bpmn:incoming>Flow_0aj96s2</bpmn:incoming>
+      <bpmn:outgoing>Flow_0393j0o</bpmn:outgoing>
+      <bpmn:outgoing>Flow_09aqxdl</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:serviceTask id="Activity_Notify_Mentor_PostMeeting_To_Do" name="Notify the Mentor">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="notification" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="subject" value="Annual Report: meeting mentor-doctoral candidate {{ phdStudentName }} (sciper {{ phdStudentSciper }})" />
+          <zeebe:header key="message" value="&#60;p&#62;Dear Mentor,&#60;/p&#62;  &#60;p&#62;Regarding the annual report of the doctoral candidate  {{ phdStudentName }}, sciper {{ phdStudentSciper }}, mentored by you, please meet to discuss this report and assessment of progress. This discussion is always kept &#60;em&#62;confidential.&#60;/em&#62;&#60;/p&#62;   &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find useful information on the tool: {{ docLinkAnnualReport }}.&#60;/p&#62;  &#60;p&#62;You can access the report by connecting to the tool via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;. Thank you for confirming that the meeting has taken place, by checking the dedicated box in the tool.&#60;/p&#62;   &#60;p&#62;We kindly inform you that once the annual report process is complete, you will receive a PDF copy of the report by email.&#60;/p&#62;    &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName  }} doctoral program Director&#60;/p&#62;" />
+        </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:input source="= mentorEmail" target="to" />
+          <zeebe:input source="= null" target="PDF" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_09aqxdl</bpmn:incoming>
+      <bpmn:outgoing>Flow_10ir786</bpmn:outgoing>
+    </bpmn:serviceTask>
     <bpmn:endEvent id="Event_03v74ka" name="End_Activity_Notify_Mentor_PostMeeting_To_Do">
       <bpmn:incoming>Flow_10ir786</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_10ir786" sourceRef="Activity_Notify_Mentor_PostMeeting_To_Do" targetRef="Event_03v74ka" />
     <bpmn:textAnnotation id="TextAnnotation_0j1km92">
       <bpmn:text>Section C</bpmn:text>
     </bpmn:textAnnotation>
@@ -776,14 +776,14 @@
     <bpmn:association id="Association_10enfvy" sourceRef="Activity_Thesis_Co_Director_fills_annual_report" targetRef="TextAnnotation_0j1km92" />
     <bpmn:association id="Association_0x6dd06" sourceRef="Activity_Thesis_Director_Collaborative_Review_Signs" targetRef="TextAnnotation_0qwyl9d" />
     <bpmn:association id="Association_188cxvr" sourceRef="TextAnnotation_1c8hagf" targetRef="Activity_PHD_fills_annual_report_2" />
-    <bpmn:textAnnotation id="TextAnnotation_04v2gmm">
-      <bpmn:text>Section A, B</bpmn:text>
-    </bpmn:textAnnotation>
-    <bpmn:association id="Association_033zd9d" sourceRef="Activity_PHD_fills_annual_report_1" targetRef="TextAnnotation_04v2gmm" />
     <bpmn:textAnnotation id="TextAnnotation_0vy5jzl">
       <bpmn:text>Section C</bpmn:text>
     </bpmn:textAnnotation>
     <bpmn:association id="Association_03p4xdz" sourceRef="Activity_Thesis_Director_fills_annual_report" targetRef="TextAnnotation_0vy5jzl" />
+    <bpmn:textAnnotation id="TextAnnotation_04v2gmm">
+      <bpmn:text>Section A, B</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_033zd9d" sourceRef="Activity_PHD_fills_annual_report_1" targetRef="TextAnnotation_04v2gmm" />
   </bpmn:process>
   <bpmn:error id="Error_0ysg2s5" name="Error_GED_Deposit_Unreachable" errorCode="504" />
   <bpmn:error id="Error_1yas1pq" name="Error_GED_Deposit_Student_Folder_Unfindable" errorCode="404" />
@@ -840,30 +840,9 @@
       <bpmndi:BPMNShape id="Lane_1k7ll7j_di" bpmnElement="Lane_1k7ll7j" isHorizontal="true">
         <dc:Bounds x="182" y="85" width="4115" height="410" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1okn0bp_di" bpmnElement="Event_PhD_Assess_Start">
-        <dc:Bounds x="272" y="317" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="249" y="360" width="84" height="40" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1vk6wu2_di" bpmnElement="Gateway_1vk6wu2">
-        <dc:Bounds x="490" y="570" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0bcd10c_di" bpmnElement="Activity_PHD_fills_annual_report_1">
-        <dc:Bounds x="585" y="555" width="100" height="80" />
+      <bpmndi:BPMNShape id="TextAnnotation_04v2gmm_di" bpmnElement="TextAnnotation_04v2gmm">
+        <dc:Bounds x="630" y="650" width="100" height="30" />
         <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0a9n280_di" bpmnElement="Activity_Program_Assistant_Assigns_Participants">
-        <dc:Bounds x="465" y="295" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1stz7w5_di" bpmnElement="Gateway_1stz7w5" isMarkerVisible="true">
-        <dc:Bounds x="490" y="460" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1vxeb07_di" bpmnElement="Gateway_1vxeb07" isMarkerVisible="true">
-        <dc:Bounds x="362" y="310" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="356" y="281" width="74" height="27" />
-        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_10ceb5k_di" bpmnElement="Activity_Thesis_Director_fills_annual_report">
         <dc:Bounds x="1000" y="915" width="100" height="80" />
@@ -873,15 +852,6 @@
         <bpmndi:BPMNLabel>
           <dc:Bounds x="634" y="942" width="81" height="27" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1eaw25w_di" bpmnElement="Gateway_1eaw25w">
-        <dc:Bounds x="905" y="930" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1wdv629_di" bpmnElement="Activity_Notify_Thesis_Codirector_PhDStudent_Filled">
-        <dc:Bounds x="790" y="1300" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0wwdo6d_di" bpmnElement="Activity_Notify_Thesis_Director_PhDStudent_Filled">
-        <dc:Bounds x="880" y="1035" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1nl6gt1_di" bpmnElement="Activity_Thesis_Co_Director_fills_annual_report">
         <dc:Bounds x="1000" y="1195" width="100" height="80" />
@@ -931,12 +901,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1rbjt5y_di" bpmnElement="Gateway_1hndi1s">
         <dc:Bounds x="725" y="570" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_09x6bzq_di" bpmnElement="Activity_Notify_Mentor_PostMeeting_To_Do">
-        <dc:Bounds x="465" y="1730" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1vkk1yr_di" bpmnElement="Gateway_1vkk1yr">
-        <dc:Bounds x="490" y="1635" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0yk30nj_di" bpmnElement="Activity_Post_Mentor_Meeting_Mentor_Signs">
         <dc:Bounds x="1569" y="1620" width="100" height="80" />
@@ -1016,9 +980,6 @@
       <bpmndi:BPMNShape id="Gateway_0s2fnb8_di" bpmnElement="Gateway_0s2fnb8" isMarkerVisible="true">
         <dc:Bounds x="3365" y="380" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0biymns_di" bpmnElement="Activity_Notify_PhDStudent_Filled">
-        <dc:Bounds x="465" y="675" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_1k2asd0" bpmnElement="Gateway_1rxjsuw" isMarkerVisible="true">
         <dc:Bounds x="1725" y="1050" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -1032,31 +993,10 @@
       <bpmndi:BPMNShape id="BPMNShape_0yicexh" bpmnElement="Activity_Notify_Program_Director_NeedsImprovement">
         <dc:Bounds x="1700" y="1475" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0l17n0s_di" bpmnElement="Gateway_0wl0pjp">
-        <dc:Bounds x="815" y="1210" width="50" height="50" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_10y2s0x_di" bpmnElement="Event_PhD_Assess_Done">
         <dc:Bounds x="3834" y="287" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="3808" y="333" width="88" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0axai2o_di" bpmnElement="Event_0g64tds">
-        <dc:Bounds x="622" y="697" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="596" y="740" width="90" height="40" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_17oqgla_di" bpmnElement="Event_17oqgla">
-        <dc:Bounds x="1032" y="1057" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1009" y="1100" width="85" height="53" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_025jdol_di" bpmnElement="Event_1yux775">
-        <dc:Bounds x="942" y="1322" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="916" y="1365" width="90" height="53" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1gxye5u_di" bpmnElement="Event_1gxye5u">
@@ -1095,12 +1035,6 @@
           <dc:Bounds x="1868" y="740" width="84" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_03v74ka_di" bpmnElement="Event_03v74ka">
-        <dc:Bounds x="622" y="1752" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="600" y="1795" width="81" height="40" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_0j1km92_di" bpmnElement="TextAnnotation_0j1km92">
         <dc:Bounds x="1070" y="1305" width="100" height="30" />
       </bpmndi:BPMNShape>
@@ -1111,13 +1045,83 @@
         <dc:Bounds x="1035" y="680" width="100" height="30" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_04v2gmm_di" bpmnElement="TextAnnotation_04v2gmm">
-        <dc:Bounds x="660" y="650" width="100" height="30" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_0vy5jzl_di" bpmnElement="TextAnnotation_0vy5jzl">
         <dc:Bounds x="1050" y="1013" width="100" height="30" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1okn0bp_di" bpmnElement="Event_PhD_Assess_Start">
+        <dc:Bounds x="217" y="317" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="194" y="360" width="84" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1vk6wu2_di" bpmnElement="Gateway_1vk6wu2">
+        <dc:Bounds x="435" y="570" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0bcd10c_di" bpmnElement="Activity_PHD_fills_annual_report_1">
+        <dc:Bounds x="530" y="555" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0a9n280_di" bpmnElement="Activity_Program_Assistant_Assigns_Participants">
+        <dc:Bounds x="410" y="295" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1stz7w5_di" bpmnElement="Gateway_1stz7w5" isMarkerVisible="true">
+        <dc:Bounds x="435" y="460" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1vxeb07_di" bpmnElement="Gateway_1vxeb07" isMarkerVisible="true">
+        <dc:Bounds x="307" y="310" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="301" y="281" width="74" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0biymns_di" bpmnElement="Activity_Notify_PhDStudent_Filled">
+        <dc:Bounds x="410" y="675" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0axai2o_di" bpmnElement="Event_0g64tds">
+        <dc:Bounds x="567" y="697" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="541" y="740" width="90" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0l17n0s_di" bpmnElement="Gateway_0wl0pjp">
+        <dc:Bounds x="845" y="1210" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_025jdol_di" bpmnElement="Event_1yux775">
+        <dc:Bounds x="972" y="1322" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="946" y="1365" width="90" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1wdv629_di" bpmnElement="Activity_Notify_Thesis_Codirector_PhDStudent_Filled">
+        <dc:Bounds x="820" y="1300" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wwdo6d_di" bpmnElement="Activity_Notify_Thesis_Director_PhDStudent_Filled">
+        <dc:Bounds x="820" y="1035" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1eaw25w_di" bpmnElement="Gateway_1eaw25w">
+        <dc:Bounds x="845" y="930" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_17oqgla_di" bpmnElement="Event_17oqgla">
+        <dc:Bounds x="972" y="1057" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="949" y="1100" width="85" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1vkk1yr_di" bpmnElement="Gateway_1vkk1yr">
+        <dc:Bounds x="845" y="1635" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09x6bzq_di" bpmnElement="Activity_Notify_Mentor_PostMeeting_To_Do">
+        <dc:Bounds x="820" y="1720" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_03v74ka_di" bpmnElement="Event_03v74ka">
+        <dc:Bounds x="972" y="1742" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="950" y="1785" width="81" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_033zd9d_di" bpmnElement="Association_033zd9d">
+        <di:waypoint x="629" y="629" />
+        <di:waypoint x="659" y="650" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_1ogv24m_di" bpmnElement="Event_GED_Deposit_Unreachable_Error">
         <dc:Bounds x="3274" y="327" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -1130,53 +1134,12 @@
           <dc:Bounds x="3341" y="361" width="82" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_0ighe3r_di" bpmnElement="Flow_0ighe3r">
-        <di:waypoint x="308" y="335" />
-        <di:waypoint x="362" y="335" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1lvnxkq_di" bpmnElement="Flow_1lvnxkq">
-        <di:waypoint x="515" y="510" />
-        <di:waypoint x="515" y="570" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_16matth_di" bpmnElement="Flow_16matth">
-        <di:waypoint x="540" y="595" />
-        <di:waypoint x="585" y="595" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1nr857v_di" bpmnElement="Flow_1nr857v">
-        <di:waypoint x="490" y="595" />
-        <di:waypoint x="390" y="595" />
-        <di:waypoint x="390" y="1660" />
-        <di:waypoint x="490" y="1660" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_16da4ed_di" bpmnElement="Flow_16da4ed">
-        <di:waypoint x="515" y="620" />
-        <di:waypoint x="515" y="675" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_08cun4v_di" bpmnElement="Flow_08cun4v">
-        <di:waypoint x="685" y="595" />
+        <di:waypoint x="630" y="595" />
         <di:waypoint x="725" y="595" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1p551fj_di" bpmnElement="Flow_1p551fj">
-        <di:waypoint x="412" y="335" />
-        <di:waypoint x="465" y="335" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="432" y="317" width="13" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1bi0oxc_di" bpmnElement="Flow_1bi0oxc">
-        <di:waypoint x="515" y="375" />
-        <di:waypoint x="515" y="460" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1abdc6g_di" bpmnElement="Flow_1abdc6g">
-        <di:waypoint x="387" y="360" />
-        <di:waypoint x="387" y="485" />
-        <di:waypoint x="490" y="485" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="393" y="420" width="18" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1crcs3x_di" bpmnElement="Flow_1crcs3x">
-        <di:waypoint x="955" y="955" />
+        <di:waypoint x="895" y="955" />
         <di:waypoint x="1000" y="955" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1q4fi07_di" bpmnElement="Flow_1q4fi07">
@@ -1189,29 +1152,29 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0g6z3sg_di" bpmnElement="Flow_0g6z3sg">
         <di:waypoint x="775" y="955" />
-        <di:waypoint x="905" y="955" />
+        <di:waypoint x="845" y="955" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="801" y="937" width="13" height="14" />
+          <dc:Bounds x="786" y="937" width="13" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1qnxt97_di" bpmnElement="Flow_1qnxt97">
         <di:waypoint x="750" y="980" />
         <di:waypoint x="750" y="1235" />
-        <di:waypoint x="815" y="1235" />
+        <di:waypoint x="845" y="1235" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="721" y="979" width="18" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_00kh14p_di" bpmnElement="Flow_00kh14p">
-        <di:waypoint x="930" y="980" />
-        <di:waypoint x="930" y="1035" />
+        <di:waypoint x="870" y="980" />
+        <di:waypoint x="870" y="1035" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_02hkb0w_di" bpmnElement="Flow_02hkb0w">
-        <di:waypoint x="840" y="1260" />
-        <di:waypoint x="840" y="1300" />
+        <di:waypoint x="870" y="1260" />
+        <di:waypoint x="870" y="1300" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_00vwbvq_di" bpmnElement="Flow_00vwbvq">
-        <di:waypoint x="865" y="1235" />
+        <di:waypoint x="895" y="1235" />
         <di:waypoint x="1000" y="1235" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1f0mux0_di" bpmnElement="Flow_1f0mux0">
@@ -1294,12 +1257,8 @@
         <di:waypoint x="775" y="595" />
         <di:waypoint x="1000" y="595" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_09aqxdl_di" bpmnElement="Flow_09aqxdl">
-        <di:waypoint x="515" y="1685" />
-        <di:waypoint x="515" y="1730" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0393j0o_di" bpmnElement="Flow_0393j0o">
-        <di:waypoint x="540" y="1660" />
+        <di:waypoint x="895" y="1660" />
         <di:waypoint x="1569" y="1660" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1vcraeo_di" bpmnElement="Flow_1vcraeo">
@@ -1448,10 +1407,6 @@
         <di:waypoint x="3332" y="405" />
         <di:waypoint x="3365" y="405" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_195mym0_di" bpmnElement="Flow_195mym0">
-        <di:waypoint x="565" y="715" />
-        <di:waypoint x="622" y="715" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_04ae09c_di" bpmnElement="Flow_04ae09c">
         <di:waypoint x="1750" y="1100" />
         <di:waypoint x="1750" y="1370" />
@@ -1464,12 +1419,12 @@
         <di:waypoint x="1750" y="1475" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0ek8xqq_di" bpmnElement="Flow_0ek8xqq">
-        <di:waypoint x="980" y="1075" />
-        <di:waypoint x="1032" y="1075" />
+        <di:waypoint x="920" y="1075" />
+        <di:waypoint x="972" y="1075" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0w00d67_di" bpmnElement="Flow_0w00d67">
-        <di:waypoint x="890" y="1340" />
-        <di:waypoint x="942" y="1340" />
+        <di:waypoint x="920" y="1340" />
+        <di:waypoint x="972" y="1340" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0nks6u8_di" bpmnElement="Flow_0nks6u8">
         <di:waypoint x="1459" y="1140" />
@@ -1495,10 +1450,6 @@
         <di:waypoint x="1840" y="715" />
         <di:waypoint x="1892" y="715" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_10ir786_di" bpmnElement="Flow_10ir786">
-        <di:waypoint x="565" y="1770" />
-        <di:waypoint x="622" y="1770" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_10enfvy_di" bpmnElement="Association_10enfvy">
         <di:waypoint x="1083" y="1275" />
         <di:waypoint x="1108" y="1305" />
@@ -1511,13 +1462,62 @@
         <di:waypoint x="1085" y="680" />
         <di:waypoint x="1085" y="635" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_033zd9d_di" bpmnElement="Association_033zd9d">
-        <di:waypoint x="677" y="634" />
-        <di:waypoint x="694" y="650" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_03p4xdz_di" bpmnElement="Association_03p4xdz">
         <di:waypoint x="1077" y="995" />
         <di:waypoint x="1090" y="1013" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ighe3r_di" bpmnElement="Flow_0ighe3r">
+        <di:waypoint x="253" y="335" />
+        <di:waypoint x="307" y="335" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1lvnxkq_di" bpmnElement="Flow_1lvnxkq">
+        <di:waypoint x="460" y="510" />
+        <di:waypoint x="460" y="570" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16matth_di" bpmnElement="Flow_16matth">
+        <di:waypoint x="485" y="595" />
+        <di:waypoint x="530" y="595" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16da4ed_di" bpmnElement="Flow_16da4ed">
+        <di:waypoint x="460" y="620" />
+        <di:waypoint x="460" y="675" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1p551fj_di" bpmnElement="Flow_1p551fj">
+        <di:waypoint x="357" y="335" />
+        <di:waypoint x="410" y="335" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="377" y="317" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1bi0oxc_di" bpmnElement="Flow_1bi0oxc">
+        <di:waypoint x="460" y="375" />
+        <di:waypoint x="460" y="460" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1abdc6g_di" bpmnElement="Flow_1abdc6g">
+        <di:waypoint x="332" y="360" />
+        <di:waypoint x="332" y="485" />
+        <di:waypoint x="435" y="485" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="338" y="420" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_195mym0_di" bpmnElement="Flow_195mym0">
+        <di:waypoint x="510" y="715" />
+        <di:waypoint x="567" y="715" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0aj96s2_di" bpmnElement="Flow_0aj96s2">
+        <di:waypoint x="742" y="612" />
+        <di:waypoint x="590" y="950" />
+        <di:waypoint x="590" y="1660" />
+        <di:waypoint x="845" y="1660" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09aqxdl_di" bpmnElement="Flow_09aqxdl">
+        <di:waypoint x="870" y="1685" />
+        <di:waypoint x="870" y="1720" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10ir786_di" bpmnElement="Flow_10ir786">
+        <di:waypoint x="920" y="1760" />
+        <di:waypoint x="972" y="1760" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
