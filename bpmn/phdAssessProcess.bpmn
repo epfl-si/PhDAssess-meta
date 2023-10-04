@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.15.1">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <bpmn:collaboration id="Collaboration_13he9tk">
     <bpmn:participant id="Participant_0f1vwfj" name="PhD Assess" processRef="phdAssessProcess" />
   </bpmn:collaboration>
@@ -10,22 +10,23 @@
         <bpmn:flowNodeRef>Gateway_0wl0pjp</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_1yux775</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_Thesis_Codirector_PhDStudent_Filled</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1gxye5u</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1w3ugn8" name="Program Director">
+        <bpmn:flowNodeRef>Event_1yux775</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_Program_Director_Unsatisfacoty</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_153g1f0</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_08kccwb</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_Program_Director_For_Disagreement</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_09hr2up</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_1ra6519</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_Program_Director_Signs</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_0pguy2h</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_Notify_Program_Director_For_Signing_PostMeeting</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1pwsglk</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_Program_Director_NeedsImprovement</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_0f9a79j</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_0ov766g</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_03g5osb</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1ra6519</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_Program_Director_Signs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0pguy2h</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_Notify_Program_Director_For_Signing_PostMeeting</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_0o6lsaa</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1e7w1ps" name="Mentor">
@@ -33,6 +34,8 @@
         <bpmn:flowNodeRef>Activity_Notify_Mentor_PostMeeting_To_Do</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_03v74ka</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Post_Mentor_Meeting_Mentor_Signs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0f9a79j</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0ov766g</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0wb948r" name="PhD Student">
         <bpmn:flowNodeRef>Gateway_1hndi1s</bpmn:flowNodeRef>
@@ -77,6 +80,8 @@
         <bpmn:flowNodeRef>Activity_Program_Assistant_Assigns_Participants</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1stz7w5</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1vxeb07</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_0yeky97</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_08kccwb</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Build_PDF</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_With_PDF_ProgramDirector_And_Office</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_With_PDF_PhDStudent</bpmn:flowNodeRef>
@@ -84,11 +89,10 @@
         <bpmn:flowNodeRef>Activity_Notify_Ask_For_Manual_Deposit</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0hp9bfx</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1iu457q</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_0yeky97</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0s2fnb8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_PhD_Assess_Done</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_GED_Deposit_Unreachable_Error</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_GED_Deposit_Student_Folder_Unfindable_Error</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_GED_Deposit_Unreachable_Error</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_admin" name="Admin">
         <bpmn:flowNodeRef>Activity_Edit_Participants</bpmn:flowNodeRef>
@@ -398,7 +402,7 @@
         <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
         <zeebe:taskHeaders>
           <zeebe:header key="title" value="Validation of the annual report" />
-          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;6094ea003614a90bb3112cc5&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a091e390b9fa6e626d355&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Annual Progress Report&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [         &#34;605a093a1964dcf6c669c8dd&#34;,         &#34;605a093a1964dc7db769c8de&#34;,         &#34;605a093a1964dcd89969c8df&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     }   ],   &#34;submissionAccess&#34;: [],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;annualProgressReport&#34;,   &#34;path&#34;: &#34;annualprogressreport&#34;,   &#34;project&#34;: &#34;605a093a1964dca89369c8dc&#34;,   &#34;created&#34;: &#34;2021-05-07T07:19:28.829Z&#34;,   &#34;modified&#34;: &#34;2021-05-11T15:57:35.231Z&#34;,   &#34;machineName&#34;: &#34;mcvvtebnveuvysz:annualProgressReport&#34;,   &#34;components&#34;: [     {       &#34;label&#34;: &#34;HTML&#34;,       &#34;attrs&#34;: [         {           &#34;attr&#34;: &#34;&#34;,           &#34;value&#34;: &#34;&#34;         }       ],       &#34;content&#34;: &#34;&#60;a href=\&#34;https://www.epfl.ch/education/phd/annual_report/phd_signs\&#34; target=\&#34;_blank\&#34;&#62;User manual&#60;/a&#62;&#34;,       &#34;refreshOnChange&#34;: false,       &#34;key&#34;: &#34;html10&#34;,       &#34;type&#34;: &#34;htmlelement&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false     },     {       &#34;title&#34;: &#34;&#60;b&#62;Annual Report&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Panel&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Doctoral Program:&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;doctoralProgramName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of enrolment:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfEnrolment&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Annual report of&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;1st year (tick only if candidacy exam not yet passed)&#34;,               &#34;value&#34;: &#34;1st year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;2nd year&#34;,               &#34;value&#34;: &#34;2nd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;3rd year&#34;,               &#34;value&#34;: &#34;3rd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;4th year&#34;,               &#34;value&#34;: &#34;4th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;5th year&#34;,               &#34;value&#34;: &#34;5th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;6th year&#34;,               &#34;value&#34;: &#34;6th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;year&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Basic information&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section A: Basic information&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Name of doctoral candidate:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = Meteor.user().tequila.displayname;&#34;,           &#34;key&#34;: &#34;phdStudentName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Tentative thesis title:&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;tentativeThesisTitle&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of candidacy exam:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfCandidacyExam&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;TA duties: Activities done: &#60;br&#62;&#60;i&#62;Estimated hours and/or courses completed, supervision of project, ...&#60;/i&#62;&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;taDutiesHoursAndOrCoursesCompleted&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Credits needed for this program:&#34;,           &#34;inputMask&#34;: &#34;99&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;persistent&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;creditsNeeded&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits obtained:&#34;,           &#34;mask&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;totalCreditsObtained&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits planned for the coming year:&#34;,           &#34;mask&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;key&#34;: &#34;totalCreditsPlanned&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Research progress&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;sectionBResearchProgress1&#34;,       &#34;conditional&#34;: {         &#34;show&#34;: false,         &#34;when&#34;: &#34;year&#34;,         &#34;eq&#34;: &#34;1st year&#34;       },       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section B: Research progress&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;To be completed first by the doctoral candidate and then discussed with the thesis director (and co-director if applicable) during a meeting (collaborative review).  Future objectives are meant to provide guidance in the thesis and should thus be as realistic as possible. Achieved and planned objectives should be discussed and agreed upon by the doctoral candidate and thesis director(s) before approving the Annual Report. &#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;1. Overall goals of the thesis&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;goalsOfTheThesis&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;2. Research progress during the past year &#60;br&#62;&#60;i&#62;(i.e. describe which objectives are completed and elaborate if any difficulties have been encountered since the last annual report)&#60;/i&#62;&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;defaultValue&#34;: &#34;(i.e. describe which objectives are completed and elaborate if any difficulties have been encountered since the last annual report)&#34;,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchProgressDuringThePastYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;3. Have the objectives changed in the past year? If so, why and how? &#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;haveTheObjectivesChangedInThePastYearIfSoWhyAndHow&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;4. Research objectives for the next year&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchObjectivesForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;5. Timeline of the planned work for the next year&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;timelineOfThePlannedWorkForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;6. Scientific output&#60;br&#62;&#60;i&#62;(journal and conference papers, patents, software, etc. published, submitted or in preparation)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;scientificOutput&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;7. Educational activities&#60;br&#62;&#60;i&#62;(i.e. Mention oral or poster presentations, outreach and any specific training)&#60;/i&#62;&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;educationalActivities&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Progress assessment&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionCProgressAssessment1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section C: Progress assessment&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;To be completed independently by the doctoral candidate and thesis director (and co-director if applicable), then discussed and approved by both during a meeting (collaborative review). The goal is to have their respective perspective on the same topic, e.g. how the doctoral candidate views the supervision they receive and how the thesis director(s) views the supervision they give.&#60;br&#62;The progress assessment is not confidential: each person’s comments initially remain hidden in order to provide all participants with the opportunity to express their view independently. When all parties have completed the self-assessment, comments are revealed to everyone so that they can prepare for the collaborative review. &#38;nbsp;&#60;/p&#62;\n&#60;p&#62;Aims on the doctoral candidate side:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62;to assess how the doctoral candidate views their own progress and skills&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to identify and communicate to the thesis director(s) in which areas the doctoral candidate seeks more input or help&#60;/li&#62;\n&#60;/ul&#62;\n&#60;p&#62;Aims on the thesis director (and co-director if applicable) side:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62;to ensure that the doctoral candidate knows how they are performing overall according to the thesis director’s expectations&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to communicate what the doctoral candidate’s strengths and weaknesses towards completing a PhD&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to communicate which areas need improvement&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to ensure that career issues are discussed at least once per year&#38;nbsp;&#60;/li&#62;\n&#60;/ul&#62;\n&#60;p&#62;The comments box should be used to briefly assess the progress and further elaborate any specific issues.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html1&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;h4&#62;&#60;b&#62;Discussion topics&#60;/b&#62;&#60;/h4&#62;\n&#60;p&#62;1.  Doctoral candidate’s engagement in the thesis:&#60;br&#62;\n&#60;i&#62;satisfaction, motivation, commitment, initiative, independence, ...&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html2&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment1&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment1&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment1&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment1&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;2. How do you view the thesis director&#39;s (and co-director if applicable) supervision:&#60;br&#62;\n&#60;i&#62;vailability, coaching, support, resources, training and conferences, ...&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html3&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment2&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment2&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment2&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment2&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;3. Thesis progress:&#60;br&#62;\n&#60;i&#62;quality of results, critical thinking, vision, timeline, organization, planning, ...&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html4&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment3&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment3&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment3&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment3&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;4. Doctoral candidate’s scientific and career development:&#60;br&#62;\n&#60;i&#62;training, acquired skills (writing, presenting), teaching load, conferences and networking, after-PhD planning, ...&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html5&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment4&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment4&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment4&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment4&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;5. Laboratory environment:&#60;br&#62;\n&#60;i&#62;support from colleagues and own collegiality, open communication and atmosphere, balance in collaborative projects, resource availability, ….&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html6&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment5&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment5&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment5&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment5&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;6. Any other specific points&#60;br&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html7&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;phdComment6&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorComment6&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorComment6&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;commonComment6&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Overall appraisal and signatures&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionDOverallAppraisalAndSignatures&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section D: Overall appraisal and signatures&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;By validating the Annual Report (checkbox below), the doctoral candidate and the thesis director (and co-director if applicable) agree that the discussion regarding the achieved and planned objectives as well as the progress assessment satisfy both parties, who thus approve the current report.&#60;/p&#62;\n&#60;p&#62;&#60;strong&#62;Notes&#60;/strong&#62;&#60;/p&#62;\n&#60;p&#62;&#60;strong&#62;For the doctoral candidate: &#60;/strong&#62;The thesis director(s) is responsible for guiding the doctoral candidate in their research and for coaching them to reach the scientific level of a PhD. The critical feedback of the thesis director(s) plays a key role in this process and also for the success of the doctoral candidate beyond. Validation of the Annual Report indicates that the doctoral candidate has discussed with the thesis director(s), understood the expectations for improvement in the areas identified, and agreed on the plan to reach these milestones and assess their progress.&#60;/p&#62;\n&#60;p&#62;&#60;strong&#62;For the thesis director(s): &#60;/strong&#62;Validation of the Annual Report indicates that the thesis director(s) has discussed all the above points with the doctoral candidate, considered their feedback regarding any potential problem, explained their expectations for improvement, when appropriate, including mechanisms for intermediate progress assessments, and discussed a plan for timely publication of the results and for the thesis defence.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;&#60;b&#62;General appraisal of the progress&#60;/b&#62;&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;exceeds expectations&#34;,               &#34;value&#34;: &#34;exceeds expectations&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;meets expectations&#34;,               &#34;value&#34;: &#34;meets expectations&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;needs some improvement&#34;,               &#34;value&#34;: &#34;needs some improvement&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;unsatisfactory&#34;,               &#34;value&#34;: &#34;unsatisfactory&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;generalAppraisalOfTheProgress&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p style=\&#34;color:red;\&#34;&#62;In case the annual report is unsatisfactory, the program director is informed and will seek a meeting with the doctoral candidate and the thesis director(s), to set goals and appropriate timelines for completion.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html8&#34;,           &#34;conditional&#34;: {             &#34;show&#34;: true,             &#34;when&#34;: &#34;GeneralAppraisalOfTheProgress&#34;,             &#34;eq&#34;: &#34;unsatisfactory&#34;           },           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Program Director notif&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;hidden&#34;: true,           &#34;tableView&#34;: true,           &#34;clearOnHide&#34;: false,           &#34;calculateValue&#34;: &#34;\nif (data.generalAppraisalOfTheProgress != \&#34;unsatisfactory\&#34; &#38;&#38; data.generalAppraisalOfTheProgress != \&#34;needs some improvement\&#34;) {\n  value = \&#34;\&#34; ;\n} else {\n  value = \&#34;notif\&#34;; \n}&#34;,           &#34;key&#34;: &#34;programDirectorNotif&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;We have met with the mentor&#34;,           &#34;tableView&#34;: false,           &#34;defaultValue&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdSignature&#34;,           &#34;type&#34;: &#34;checkbox&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Doctoral candidate date of review:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: false,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = moment().format(&#39;DD.MM.YYYY&#39;);&#34;,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdDateOfReview&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Doctoral candidate review&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;I agree&#34;,               &#34;value&#34;: &#34;Doctoral student agrees&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;I do not agree&#34;,               &#34;value&#34;: &#34;Doctoral student does not agree&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;agreePhd&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Not Agree&#34;,           &#34;hidden&#34;: true,           &#34;tableView&#34;: true,           &#34;clearOnHide&#34;: false,           &#34;calculateValue&#34;: &#34;if (data.agreePhd != \&#34;Doctoral student does not agree\&#34; &#38;&#38; data.agreeThesisDirector != \&#34;Thesis director does not agree\&#34; &#38;&#38; data.agreeThesisCoDirector != \&#34;Thesis co-director does not agree\&#34;) {\n  value = \&#34;\&#34; ;\n} else {\n  value = \&#34;notif\&#34;; \n}&#34;,           &#34;key&#34;: &#34;notAgree&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p style=\&#34;color:red;\&#34;&#62;In case the annual report is not approved by one or more participants, the program director is informed and will seek appropriate measures to resolve possible problems and conflicts.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html9&#34;,           &#34;conditional&#34;: {             &#34;show&#34;: true,             &#34;when&#34;: &#34;agreePhd&#34;,             &#34;eq&#34;: &#34;Doctoral student does not agree&#34;           },           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;phdComment&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;GeneralCommentLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;agreePhd&#34;,                   &#34;eq&#34;: &#34;Doctoral student does not agree&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;GeneralCommentAction1&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Required&#34;,                     &#34;value&#34;: &#34;validate.required&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
+          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;6094ea003614a90bb3112cc5&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a091e390b9fa6e626d355&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Annual Progress Report&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [         &#34;605a093a1964dcf6c669c8dd&#34;,         &#34;605a093a1964dc7db769c8de&#34;,         &#34;605a093a1964dcd89969c8df&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     }   ],   &#34;submissionAccess&#34;: [],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;annualProgressReport&#34;,   &#34;path&#34;: &#34;annualprogressreport&#34;,   &#34;project&#34;: &#34;605a093a1964dca89369c8dc&#34;,   &#34;created&#34;: &#34;2021-05-07T07:19:28.829Z&#34;,   &#34;modified&#34;: &#34;2021-05-11T15:57:35.231Z&#34;,   &#34;machineName&#34;: &#34;mcvvtebnveuvysz:annualProgressReport&#34;,   &#34;components&#34;: [     {       &#34;label&#34;: &#34;HTML&#34;,       &#34;attrs&#34;: [         {           &#34;attr&#34;: &#34;&#34;,           &#34;value&#34;: &#34;&#34;         }       ],       &#34;content&#34;: &#34;&#60;a href=\&#34;https://www.epfl.ch/education/phd/annual_report/phd_signs\&#34; target=\&#34;_blank\&#34;&#62;User manual&#60;/a&#62;&#34;,       &#34;refreshOnChange&#34;: false,       &#34;key&#34;: &#34;html10&#34;,       &#34;type&#34;: &#34;htmlelement&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false     },     {       &#34;title&#34;: &#34;&#60;b&#62;Annual Report&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Panel&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Doctoral Program:&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;doctoralProgramName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of enrolment:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfEnrolment&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Annual report of&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;1st year (tick only if candidacy exam not yet passed)&#34;,               &#34;value&#34;: &#34;1st year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;2nd year&#34;,               &#34;value&#34;: &#34;2nd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;3rd year&#34;,               &#34;value&#34;: &#34;3rd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;4th year&#34;,               &#34;value&#34;: &#34;4th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;5th year&#34;,               &#34;value&#34;: &#34;5th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;6th year&#34;,               &#34;value&#34;: &#34;6th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;year&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Basic information&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section A: Basic information&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Name of doctoral candidate:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = Meteor.user().tequila.displayname;&#34;,           &#34;key&#34;: &#34;phdStudentName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Tentative thesis title:&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;tentativeThesisTitle&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of candidacy exam:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfCandidacyExam&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;TA duties: Activities done: &#60;br&#62;&#60;i&#62;Estimated hours and/or courses completed, supervision of project, ...&#60;/i&#62;&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;taDutiesHoursAndOrCoursesCompleted&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Credits needed for this program:&#34;,           &#34;inputMask&#34;: &#34;99&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;persistent&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;creditsNeeded&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits obtained:&#34;,           &#34;mask&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;totalCreditsObtained&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits planned for the coming year:&#34;,           &#34;mask&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;key&#34;: &#34;totalCreditsPlanned&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Research progress&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;sectionBResearchProgress1&#34;,       &#34;conditional&#34;: {         &#34;show&#34;: false,         &#34;when&#34;: &#34;year&#34;,         &#34;eq&#34;: &#34;1st year&#34;       },       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section B: Research progress&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;To be completed first by the doctoral candidate and then discussed with the thesis director (and co-director if applicable) during a meeting (collaborative review).  Future objectives are meant to provide guidance in the thesis and should thus be as realistic as possible. Achieved and planned objectives should be discussed and agreed upon by the doctoral candidate and thesis director(s) before approving the Annual Report. &#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;1. Overall goals of the thesis&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;goalsOfTheThesis&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;2. Research progress during the past year &#60;br&#62;&#60;i&#62;(i.e. describe which objectives are completed and elaborate if any difficulties have been encountered since the last annual report)&#60;/i&#62;&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;defaultValue&#34;: &#34;(i.e. describe which objectives are completed and elaborate if any difficulties have been encountered since the last annual report)&#34;,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchProgressDuringThePastYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;3. Have the objectives changed in the past year? If so, why and how? &#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;haveTheObjectivesChangedInThePastYearIfSoWhyAndHow&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;4. Research objectives for the next year&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchObjectivesForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;5. Timeline of the planned work for the next year&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;timelineOfThePlannedWorkForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;6. Scientific output&#60;br&#62;&#60;i&#62;(journal and conference papers, patents, software, etc. published, submitted or in preparation)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;scientificOutput&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;7. Educational activities&#60;br&#62;&#60;i&#62;(i.e. Mention oral or poster presentations, outreach and any specific training)&#60;/i&#62;&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;educationalActivities&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Progress assessment&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionCProgressAssessment1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section C: Progress assessment&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;To be completed independently by the doctoral candidate and thesis director (and co-director if applicable), then discussed and approved by both during a meeting (collaborative review). The goal is to have their respective perspective on the same topic, e.g. how the doctoral candidate views the supervision they receive and how the thesis director(s) views the supervision they give.&#60;br&#62;The progress assessment is not confidential: each person’s comments initially remain hidden in order to provide all participants with the opportunity to express their view independently. When all parties have completed the self-assessment, comments are revealed to everyone so that they can prepare for the collaborative review. &#38;nbsp;&#60;/p&#62;\n&#60;p&#62;Aims on the doctoral candidate side:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62;to assess how the doctoral candidate views their own progress and skills&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to identify and communicate to the thesis director(s) in which areas the doctoral candidate seeks more input or help&#60;/li&#62;\n&#60;/ul&#62;\n&#60;p&#62;Aims on the thesis director (and co-director if applicable) side:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62;to ensure that the doctoral candidate knows how they are performing overall according to the thesis director’s expectations&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to communicate what the doctoral candidate’s strengths and weaknesses towards completing a PhD&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to communicate which areas need improvement&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to ensure that career issues are discussed at least once per year&#38;nbsp;&#60;/li&#62;\n&#60;/ul&#62;\n&#60;p&#62;The comments box should be used to briefly assess the progress and further elaborate any specific issues.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html1&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;h4&#62;&#60;b&#62;Discussion topics&#60;/b&#62;&#60;/h4&#62;\n&#60;p&#62;1.  Doctoral candidate’s engagement in the thesis:&#60;br&#62;\n&#60;i&#62;satisfaction, motivation, commitment, initiative, independence, ...&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html2&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment1&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment1&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment1&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment1&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;2. How do you view the thesis director&#39;s (and co-director if applicable) supervision:&#60;br&#62;\n&#60;i&#62;vailability, coaching, support, resources, training and conferences, ...&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html3&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment2&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment2&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment2&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment2&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;3. Thesis progress:&#60;br&#62;\n&#60;i&#62;quality of results, critical thinking, vision, timeline, organization, planning, ...&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html4&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment3&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment3&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment3&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment3&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;4. Doctoral candidate’s scientific and career development:&#60;br&#62;\n&#60;i&#62;training, acquired skills (writing, presenting), teaching load, conferences and networking, after-PhD planning, ...&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html5&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment4&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment4&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment4&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment4&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;5. Laboratory environment:&#60;br&#62;\n&#60;i&#62;support from colleagues and own collegiality, open communication and atmosphere, balance in collaborative projects, resource availability, ….&#60;/i&#62;&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html6&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment5&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment5&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment5&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment5&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;6. Any other specific points&#60;br&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html7&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;phdComment6&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorComment6&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorComment6&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;commonComment6&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Overall appraisal and signatures&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionDOverallAppraisalAndSignatures&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section D: Overall appraisal and signatures&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;By validating the Annual Report (checkbox below), the doctoral candidate and the thesis director (and co-director if applicable) agree that the discussion regarding the achieved and planned objectives as well as the progress assessment satisfy both parties, who thus approve the current report.&#60;/p&#62;\n&#60;p&#62;&#60;strong&#62;Notes&#60;/strong&#62;&#60;/p&#62;\n&#60;p&#62;&#60;strong&#62;For the doctoral candidate: &#60;/strong&#62;The thesis director(s) is responsible for guiding the doctoral candidate in their research and for coaching them to reach the scientific level of a PhD. The critical feedback of the thesis director(s) plays a key role in this process and also for the success of the doctoral candidate beyond. Validation of the Annual Report indicates that the doctoral candidate has discussed with the thesis director(s), understood the expectations for improvement in the areas identified, and agreed on the plan to reach these milestones and assess their progress.&#60;/p&#62;\n&#60;p&#62;&#60;strong&#62;For the thesis director(s): &#60;/strong&#62;Validation of the Annual Report indicates that the thesis director(s) has discussed all the above points with the doctoral candidate, considered their feedback regarding any potential problem, explained their expectations for improvement, when appropriate, including mechanisms for intermediate progress assessments, and discussed a plan for timely publication of the results and for the thesis defence.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;&#60;b&#62;General appraisal of the progress&#60;/b&#62;&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;exceeds expectations&#34;,               &#34;value&#34;: &#34;exceeds expectations&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;meets expectations&#34;,               &#34;value&#34;: &#34;meets expectations&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;needs some improvement&#34;,               &#34;value&#34;: &#34;needs some improvement&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;unsatisfactory&#34;,               &#34;value&#34;: &#34;unsatisfactory&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;generalAppraisalOfTheProgress&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p style=\&#34;color:red;\&#34;&#62;In case the annual report is unsatisfactory, the program director is informed and will seek a meeting with the doctoral candidate and the thesis director(s), to set goals and appropriate timelines for completion.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html8&#34;,           &#34;conditional&#34;: {             &#34;show&#34;: true,             &#34;when&#34;: &#34;GeneralAppraisalOfTheProgress&#34;,             &#34;eq&#34;: &#34;unsatisfactory&#34;           },           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;We have met with the mentor&#34;,           &#34;tableView&#34;: false,           &#34;defaultValue&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdSignature&#34;,           &#34;type&#34;: &#34;checkbox&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Doctoral candidate date of review:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: false,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;yyyy-MM-dd&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = moment().format(&#39;DD.MM.YYYY&#39;);&#34;,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdDateOfReview&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Doctoral candidate review&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;I agree&#34;,               &#34;value&#34;: &#34;Doctoral student agrees&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;I do not agree&#34;,               &#34;value&#34;: &#34;Doctoral student does not agree&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;agreePhd&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Not Agree&#34;,           &#34;hidden&#34;: true,           &#34;tableView&#34;: true,           &#34;clearOnHide&#34;: false,           &#34;calculateValue&#34;: &#34;if (data.agreePhd != \&#34;Doctoral student does not agree\&#34; &#38;&#38; data.agreeThesisDirector != \&#34;Thesis director does not agree\&#34; &#38;&#38; data.agreeThesisCoDirector != \&#34;Thesis co-director does not agree\&#34;) {\n  value = \&#34;\&#34; ;\n} else {\n  value = \&#34;notif\&#34;; \n}&#34;,           &#34;key&#34;: &#34;notAgree&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Program Director notif&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;hidden&#34;: true,           &#34;tableView&#34;: true,           &#34;clearOnHide&#34;: false,           &#34;calculateValue&#34;: &#34;\nif (data.generalAppraisalOfTheProgress != \&#34;unsatisfactory\&#34; &#38;&#38; data.generalAppraisalOfTheProgress != \&#34;needs some improvement\&#34; &#38;&#38; data.agreePhd != \&#34;Doctoral student does not agree\&#34; ) {\n  value = \&#34;\&#34; ;\n} else {\n  value = \&#34;notif\&#34;; \n}&#34;,           &#34;key&#34;: &#34;programDirectorNotif&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p style=\&#34;color:red;\&#34;&#62;In case the annual report is not approved by one or more participants, the program director is informed and will seek appropriate measures to resolve possible problems and conflicts.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html9&#34;,           &#34;conditional&#34;: {             &#34;show&#34;: true,             &#34;when&#34;: &#34;agreePhd&#34;,             &#34;eq&#34;: &#34;Doctoral student does not agree&#34;           },           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;phdComment&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;GeneralCommentLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;agreePhd&#34;,                   &#34;eq&#34;: &#34;Doctoral student does not agree&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;GeneralCommentAction1&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Required&#34;,                     &#34;value&#34;: &#34;validate.required&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
           <zeebe:header key="assigneeSciperFieldName" value="phdStudentSciper" />
         </zeebe:taskHeaders>
       </bpmn:extensionElements>
@@ -425,11 +429,6 @@
       <bpmn:incoming>Flow_0pxr008</bpmn:incoming>
       <bpmn:outgoing>Flow_1lal03r</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:parallelGateway id="Gateway_08kccwb">
-      <bpmn:incoming>Flow_1vcraeo</bpmn:incoming>
-      <bpmn:incoming>Flow_0mwxbjw</bpmn:incoming>
-      <bpmn:outgoing>Flow_0p1halp</bpmn:outgoing>
-    </bpmn:parallelGateway>
     <bpmn:serviceTask id="Activity_Notify_Program_Director_For_Disagreement" name="Notify the Program Director">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="notification" />
@@ -471,8 +470,161 @@
       <bpmn:incoming>Flow_0bw508m</bpmn:incoming>
       <bpmn:outgoing>Flow_1tkcpjx</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_0aga7ka">
+      <bpmn:incoming>Flow_1o8eczd</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ekbkz0</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_0nc5ulp">
+      <bpmn:incoming>Flow_0genhf5</bpmn:incoming>
+      <bpmn:incoming>Flow_0uy8hlt</bpmn:incoming>
+      <bpmn:outgoing>Flow_1b37tsr</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_1rxjsuw" name="needs improvement ?" default="Flow_0mjuqeo">
+      <bpmn:outgoing>Flow_04ae09c</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0mjuqeo</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="Activity_1pwsglk" name="Build needs improvement PDF">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="phdBuildPDF" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="pdfType" value="unsatisfactory" />
+        </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="= PDF" target="unsatisfactoryPDF" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_04ae09c</bpmn:incoming>
+      <bpmn:outgoing>Flow_0cktx9y</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_Notify_Program_Director_NeedsImprovement" name="Notify the Program Director">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="notification" />
+        <zeebe:ioMapping>
+          <zeebe:input source="= programDirectorEmail" target="to" />
+          <zeebe:input source="= doctoralProgramEmail" target="cc" />
+          <zeebe:input source="= unsatisfactoryPDF" target="PDF" />
+          <zeebe:output source="= &#34;&#34;" target="unsatisfactoryPDF" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="subject" value="Annual report of doctoral candidate {{ phdStudentName }} (sciper {{ phdStudentSciper }}): general appraisal of the progress = needs improvement" />
+          <zeebe:header key="message" value="&#60;p&#62;Dear {{ doctoralProgramName }} doctoral program Director,&#60;/p&#62;  &#60;p&#62;Regarding the annual report of the doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, the general appraisal of the progress was rated as &#60;b&#62;needs improvement&#60;/b&#62; (please see attached information).   &#60;p&#62;To confirm that you have checked it and indicate any comment you may have, you will be notified again to access in the tool the annual report of the doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, once the doctoral candidate-mentor discussion meeting has taken place.&#60;/p&#62;  &#60;p&#62;Thank you for the follow-up and best regards,&#60;/p&#62;  &#60;p&#62;EPFL Doctoral School&#60;/p&#62;" />
+          <zeebe:header key="pdfName" value="PROVISIONAL_phd_annual_report_unsatisfactory" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0cktx9y</bpmn:incoming>
+      <bpmn:outgoing>Flow_0557sk9</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_1gxye5u" name="End_Activity_Notify_Thesis_Director_Collaborative_Review_To_Do">
+      <bpmn:incoming>Flow_0nks6u8</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_0f9a79j" name="End_Activity_Notify_Program_Director_NeedsImprovement">
+      <bpmn:incoming>Flow_0557sk9</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_0ov766g" name="End_Activity_Notify_Program_Director_Unsatisfacoty">
+      <bpmn:incoming>Flow_10b5pmi</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_03g5osb" name="End_Activity_Notify_Program_Director_For_Disagreement">
+      <bpmn:incoming>Flow_1c6p1r4</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_0ykymbd" name="End_Activity_Notify_PhDStudent_For_Signing">
+      <bpmn:incoming>Flow_1lal03r</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:parallelGateway id="Gateway_09asryp">
+      <bpmn:incoming>Flow_1q4fi07</bpmn:incoming>
+      <bpmn:incoming>Flow_02wlj08</bpmn:incoming>
+      <bpmn:outgoing>Flow_0hkjpgz</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:exclusiveGateway id="Gateway_1gscpv8">
+      <bpmn:incoming>Flow_0g6z3sg</bpmn:incoming>
+      <bpmn:incoming>Flow_183nwu2</bpmn:incoming>
+      <bpmn:outgoing>Flow_0pl6eff</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="Event_0rnj0nm" name="End_Activity_Program_Director_Notification_Unsatisfactory">
+      <bpmn:incoming>Flow_0mjuqeo</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0n5j6j2" sourceRef="Gateway_1hndi1s" targetRef="Gateway_Thesis_Director_Check1" />
+    <bpmn:sequenceFlow id="Flow_0g6z3sg" name="no" sourceRef="Gateway_Thesis_Director_Check1" targetRef="Gateway_1gscpv8" />
+    <bpmn:sequenceFlow id="Flow_1qnxt97" name="yes" sourceRef="Gateway_Thesis_Director_Check1" targetRef="Gateway_1ip838z">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=thesisCoDirectorSciper!=""</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_08cun4v" sourceRef="Activity_PHD_fills_annual_report_1" targetRef="Gateway_1hndi1s" />
+    <bpmn:sequenceFlow id="Flow_1dtzfv5" sourceRef="Gateway_1hndi1s" targetRef="Activity_PHD_fills_annual_report_2" />
+    <bpmn:sequenceFlow id="Flow_0aj96s2" sourceRef="Gateway_1hndi1s" targetRef="Gateway_1vkk1yr" />
+    <bpmn:sequenceFlow id="Flow_0ighe3r" sourceRef="Event_PhD_Assess_Start" targetRef="Gateway_1vxeb07" />
+    <bpmn:sequenceFlow id="Flow_1lvnxkq" sourceRef="Gateway_1stz7w5" targetRef="Gateway_1vk6wu2" />
+    <bpmn:sequenceFlow id="Flow_16matth" sourceRef="Gateway_1vk6wu2" targetRef="Activity_PHD_fills_annual_report_1" />
+    <bpmn:sequenceFlow id="Flow_16da4ed" sourceRef="Gateway_1vk6wu2" targetRef="Activity_Notify_PhDStudent_Filled" />
+    <bpmn:sequenceFlow id="Flow_18w2lha" sourceRef="Gateway_1vk6wu2" targetRef="Activity_Edit_Participants" />
+    <bpmn:sequenceFlow id="Flow_1p551fj" name="no" sourceRef="Gateway_1vxeb07" targetRef="Activity_Program_Assistant_Assigns_Participants" />
+    <bpmn:sequenceFlow id="Flow_1bi0oxc" sourceRef="Activity_Program_Assistant_Assigns_Participants" targetRef="Gateway_1stz7w5" />
+    <bpmn:sequenceFlow id="Flow_1abdc6g" name="yes" sourceRef="Gateway_1vxeb07" targetRef="Gateway_1stz7w5">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=not(phdStudentSciper=null)</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_195mym0" sourceRef="Activity_Notify_PhDStudent_Filled" targetRef="Event_0g64tds" />
+    <bpmn:sequenceFlow id="Flow_12pfuv4" sourceRef="Gateway_1ip838z" targetRef="Gateway_0wl0pjp" />
+    <bpmn:sequenceFlow id="Flow_183nwu2" sourceRef="Gateway_1ip838z" targetRef="Gateway_1gscpv8" />
+    <bpmn:sequenceFlow id="Flow_1crcs3x" sourceRef="Gateway_1eaw25w" targetRef="Activity_Thesis_Director_fills_annual_report" />
+    <bpmn:sequenceFlow id="Flow_1q4fi07" sourceRef="Activity_Thesis_Director_fills_annual_report" targetRef="Gateway_09asryp" />
+    <bpmn:sequenceFlow id="Flow_00vwbvq" sourceRef="Gateway_0wl0pjp" targetRef="Activity_Thesis_Co_Director_fills_annual_report" />
+    <bpmn:sequenceFlow id="Flow_1f0mux0" sourceRef="Activity_Thesis_Co_Director_fills_annual_report" targetRef="Gateway_0w5d3x0" />
+    <bpmn:sequenceFlow id="Flow_02wlj08" sourceRef="Activity_PHD_fills_annual_report_2" targetRef="Gateway_09asryp" />
+    <bpmn:sequenceFlow id="Flow_02hkb0w" sourceRef="Gateway_0wl0pjp" targetRef="Activity_Notify_Thesis_Codirector_PhDStudent_Filled" />
+    <bpmn:sequenceFlow id="Flow_0w00d67" sourceRef="Activity_Notify_Thesis_Codirector_PhDStudent_Filled" targetRef="Event_1yux775" />
+    <bpmn:sequenceFlow id="Flow_00kh14p" sourceRef="Gateway_1eaw25w" targetRef="Activity_Notify_Thesis_Director_PhDStudent_Filled" />
+    <bpmn:sequenceFlow id="Flow_0ek8xqq" sourceRef="Activity_Notify_Thesis_Director_PhDStudent_Filled" targetRef="Event_17oqgla" />
+    <bpmn:sequenceFlow id="Flow_0pl6eff" sourceRef="Gateway_1gscpv8" targetRef="Gateway_1eaw25w" />
+    <bpmn:sequenceFlow id="Flow_0393j0o" sourceRef="Gateway_1vkk1yr" targetRef="Activity_Post_Mentor_Meeting_Mentor_Signs" />
+    <bpmn:sequenceFlow id="Flow_09aqxdl" sourceRef="Gateway_1vkk1yr" targetRef="Activity_Notify_Mentor_PostMeeting_To_Do" />
+    <bpmn:sequenceFlow id="Flow_10ir786" sourceRef="Activity_Notify_Mentor_PostMeeting_To_Do" targetRef="Event_03v74ka" />
+    <bpmn:sequenceFlow id="Flow_1gy2m7j" name="yes" sourceRef="Gateway_Thesis_Director_Check2" targetRef="Gateway_0w5d3x0">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=thesisCoDirectorSciper!=""</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0yg2ypo" sourceRef="Gateway_0w5d3x0" targetRef="Gateway_1m9wltd" />
+    <bpmn:sequenceFlow id="Flow_0hkjpgz" sourceRef="Gateway_09asryp" targetRef="Gateway_Thesis_Director_Check2" />
+    <bpmn:sequenceFlow id="Flow_0r3q628" name="no" sourceRef="Gateway_Thesis_Director_Check2" targetRef="Gateway_1m9wltd" />
+    <bpmn:sequenceFlow id="Flow_1sd2f0p" sourceRef="Activity_Thesis_Director_Collaborative_Review_Signs" targetRef="Gateway_1qftu4l" />
+    <bpmn:sequenceFlow id="Flow_0pq7nor" sourceRef="Gateway_1qftu4l" targetRef="Gateway_unsatisfactory_check" />
+    <bpmn:sequenceFlow id="Flow_1o8eczd" sourceRef="Gateway_1qftu4l" targetRef="Gateway_0aga7ka" />
+    <bpmn:sequenceFlow id="Flow_1jkk0ln" name="Yes" sourceRef="Gateway_unsatisfactory_check" targetRef="Activity_153g1f0">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= unsatisfactroy!= ""</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_08rxq4y" sourceRef="Activity_153g1f0" targetRef="Activity_Notify_Program_Director_Unsatisfacoty" />
+    <bpmn:sequenceFlow id="Flow_10b5pmi" sourceRef="Activity_Notify_Program_Director_Unsatisfacoty" targetRef="Event_0ov766g" />
+    <bpmn:sequenceFlow id="Flow_071vbx1" sourceRef="Gateway_1kh591k" targetRef="Activity_Thesis_Director_Collaborative_Review_Signs" />
+    <bpmn:sequenceFlow id="Flow_1a31ekj" sourceRef="Gateway_1m9wltd" targetRef="Gateway_1kh591k" />
+    <bpmn:sequenceFlow id="Flow_08398id" sourceRef="Gateway_1kh591k" targetRef="Activity_0yid7oj" />
+    <bpmn:sequenceFlow id="Flow_0xa0id0" sourceRef="Activity_0yid7oj" targetRef="Activity_Notify_Thesis_Director_Collaborative_Review_To_Do" />
+    <bpmn:sequenceFlow id="Flow_0nks6u8" sourceRef="Activity_Notify_Thesis_Director_Collaborative_Review_To_Do" targetRef="Event_1gxye5u" />
+    <bpmn:sequenceFlow id="Flow_1vcraeo" sourceRef="Activity_Post_Mentor_Meeting_Mentor_Signs" targetRef="Gateway_08kccwb" />
+    <bpmn:sequenceFlow id="Flow_16mxiow" sourceRef="Gateway_00y6ag1" targetRef="Activity_PHD_Signs" />
+    <bpmn:sequenceFlow id="Flow_0apc4au" sourceRef="Activity_PHD_Signs" targetRef="Gateway_145opmc" />
+    <bpmn:sequenceFlow id="Flow_1ekbkz0" sourceRef="Gateway_0aga7ka" targetRef="Gateway_00y6ag1" />
+    <bpmn:sequenceFlow id="Flow_0pxr008" sourceRef="Gateway_00y6ag1" targetRef="Activity_Notify_PhDStudent_For_Signing" />
+    <bpmn:sequenceFlow id="Flow_1lal03r" sourceRef="Activity_Notify_PhDStudent_For_Signing" targetRef="Event_0ykymbd" />
+    <bpmn:sequenceFlow id="Flow_1tkcpjx" sourceRef="Activity_09hr2up" targetRef="Activity_Notify_Program_Director_For_Disagreement" />
+    <bpmn:sequenceFlow id="Flow_1c6p1r4" sourceRef="Activity_Notify_Program_Director_For_Disagreement" targetRef="Event_03g5osb" />
+    <bpmn:sequenceFlow id="Flow_16dwmbj" sourceRef="Gateway_145opmc" targetRef="Gateway_1f2dd1w" />
+    <bpmn:sequenceFlow id="Flow_0bw508m" name="no" sourceRef="Gateway_1f2dd1w" targetRef="Activity_09hr2up">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= notAgree != ""</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0uy8hlt" name="yes" sourceRef="Gateway_1f2dd1w" targetRef="Gateway_0nc5ulp" />
+    <bpmn:sequenceFlow id="Flow_0genhf5" sourceRef="Gateway_145opmc" targetRef="Gateway_0nc5ulp" />
+    <bpmn:sequenceFlow id="Flow_04ae09c" name="Yes" sourceRef="Gateway_1rxjsuw" targetRef="Activity_1pwsglk">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=needsImprovement!= ""</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0mjuqeo" sourceRef="Gateway_1rxjsuw" targetRef="Event_0rnj0nm" />
+    <bpmn:sequenceFlow id="Flow_0cktx9y" sourceRef="Activity_1pwsglk" targetRef="Activity_Notify_Program_Director_NeedsImprovement" />
+    <bpmn:sequenceFlow id="Flow_0557sk9" sourceRef="Activity_Notify_Program_Director_NeedsImprovement" targetRef="Event_0f9a79j" />
+    <bpmn:receiveTask id="Activity_Edit_Participants" name="Edit participants" messageRef="Message_3fu63rf">
+      <bpmn:documentation>This task will stay along the workflow, to allow app admins to change the participants, excluding the PhD students. </bpmn:documentation>
+      <bpmn:incoming>Flow_0amshgl</bpmn:incoming>
+      <bpmn:incoming>Flow_18w2lha</bpmn:incoming>
+      <bpmn:outgoing>Flow_0amshgl</bpmn:outgoing>
+    </bpmn:receiveTask>
+    <bpmn:sequenceFlow id="Flow_0amshgl" sourceRef="Activity_Edit_Participants" targetRef="Activity_Edit_Participants" />
+    <bpmn:sequenceFlow id="Flow_1b37tsr" sourceRef="Gateway_0nc5ulp" targetRef="Gateway_1ra6519" />
     <bpmn:exclusiveGateway id="Gateway_1ra6519" name="unsatisfactory or need improvement?" default="Flow_1qvhx9u">
-      <bpmn:incoming>Flow_0p1halp</bpmn:incoming>
+      <bpmn:incoming>Flow_1b37tsr</bpmn:incoming>
       <bpmn:outgoing>Flow_06fadpj</bpmn:outgoing>
       <bpmn:outgoing>Flow_1qvhx9u</bpmn:outgoing>
     </bpmn:exclusiveGateway>
@@ -509,11 +661,34 @@
       <bpmn:incoming>Flow_19qe9od</bpmn:incoming>
       <bpmn:outgoing>Flow_0tzttc0</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_0yeky97">
+      <bpmn:incoming>Flow_1qvhx9u</bpmn:incoming>
+      <bpmn:incoming>Flow_05koynm</bpmn:incoming>
+      <bpmn:outgoing>Flow_1od281d</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="Event_0o6lsaa" name="End_Activity_Notify_Program_Director_For_Signing_PostMeeting">
+      <bpmn:incoming>Flow_0tzttc0</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1od281d" sourceRef="Gateway_0yeky97" targetRef="Gateway_08kccwb" />
+    <bpmn:sequenceFlow id="Flow_1de1m0v" sourceRef="Gateway_08kccwb" targetRef="Activity_Build_PDF" />
+    <bpmn:sequenceFlow id="Flow_06fadpj" name="yes" sourceRef="Gateway_1ra6519" targetRef="Gateway_0pguy2h">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= programDirectorNotif != ""</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1qvhx9u" name="no" sourceRef="Gateway_1ra6519" targetRef="Gateway_0yeky97" />
+    <bpmn:sequenceFlow id="Flow_1wxgy3z" sourceRef="Gateway_0pguy2h" targetRef="Activity_Program_Director_Signs" />
+    <bpmn:sequenceFlow id="Flow_05koynm" sourceRef="Activity_Program_Director_Signs" targetRef="Gateway_0yeky97" />
+    <bpmn:sequenceFlow id="Flow_19qe9od" sourceRef="Gateway_0pguy2h" targetRef="Activity_Notify_Program_Director_For_Signing_PostMeeting" />
+    <bpmn:sequenceFlow id="Flow_0tzttc0" sourceRef="Activity_Notify_Program_Director_For_Signing_PostMeeting" targetRef="Event_0o6lsaa" />
+    <bpmn:parallelGateway id="Gateway_08kccwb">
+      <bpmn:incoming>Flow_1vcraeo</bpmn:incoming>
+      <bpmn:incoming>Flow_1od281d</bpmn:incoming>
+      <bpmn:outgoing>Flow_1de1m0v</bpmn:outgoing>
+    </bpmn:parallelGateway>
     <bpmn:serviceTask id="Activity_Build_PDF" name="Build PDF">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="phdBuildPDF" />
       </bpmn:extensionElements>
-      <bpmn:incoming>Flow_1od281d</bpmn:incoming>
+      <bpmn:incoming>Flow_1de1m0v</bpmn:incoming>
       <bpmn:outgoing>Flow_0b0vfwv</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:serviceTask id="Activity_Notify_With_PDF_ProgramDirector_And_Office" name="Notify the Prog Director + Office">
@@ -582,181 +757,23 @@
       <bpmn:incoming>Flow_1uvq6qs</bpmn:incoming>
       <bpmn:outgoing>Flow_03a8yu5</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:exclusiveGateway id="Gateway_0yeky97">
-      <bpmn:incoming>Flow_1qvhx9u</bpmn:incoming>
-      <bpmn:incoming>Flow_05koynm</bpmn:incoming>
-      <bpmn:outgoing>Flow_1od281d</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:exclusiveGateway id="Gateway_0aga7ka">
-      <bpmn:incoming>Flow_1o8eczd</bpmn:incoming>
-      <bpmn:outgoing>Flow_1ekbkz0</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:exclusiveGateway id="Gateway_0nc5ulp">
-      <bpmn:incoming>Flow_0genhf5</bpmn:incoming>
-      <bpmn:incoming>Flow_0uy8hlt</bpmn:incoming>
-      <bpmn:outgoing>Flow_0mwxbjw</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
     <bpmn:exclusiveGateway id="Gateway_0s2fnb8">
       <bpmn:incoming>Flow_0ytaj1j</bpmn:incoming>
       <bpmn:incoming>Flow_1no9et7</bpmn:incoming>
       <bpmn:outgoing>Flow_1fl8szj</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:exclusiveGateway id="Gateway_1rxjsuw" name="needs improvement ?" default="Flow_0mjuqeo">
-      <bpmn:outgoing>Flow_04ae09c</bpmn:outgoing>
-      <bpmn:outgoing>Flow_0mjuqeo</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:serviceTask id="Activity_1pwsglk" name="Build needs improvement PDF">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="phdBuildPDF" />
-        <zeebe:taskHeaders>
-          <zeebe:header key="pdfType" value="unsatisfactory" />
-        </zeebe:taskHeaders>
-        <zeebe:ioMapping>
-          <zeebe:output source="= PDF" target="unsatisfactoryPDF" />
-        </zeebe:ioMapping>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_04ae09c</bpmn:incoming>
-      <bpmn:outgoing>Flow_0cktx9y</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_Notify_Program_Director_NeedsImprovement" name="Notify the Program Director">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="notification" />
-        <zeebe:ioMapping>
-          <zeebe:input source="= programDirectorEmail" target="to" />
-          <zeebe:input source="= doctoralProgramEmail" target="cc" />
-          <zeebe:input source="= unsatisfactoryPDF" target="PDF" />
-          <zeebe:output source="= &#34;&#34;" target="unsatisfactoryPDF" />
-        </zeebe:ioMapping>
-        <zeebe:taskHeaders>
-          <zeebe:header key="subject" value="Annual report of doctoral candidate {{ phdStudentName }} (sciper {{ phdStudentSciper }}): general appraisal of the progress = needs improvement" />
-          <zeebe:header key="message" value="&#60;p&#62;Dear {{ doctoralProgramName }} doctoral program Director,&#60;/p&#62;  &#60;p&#62;Regarding the annual report of the doctoral candidate{{ phdStudentName }}, sciper {{ phdStudentSciper }}, the general appraisal of the progress was rated as &#60;b&#62;needs improvement&#60;/b&#62; (please see attached information).   &#60;p&#62;To confirm that you have checked it and indicate any comment you may have, you will be notified again to access in the tool the annual report of the doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, once the doctoral candidate-mentor discussion meeting has taken place.&#60;/p&#62;  &#60;p&#62;Thank you for the follow-up and best regards,&#60;/p&#62;  &#60;p&#62;EPFL Doctoral School&#60;/p&#62;" />
-          <zeebe:header key="pdfName" value="PROVISIONAL_phd_annual_report_unsatisfactory" />
-        </zeebe:taskHeaders>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0cktx9y</bpmn:incoming>
-      <bpmn:outgoing>Flow_0557sk9</bpmn:outgoing>
-    </bpmn:serviceTask>
     <bpmn:endEvent id="Event_PhD_Assess_Done" name="Yearly PhD Assessment done">
       <bpmn:incoming>Flow_03a8yu5</bpmn:incoming>
       <bpmn:terminateEventDefinition id="TerminateEventDefinition_0pb4dwm" />
     </bpmn:endEvent>
-    <bpmn:endEvent id="Event_1gxye5u" name="End_Activity_Notify_Thesis_Director_Collaborative_Review_To_Do">
-      <bpmn:incoming>Flow_0nks6u8</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:endEvent id="Event_0f9a79j" name="End_Activity_Notify_Program_Director_NeedsImprovement">
-      <bpmn:incoming>Flow_0557sk9</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:endEvent id="Event_0ov766g" name="End_Activity_Notify_Program_Director_Unsatisfacoty">
-      <bpmn:incoming>Flow_10b5pmi</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:endEvent id="Event_03g5osb" name="End_Activity_Notify_Program_Director_For_Disagreement">
-      <bpmn:incoming>Flow_1c6p1r4</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:endEvent id="Event_0o6lsaa" name="End_Activity_Notify_Program_Director_For_Signing_PostMeeting">
-      <bpmn:incoming>Flow_0tzttc0</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:endEvent id="Event_0ykymbd" name="End_Activity_Notify_PhDStudent_For_Signing">
-      <bpmn:incoming>Flow_1lal03r</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:parallelGateway id="Gateway_09asryp">
-      <bpmn:incoming>Flow_1q4fi07</bpmn:incoming>
-      <bpmn:incoming>Flow_02wlj08</bpmn:incoming>
-      <bpmn:outgoing>Flow_0hkjpgz</bpmn:outgoing>
-    </bpmn:parallelGateway>
-    <bpmn:exclusiveGateway id="Gateway_1gscpv8">
-      <bpmn:incoming>Flow_0g6z3sg</bpmn:incoming>
-      <bpmn:incoming>Flow_183nwu2</bpmn:incoming>
-      <bpmn:outgoing>Flow_0pl6eff</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
-    <bpmn:endEvent id="Event_0rnj0nm" name="End_Activity_Program_Director_Notification_Unsatisfactory">
-      <bpmn:incoming>Flow_0mjuqeo</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:boundaryEvent id="Event_GED_Deposit_Unreachable_Error" name="GED unreachable error" attachedToRef="Activity_GED_Deposit">
-      <bpmn:outgoing>Flow_1no9et7</bpmn:outgoing>
-      <bpmn:errorEventDefinition id="ErrorEventDefinition_1r65m7t" errorRef="Error_0ysg2s5" />
-    </bpmn:boundaryEvent>
     <bpmn:boundaryEvent id="Event_GED_Deposit_Student_Folder_Unfindable_Error" name="GED Student folder unfindable" attachedToRef="Activity_GED_Deposit">
       <bpmn:outgoing>Flow_0ytaj1j</bpmn:outgoing>
       <bpmn:errorEventDefinition id="ErrorEventDefinition_1slywwf" errorRef="Error_1yas1pq" />
     </bpmn:boundaryEvent>
-    <bpmn:sequenceFlow id="Flow_0n5j6j2" sourceRef="Gateway_1hndi1s" targetRef="Gateway_Thesis_Director_Check1" />
-    <bpmn:sequenceFlow id="Flow_0g6z3sg" name="no" sourceRef="Gateway_Thesis_Director_Check1" targetRef="Gateway_1gscpv8" />
-    <bpmn:sequenceFlow id="Flow_1qnxt97" name="yes" sourceRef="Gateway_Thesis_Director_Check1" targetRef="Gateway_1ip838z">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=thesisCoDirectorSciper!=""</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_08cun4v" sourceRef="Activity_PHD_fills_annual_report_1" targetRef="Gateway_1hndi1s" />
-    <bpmn:sequenceFlow id="Flow_1dtzfv5" sourceRef="Gateway_1hndi1s" targetRef="Activity_PHD_fills_annual_report_2" />
-    <bpmn:sequenceFlow id="Flow_0aj96s2" sourceRef="Gateway_1hndi1s" targetRef="Gateway_1vkk1yr" />
-    <bpmn:sequenceFlow id="Flow_0ighe3r" sourceRef="Event_PhD_Assess_Start" targetRef="Gateway_1vxeb07" />
-    <bpmn:sequenceFlow id="Flow_1lvnxkq" sourceRef="Gateway_1stz7w5" targetRef="Gateway_1vk6wu2" />
-    <bpmn:sequenceFlow id="Flow_16matth" sourceRef="Gateway_1vk6wu2" targetRef="Activity_PHD_fills_annual_report_1" />
-    <bpmn:sequenceFlow id="Flow_16da4ed" sourceRef="Gateway_1vk6wu2" targetRef="Activity_Notify_PhDStudent_Filled" />
-    <bpmn:sequenceFlow id="Flow_18w2lha" sourceRef="Gateway_1vk6wu2" targetRef="Activity_Edit_Participants" />
-    <bpmn:sequenceFlow id="Flow_1p551fj" name="no" sourceRef="Gateway_1vxeb07" targetRef="Activity_Program_Assistant_Assigns_Participants" />
-    <bpmn:sequenceFlow id="Flow_1bi0oxc" sourceRef="Activity_Program_Assistant_Assigns_Participants" targetRef="Gateway_1stz7w5" />
-    <bpmn:sequenceFlow id="Flow_1abdc6g" name="yes" sourceRef="Gateway_1vxeb07" targetRef="Gateway_1stz7w5">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=not(phdStudentSciper=null)</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_195mym0" sourceRef="Activity_Notify_PhDStudent_Filled" targetRef="Event_0g64tds" />
-    <bpmn:sequenceFlow id="Flow_12pfuv4" sourceRef="Gateway_1ip838z" targetRef="Gateway_0wl0pjp" />
-    <bpmn:sequenceFlow id="Flow_183nwu2" sourceRef="Gateway_1ip838z" targetRef="Gateway_1gscpv8" />
-    <bpmn:sequenceFlow id="Flow_1crcs3x" sourceRef="Gateway_1eaw25w" targetRef="Activity_Thesis_Director_fills_annual_report" />
-    <bpmn:sequenceFlow id="Flow_1q4fi07" sourceRef="Activity_Thesis_Director_fills_annual_report" targetRef="Gateway_09asryp" />
-    <bpmn:sequenceFlow id="Flow_00vwbvq" sourceRef="Gateway_0wl0pjp" targetRef="Activity_Thesis_Co_Director_fills_annual_report" />
-    <bpmn:sequenceFlow id="Flow_1f0mux0" sourceRef="Activity_Thesis_Co_Director_fills_annual_report" targetRef="Gateway_0w5d3x0" />
-    <bpmn:sequenceFlow id="Flow_02wlj08" sourceRef="Activity_PHD_fills_annual_report_2" targetRef="Gateway_09asryp" />
-    <bpmn:sequenceFlow id="Flow_02hkb0w" sourceRef="Gateway_0wl0pjp" targetRef="Activity_Notify_Thesis_Codirector_PhDStudent_Filled" />
-    <bpmn:sequenceFlow id="Flow_0w00d67" sourceRef="Activity_Notify_Thesis_Codirector_PhDStudent_Filled" targetRef="Event_1yux775" />
-    <bpmn:sequenceFlow id="Flow_00kh14p" sourceRef="Gateway_1eaw25w" targetRef="Activity_Notify_Thesis_Director_PhDStudent_Filled" />
-    <bpmn:sequenceFlow id="Flow_0ek8xqq" sourceRef="Activity_Notify_Thesis_Director_PhDStudent_Filled" targetRef="Event_17oqgla" />
-    <bpmn:sequenceFlow id="Flow_0pl6eff" sourceRef="Gateway_1gscpv8" targetRef="Gateway_1eaw25w" />
-    <bpmn:sequenceFlow id="Flow_0393j0o" sourceRef="Gateway_1vkk1yr" targetRef="Activity_Post_Mentor_Meeting_Mentor_Signs" />
-    <bpmn:sequenceFlow id="Flow_09aqxdl" sourceRef="Gateway_1vkk1yr" targetRef="Activity_Notify_Mentor_PostMeeting_To_Do" />
-    <bpmn:sequenceFlow id="Flow_10ir786" sourceRef="Activity_Notify_Mentor_PostMeeting_To_Do" targetRef="Event_03v74ka" />
-    <bpmn:sequenceFlow id="Flow_1gy2m7j" name="yes" sourceRef="Gateway_Thesis_Director_Check2" targetRef="Gateway_0w5d3x0">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=thesisCoDirectorSciper!=""</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0yg2ypo" sourceRef="Gateway_0w5d3x0" targetRef="Gateway_1m9wltd" />
-    <bpmn:sequenceFlow id="Flow_0hkjpgz" sourceRef="Gateway_09asryp" targetRef="Gateway_Thesis_Director_Check2" />
-    <bpmn:sequenceFlow id="Flow_0r3q628" name="no" sourceRef="Gateway_Thesis_Director_Check2" targetRef="Gateway_1m9wltd" />
-    <bpmn:sequenceFlow id="Flow_1sd2f0p" sourceRef="Activity_Thesis_Director_Collaborative_Review_Signs" targetRef="Gateway_1qftu4l" />
-    <bpmn:sequenceFlow id="Flow_0pq7nor" sourceRef="Gateway_1qftu4l" targetRef="Gateway_unsatisfactory_check" />
-    <bpmn:sequenceFlow id="Flow_1o8eczd" sourceRef="Gateway_1qftu4l" targetRef="Gateway_0aga7ka" />
-    <bpmn:sequenceFlow id="Flow_1jkk0ln" name="Yes" sourceRef="Gateway_unsatisfactory_check" targetRef="Activity_153g1f0">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= unsatisfactroy!= ""</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_08rxq4y" sourceRef="Activity_153g1f0" targetRef="Activity_Notify_Program_Director_Unsatisfacoty" />
-    <bpmn:sequenceFlow id="Flow_10b5pmi" sourceRef="Activity_Notify_Program_Director_Unsatisfacoty" targetRef="Event_0ov766g" />
-    <bpmn:sequenceFlow id="Flow_071vbx1" sourceRef="Gateway_1kh591k" targetRef="Activity_Thesis_Director_Collaborative_Review_Signs" />
-    <bpmn:sequenceFlow id="Flow_1a31ekj" sourceRef="Gateway_1m9wltd" targetRef="Gateway_1kh591k" />
-    <bpmn:sequenceFlow id="Flow_08398id" sourceRef="Gateway_1kh591k" targetRef="Activity_0yid7oj" />
-    <bpmn:sequenceFlow id="Flow_0xa0id0" sourceRef="Activity_0yid7oj" targetRef="Activity_Notify_Thesis_Director_Collaborative_Review_To_Do" />
-    <bpmn:sequenceFlow id="Flow_0nks6u8" sourceRef="Activity_Notify_Thesis_Director_Collaborative_Review_To_Do" targetRef="Event_1gxye5u" />
-    <bpmn:sequenceFlow id="Flow_1vcraeo" sourceRef="Activity_Post_Mentor_Meeting_Mentor_Signs" targetRef="Gateway_08kccwb" />
-    <bpmn:sequenceFlow id="Flow_16mxiow" sourceRef="Gateway_00y6ag1" targetRef="Activity_PHD_Signs" />
-    <bpmn:sequenceFlow id="Flow_0apc4au" sourceRef="Activity_PHD_Signs" targetRef="Gateway_145opmc" />
-    <bpmn:sequenceFlow id="Flow_1ekbkz0" sourceRef="Gateway_0aga7ka" targetRef="Gateway_00y6ag1" />
-    <bpmn:sequenceFlow id="Flow_0pxr008" sourceRef="Gateway_00y6ag1" targetRef="Activity_Notify_PhDStudent_For_Signing" />
-    <bpmn:sequenceFlow id="Flow_1lal03r" sourceRef="Activity_Notify_PhDStudent_For_Signing" targetRef="Event_0ykymbd" />
-    <bpmn:sequenceFlow id="Flow_0mwxbjw" sourceRef="Gateway_0nc5ulp" targetRef="Gateway_08kccwb" />
-    <bpmn:sequenceFlow id="Flow_0p1halp" sourceRef="Gateway_08kccwb" targetRef="Gateway_1ra6519" />
-    <bpmn:sequenceFlow id="Flow_1tkcpjx" sourceRef="Activity_09hr2up" targetRef="Activity_Notify_Program_Director_For_Disagreement" />
-    <bpmn:sequenceFlow id="Flow_1c6p1r4" sourceRef="Activity_Notify_Program_Director_For_Disagreement" targetRef="Event_03g5osb" />
-    <bpmn:sequenceFlow id="Flow_16dwmbj" sourceRef="Gateway_145opmc" targetRef="Gateway_1f2dd1w" />
-    <bpmn:sequenceFlow id="Flow_0bw508m" name="no" sourceRef="Gateway_1f2dd1w" targetRef="Activity_09hr2up">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= notAgree != ""</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0uy8hlt" name="yes" sourceRef="Gateway_1f2dd1w" targetRef="Gateway_0nc5ulp" />
-    <bpmn:sequenceFlow id="Flow_0genhf5" sourceRef="Gateway_145opmc" targetRef="Gateway_0nc5ulp" />
-    <bpmn:sequenceFlow id="Flow_06fadpj" name="yes" sourceRef="Gateway_1ra6519" targetRef="Gateway_0pguy2h">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= programDirectorNotif != ""</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_1qvhx9u" name="no" sourceRef="Gateway_1ra6519" targetRef="Gateway_0yeky97" />
-    <bpmn:sequenceFlow id="Flow_1wxgy3z" sourceRef="Gateway_0pguy2h" targetRef="Activity_Program_Director_Signs" />
-    <bpmn:sequenceFlow id="Flow_05koynm" sourceRef="Activity_Program_Director_Signs" targetRef="Gateway_0yeky97" />
-    <bpmn:sequenceFlow id="Flow_19qe9od" sourceRef="Gateway_0pguy2h" targetRef="Activity_Notify_Program_Director_For_Signing_PostMeeting" />
-    <bpmn:sequenceFlow id="Flow_0tzttc0" sourceRef="Activity_Notify_Program_Director_For_Signing_PostMeeting" targetRef="Event_0o6lsaa" />
-    <bpmn:sequenceFlow id="Flow_1od281d" sourceRef="Gateway_0yeky97" targetRef="Activity_Build_PDF" />
+    <bpmn:boundaryEvent id="Event_GED_Deposit_Unreachable_Error" name="GED unreachable error" attachedToRef="Activity_GED_Deposit">
+      <bpmn:outgoing>Flow_1no9et7</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_1r65m7t" errorRef="Error_0ysg2s5" />
+    </bpmn:boundaryEvent>
     <bpmn:sequenceFlow id="Flow_0b0vfwv" sourceRef="Activity_Build_PDF" targetRef="Gateway_0hp9bfx" />
     <bpmn:sequenceFlow id="Flow_0bkc875" sourceRef="Gateway_0hp9bfx" targetRef="Activity_Notify_With_PDF_ProgramDirector_And_Office" />
     <bpmn:sequenceFlow id="Flow_19hd8zh" sourceRef="Activity_Notify_With_PDF_ProgramDirector_And_Office" targetRef="Activity_Notify_With_PDF_PhDStudent" />
@@ -768,19 +785,6 @@
     <bpmn:sequenceFlow id="Flow_03a8yu5" sourceRef="Gateway_1iu457q" targetRef="Event_PhD_Assess_Done" />
     <bpmn:sequenceFlow id="Flow_1no9et7" sourceRef="Event_GED_Deposit_Unreachable_Error" targetRef="Gateway_0s2fnb8" />
     <bpmn:sequenceFlow id="Flow_0ytaj1j" sourceRef="Event_GED_Deposit_Student_Folder_Unfindable_Error" targetRef="Gateway_0s2fnb8" />
-    <bpmn:sequenceFlow id="Flow_04ae09c" name="Yes" sourceRef="Gateway_1rxjsuw" targetRef="Activity_1pwsglk">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=needsImprovement!= ""</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0mjuqeo" sourceRef="Gateway_1rxjsuw" targetRef="Event_0rnj0nm" />
-    <bpmn:sequenceFlow id="Flow_0cktx9y" sourceRef="Activity_1pwsglk" targetRef="Activity_Notify_Program_Director_NeedsImprovement" />
-    <bpmn:sequenceFlow id="Flow_0557sk9" sourceRef="Activity_Notify_Program_Director_NeedsImprovement" targetRef="Event_0f9a79j" />
-    <bpmn:receiveTask id="Activity_Edit_Participants" name="Edit participants" messageRef="Message_3fu63rf">
-      <bpmn:documentation>This task will stay along the workflow, to allow app admins to change the participants, excluding the PhD students. </bpmn:documentation>
-      <bpmn:incoming>Flow_0amshgl</bpmn:incoming>
-      <bpmn:incoming>Flow_18w2lha</bpmn:incoming>
-      <bpmn:outgoing>Flow_0amshgl</bpmn:outgoing>
-    </bpmn:receiveTask>
-    <bpmn:sequenceFlow id="Flow_0amshgl" sourceRef="Activity_Edit_Participants" targetRef="Activity_Edit_Participants" />
     <bpmn:textAnnotation id="TextAnnotation_04v2gmm">
       <bpmn:text>Section A, B</bpmn:text>
     </bpmn:textAnnotation>
@@ -842,29 +846,29 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_13he9tk">
       <bpmndi:BPMNShape id="Participant_0f1vwfj_di" bpmnElement="Participant_0f1vwfj" isHorizontal="true">
-        <dc:Bounds x="152" y="85" width="4145" height="1875" />
+        <dc:Bounds x="152" y="85" width="4536" height="1875" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0nlhn1t_di" bpmnElement="Lane_admin" isHorizontal="true">
-        <dc:Bounds x="182" y="85" width="4115" height="120" />
+        <dc:Bounds x="182" y="85" width="4506" height="120" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1k7ll7j_di" bpmnElement="Lane_1k7ll7j" isHorizontal="true">
-        <dc:Bounds x="182" y="205" width="4115" height="410" />
+        <dc:Bounds x="182" y="205" width="4506" height="410" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1kybckv_di" bpmnElement="Lane_1kybckv" isHorizontal="true">
-        <dc:Bounds x="182" y="905" width="4115" height="399" />
+        <dc:Bounds x="182" y="905" width="4506" height="399" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0wb948r_di" bpmnElement="Lane_0wb948r" isHorizontal="true">
-        <dc:Bounds x="182" y="615" width="4115" height="290" />
+        <dc:Bounds x="182" y="615" width="4506" height="290" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1e7w1ps_di" bpmnElement="Lane_1e7w1ps" isHorizontal="true">
-        <dc:Bounds x="182" y="1685" width="4115" height="275" />
+        <dc:Bounds x="182" y="1685" width="4506" height="275" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1w3ugn8_di" bpmnElement="Lane_1w3ugn8" isHorizontal="true">
-        <dc:Bounds x="182" y="1505" width="4115" height="180" />
+        <dc:Bounds x="182" y="1505" width="4506" height="180" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0kmegd1_di" bpmnElement="Lane_0kmegd1" isHorizontal="true">
-        <dc:Bounds x="182" y="1304" width="4115" height="201" />
+        <dc:Bounds x="182" y="1304" width="4506" height="201" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1u8sie4_di" bpmnElement="Gateway_Thesis_Director_Check1" isMarkerVisible="true">
         <dc:Bounds x="725" y="1050" width="50" height="50" />
@@ -1010,9 +1014,6 @@
       <bpmndi:BPMNShape id="Activity_0f03q9c_di" bpmnElement="Activity_Notify_PhDStudent_For_Signing">
         <dc:Bounds x="1855" y="795" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_18i972i_di" bpmnElement="Gateway_08kccwb">
-        <dc:Bounds x="2700" y="1530" width="50" height="50" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1686jxu_di" bpmnElement="Activity_Notify_Program_Director_For_Disagreement">
         <dc:Bounds x="2148" y="1585" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -1028,53 +1029,11 @@
       <bpmndi:BPMNShape id="Activity_09hr2up_di" bpmnElement="Activity_09hr2up">
         <dc:Bounds x="2148" y="1480" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1ra6519_di" bpmnElement="Gateway_1ra6519" isMarkerVisible="true">
-        <dc:Bounds x="2830" y="1530" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2815" y="1587" width="82" height="40" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1mwo40u_di" bpmnElement="Activity_Program_Director_Signs">
-        <dc:Bounds x="3125" y="1515" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0pguy2h_di" bpmnElement="Gateway_0pguy2h">
-        <dc:Bounds x="3020" y="1530" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0s9w3zi_di" bpmnElement="Activity_Notify_Program_Director_For_Signing_PostMeeting">
-        <dc:Bounds x="2995" y="1595" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0etdbm8_di" bpmnElement="Activity_Build_PDF">
-        <dc:Bounds x="3125" y="275" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0jbwxb1_di" bpmnElement="Activity_Notify_With_PDF_ProgramDirector_And_Office">
-        <dc:Bounds x="3387" y="275" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0pelgwh_di" bpmnElement="Activity_Notify_With_PDF_PhDStudent">
-        <dc:Bounds x="3567" y="275" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0vwjqq9_di" bpmnElement="Activity_GED_Deposit">
-        <dc:Bounds x="3387" y="385" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1234dlc_di" bpmnElement="Activity_Notify_Ask_For_Manual_Deposit">
-        <dc:Bounds x="3567" y="485" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0e3v8s8_di" bpmnElement="Gateway_0hp9bfx">
-        <dc:Bounds x="3272" y="290" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0gs5ip4_di" bpmnElement="Gateway_1iu457q">
-        <dc:Bounds x="3772" y="400" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0yeky97_di" bpmnElement="Gateway_0yeky97" isMarkerVisible="true">
-        <dc:Bounds x="2830" y="430" width="50" height="50" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0aga7ka_di" bpmnElement="Gateway_0aga7ka" isMarkerVisible="true">
         <dc:Bounds x="1709" y="945" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0nc5ulp_di" bpmnElement="Gateway_0nc5ulp" isMarkerVisible="true">
         <dc:Bounds x="2340" y="690" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0s2fnb8_di" bpmnElement="Gateway_0s2fnb8" isMarkerVisible="true">
-        <dc:Bounds x="3480" y="500" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_1k2asd0" bpmnElement="Gateway_1rxjsuw" isMarkerVisible="true">
         <dc:Bounds x="1840" y="1170" width="50" height="50" />
@@ -1088,12 +1047,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_0yicexh" bpmnElement="Activity_Notify_Program_Director_NeedsImprovement">
         <dc:Bounds x="1815" y="1595" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_10y2s0x_di" bpmnElement="Event_PhD_Assess_Done">
-        <dc:Bounds x="3949" y="407" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="3923" y="453" width="88" height="27" />
-        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1gxye5u_di" bpmnElement="Event_1gxye5u">
         <dc:Bounds x="1627" y="1242" width="36" height="36" />
@@ -1117,12 +1070,6 @@
         <dc:Bounds x="2307" y="1607" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="2282" y="1650" width="86" height="53" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0o6lsaa_di" bpmnElement="Event_0o6lsaa">
-        <dc:Bounds x="3147" y="1617" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="3123" y="1660" width="86" height="53" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0ykymbd_di" bpmnElement="Event_0ykymbd">
@@ -1164,16 +1111,73 @@
       <bpmndi:BPMNShape id="TextAnnotation_0qwyl9d_di" bpmnElement="TextAnnotation_0qwyl9d">
         <dc:Bounds x="1594" y="1121" width="100" height="54" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0c3qeol_di" bpmnElement="Event_GED_Deposit_Student_Folder_Unfindable_Error">
-        <dc:Bounds x="3429" y="447" width="36" height="36" />
+      <bpmndi:BPMNShape id="Gateway_1ra6519_di" bpmnElement="Gateway_1ra6519" isMarkerVisible="true">
+        <dc:Bounds x="2620" y="1530" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="3456" y="481" width="82" height="27" />
+          <dc:Bounds x="2606" y="1587" width="81" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mwo40u_di" bpmnElement="Activity_Program_Director_Signs">
+        <dc:Bounds x="2850" y="1515" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0pguy2h_di" bpmnElement="Gateway_0pguy2h">
+        <dc:Bounds x="2745" y="1530" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0s9w3zi_di" bpmnElement="Activity_Notify_Program_Director_For_Signing_PostMeeting">
+        <dc:Bounds x="2720" y="1595" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0yeky97_di" bpmnElement="Gateway_0yeky97" isMarkerVisible="true">
+        <dc:Bounds x="2975" y="275" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0o6lsaa_di" bpmnElement="Event_0o6lsaa">
+        <dc:Bounds x="2872" y="1617" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2848" y="1660" width="86" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_18i972i_di" bpmnElement="Gateway_08kccwb">
+        <dc:Bounds x="3115" y="275" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0etdbm8_di" bpmnElement="Activity_Build_PDF">
+        <dc:Bounds x="3260" y="260" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jbwxb1_di" bpmnElement="Activity_Notify_With_PDF_ProgramDirector_And_Office">
+        <dc:Bounds x="3522" y="260" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pelgwh_di" bpmnElement="Activity_Notify_With_PDF_PhDStudent">
+        <dc:Bounds x="3702" y="260" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0vwjqq9_di" bpmnElement="Activity_GED_Deposit">
+        <dc:Bounds x="3522" y="370" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1234dlc_di" bpmnElement="Activity_Notify_Ask_For_Manual_Deposit">
+        <dc:Bounds x="3702" y="470" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0e3v8s8_di" bpmnElement="Gateway_0hp9bfx">
+        <dc:Bounds x="3407" y="275" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0gs5ip4_di" bpmnElement="Gateway_1iu457q">
+        <dc:Bounds x="3907" y="385" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0s2fnb8_di" bpmnElement="Gateway_0s2fnb8" isMarkerVisible="true">
+        <dc:Bounds x="3615" y="485" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_10y2s0x_di" bpmnElement="Event_PhD_Assess_Done">
+        <dc:Bounds x="4084" y="392" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4058" y="438" width="88" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0c3qeol_di" bpmnElement="Event_GED_Deposit_Student_Folder_Unfindable_Error">
+        <dc:Bounds x="3564" y="432" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3591" y="466" width="82" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1ogv24m_di" bpmnElement="Event_GED_Deposit_Unreachable_Error">
-        <dc:Bounds x="3389" y="447" width="36" height="36" />
+        <dc:Bounds x="3524" y="432" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="3314" y="481" width="88" height="27" />
+          <dc:Bounds x="3449" y="466" width="88" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0n5j6j2_di" bpmnElement="Flow_0n5j6j2">
@@ -1389,8 +1393,8 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1vcraeo_di" bpmnElement="Flow_1vcraeo">
         <di:waypoint x="1784" y="1780" />
-        <di:waypoint x="2725" y="1780" />
-        <di:waypoint x="2725" y="1580" />
+        <di:waypoint x="3140" y="1780" />
+        <di:waypoint x="3140" y="325" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_16mxiow_di" bpmnElement="Flow_16mxiow">
         <di:waypoint x="1930" y="715" />
@@ -1412,15 +1416,6 @@
       <bpmndi:BPMNEdge id="Flow_1lal03r_di" bpmnElement="Flow_1lal03r">
         <di:waypoint x="1955" y="835" />
         <di:waypoint x="2007" y="835" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0mwxbjw_di" bpmnElement="Flow_0mwxbjw">
-        <di:waypoint x="2390" y="715" />
-        <di:waypoint x="2725" y="715" />
-        <di:waypoint x="2725" y="1530" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0p1halp_di" bpmnElement="Flow_0p1halp">
-        <di:waypoint x="2750" y="1555" />
-        <di:waypoint x="2830" y="1555" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1tkcpjx_di" bpmnElement="Flow_1tkcpjx">
         <di:waypoint x="2198" y="1560" />
@@ -1452,92 +1447,6 @@
       <bpmndi:BPMNEdge id="Flow_0genhf5_di" bpmnElement="Flow_0genhf5">
         <di:waypoint x="2223" y="715" />
         <di:waypoint x="2340" y="715" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_06fadpj_di" bpmnElement="Flow_06fadpj">
-        <di:waypoint x="2880" y="1555" />
-        <di:waypoint x="3020" y="1555" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2875" y="1537" width="18" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1qvhx9u_di" bpmnElement="Flow_1qvhx9u">
-        <di:waypoint x="2855" y="1530" />
-        <di:waypoint x="2855" y="480" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2864" y="1514" width="13" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1wxgy3z_di" bpmnElement="Flow_1wxgy3z">
-        <di:waypoint x="3070" y="1555" />
-        <di:waypoint x="3125" y="1555" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_05koynm_di" bpmnElement="Flow_05koynm">
-        <di:waypoint x="3225" y="1555" />
-        <di:waypoint x="3275" y="1555" />
-        <di:waypoint x="3275" y="455" />
-        <di:waypoint x="2880" y="455" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_19qe9od_di" bpmnElement="Flow_19qe9od">
-        <di:waypoint x="3045" y="1580" />
-        <di:waypoint x="3045" y="1595" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0tzttc0_di" bpmnElement="Flow_0tzttc0">
-        <di:waypoint x="3095" y="1635" />
-        <di:waypoint x="3147" y="1635" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1od281d_di" bpmnElement="Flow_1od281d">
-        <di:waypoint x="2855" y="430" />
-        <di:waypoint x="2855" y="315" />
-        <di:waypoint x="3125" y="315" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0b0vfwv_di" bpmnElement="Flow_0b0vfwv">
-        <di:waypoint x="3225" y="315" />
-        <di:waypoint x="3272" y="315" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0bkc875_di" bpmnElement="Flow_0bkc875">
-        <di:waypoint x="3322" y="315" />
-        <di:waypoint x="3387" y="315" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_19hd8zh_di" bpmnElement="Flow_19hd8zh">
-        <di:waypoint x="3487" y="315" />
-        <di:waypoint x="3567" y="315" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1tpm1z9_di" bpmnElement="Flow_1tpm1z9">
-        <di:waypoint x="3667" y="315" />
-        <di:waypoint x="3797" y="315" />
-        <di:waypoint x="3797" y="400" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0z5b27w_di" bpmnElement="Flow_0z5b27w">
-        <di:waypoint x="3297" y="340" />
-        <di:waypoint x="3297" y="425" />
-        <di:waypoint x="3387" y="425" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1uvq6qs_di" bpmnElement="Flow_1uvq6qs">
-        <di:waypoint x="3487" y="425" />
-        <di:waypoint x="3772" y="425" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1fl8szj_di" bpmnElement="Flow_1fl8szj">
-        <di:waypoint x="3530" y="525" />
-        <di:waypoint x="3567" y="525" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0qltexw_di" bpmnElement="Flow_0qltexw">
-        <di:waypoint x="3667" y="525" />
-        <di:waypoint x="3797" y="525" />
-        <di:waypoint x="3797" y="450" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_03a8yu5_di" bpmnElement="Flow_03a8yu5">
-        <di:waypoint x="3822" y="425" />
-        <di:waypoint x="3949" y="425" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1no9et7_di" bpmnElement="Flow_1no9et7">
-        <di:waypoint x="3407" y="483" />
-        <di:waypoint x="3407" y="550" />
-        <di:waypoint x="3505" y="550" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ytaj1j_di" bpmnElement="Flow_0ytaj1j">
-        <di:waypoint x="3447" y="483" />
-        <di:waypoint x="3447" y="525" />
-        <di:waypoint x="3480" y="525" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_04ae09c_di" bpmnElement="Flow_04ae09c">
         <di:waypoint x="1865" y="1220" />
@@ -1583,6 +1492,101 @@
       <bpmndi:BPMNEdge id="Association_0x6dd06_di" bpmnElement="Association_0x6dd06">
         <di:waypoint x="1635" y="1115" />
         <di:waypoint x="1637" y="1121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1b37tsr_di" bpmnElement="Flow_1b37tsr">
+        <di:waypoint x="2390" y="715" />
+        <di:waypoint x="2500" y="715" />
+        <di:waypoint x="2500" y="1555" />
+        <di:waypoint x="2620" y="1555" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1od281d_di" bpmnElement="Flow_1od281d">
+        <di:waypoint x="3025" y="300" />
+        <di:waypoint x="3115" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1de1m0v_di" bpmnElement="Flow_1de1m0v">
+        <di:waypoint x="3165" y="300" />
+        <di:waypoint x="3260" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06fadpj_di" bpmnElement="Flow_06fadpj">
+        <di:waypoint x="2670" y="1555" />
+        <di:waypoint x="2745" y="1555" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2663" y="1537" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qvhx9u_di" bpmnElement="Flow_1qvhx9u">
+        <di:waypoint x="2645" y="1530" />
+        <di:waypoint x="2645" y="300" />
+        <di:waypoint x="2975" y="300" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2641" y="309" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wxgy3z_di" bpmnElement="Flow_1wxgy3z">
+        <di:waypoint x="2795" y="1555" />
+        <di:waypoint x="2850" y="1555" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05koynm_di" bpmnElement="Flow_05koynm">
+        <di:waypoint x="2950" y="1555" />
+        <di:waypoint x="3000" y="1555" />
+        <di:waypoint x="3000" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19qe9od_di" bpmnElement="Flow_19qe9od">
+        <di:waypoint x="2770" y="1580" />
+        <di:waypoint x="2770" y="1595" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0tzttc0_di" bpmnElement="Flow_0tzttc0">
+        <di:waypoint x="2820" y="1635" />
+        <di:waypoint x="2872" y="1635" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0b0vfwv_di" bpmnElement="Flow_0b0vfwv">
+        <di:waypoint x="3360" y="300" />
+        <di:waypoint x="3407" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bkc875_di" bpmnElement="Flow_0bkc875">
+        <di:waypoint x="3457" y="300" />
+        <di:waypoint x="3522" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19hd8zh_di" bpmnElement="Flow_19hd8zh">
+        <di:waypoint x="3622" y="300" />
+        <di:waypoint x="3702" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1tpm1z9_di" bpmnElement="Flow_1tpm1z9">
+        <di:waypoint x="3802" y="300" />
+        <di:waypoint x="3932" y="300" />
+        <di:waypoint x="3932" y="385" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0z5b27w_di" bpmnElement="Flow_0z5b27w">
+        <di:waypoint x="3432" y="325" />
+        <di:waypoint x="3432" y="410" />
+        <di:waypoint x="3522" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1uvq6qs_di" bpmnElement="Flow_1uvq6qs">
+        <di:waypoint x="3622" y="425" />
+        <di:waypoint x="3922" y="425" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fl8szj_di" bpmnElement="Flow_1fl8szj">
+        <di:waypoint x="3665" y="510" />
+        <di:waypoint x="3702" y="510" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qltexw_di" bpmnElement="Flow_0qltexw">
+        <di:waypoint x="3802" y="510" />
+        <di:waypoint x="3932" y="510" />
+        <di:waypoint x="3932" y="435" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03a8yu5_di" bpmnElement="Flow_03a8yu5">
+        <di:waypoint x="3957" y="410" />
+        <di:waypoint x="4084" y="410" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1no9et7_di" bpmnElement="Flow_1no9et7">
+        <di:waypoint x="3542" y="468" />
+        <di:waypoint x="3542" y="535" />
+        <di:waypoint x="3640" y="535" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ytaj1j_di" bpmnElement="Flow_0ytaj1j">
+        <di:waypoint x="3582" y="468" />
+        <di:waypoint x="3582" y="510" />
+        <di:waypoint x="3615" y="510" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
