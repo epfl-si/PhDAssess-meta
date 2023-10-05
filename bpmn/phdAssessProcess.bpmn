@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.15.1">
   <bpmn:collaboration id="Collaboration_13he9tk">
     <bpmn:participant id="Participant_0f1vwfj" name="PhD Assess" processRef="phdAssessProcess" />
   </bpmn:collaboration>
@@ -141,7 +141,7 @@
         <zeebe:taskHeaders>
           <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;608a65b2fa8cfbee1a2179d1&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a08952f89aa06c9e1d17a&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Choose participants&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;read_own&#34;     },     {       &#34;roles&#34;: [         &#34;6086b4372f560010780a0f7e&#34;,         &#34;6086b4382f56006d660a0f84&#34;,         &#34;6086b4382f5600137f0a0f86&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_read&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_write&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_admin&#34;     }   ],   &#34;submissionAccess&#34;: [     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;create_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;read_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;read_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;update_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_own&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;delete_all&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_read&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_write&#34;     },     {       &#34;roles&#34;: [],       &#34;type&#34;: &#34;team_admin&#34;     }   ],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;chooseParticipants&#34;,   &#34;path&#34;: &#34;chooseparticipants&#34;,   &#34;project&#34;: &#34;6086b4372f560027570a0f78&#34;,   &#34;created&#34;: &#34;2021-04-29T07:52:18.208Z&#34;,   &#34;modified&#34;: &#34;2021-05-06T14:02:50.982Z&#34;,   &#34;machineName&#34;: &#34;zqtizxixjkxqkfi:chooseParticipants&#34;,   &#34;components&#34;: [     {       &#34;label&#34;: &#34;Program assistant sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;customDefaultValue&#34;: &#34;value = Meteor.user()._id;&#34;,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;programAssistantSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Doctoral program&#34;,       &#34;placeholder&#34;: &#34;ED__&#34;,       &#34;tableView&#34;: true,       &#34;case&#34;: &#34;uppercase&#34;,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 4,         &#34;maxLength&#34;: 4       },       &#34;key&#34;: &#34;doctoralProgramName&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Doctoral program’s administrative office email&#34;,       &#34;customClass&#34;: &#34;form-control:disabled&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;case&#34;: &#34;lowercase&#34;,       &#34;clearOnHide&#34;: false,       &#34;calculateValue&#34;: &#34;value = data.doctoralProgramName.toLowerCase() + \&#34;@epfl.ch\&#34;;&#34;,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;doctoralProgramEmail&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;altInput&#34;: true,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Link to annual report documentation&#34;,       &#34;placeholder&#34;: &#34;example : https://www.epfl.ch/education/phd/edam-advanced-manufacturing/edam-annual-report/&#34;,       &#34;tableView&#34;: true,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;docLinkAnnualReport&#34;,       &#34;type&#34;: &#34;url&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Doctoral candidate sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;phdStudentSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Thesis director sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;thesisDirectorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Thesis co-director sciper&#34;,       &#34;tableView&#34;: true,       &#34;validate&#34;: {         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 7       },       &#34;key&#34;: &#34;thesisCoDirectorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Program director sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true,         &#34;minLength&#34;: 6,         &#34;maxLength&#34;: 6       },       &#34;key&#34;: &#34;programDirectorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Mentor sciper&#34;,       &#34;inputMask&#34;: &#34;999999&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;mentorSciper&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;label&#34;: &#34;Credits needed for this program:&#34;,       &#34;inputMask&#34;: &#34;99&#34;,       &#34;tableView&#34;: true,       &#34;persistent&#34;: false,       &#34;validate&#34;: {         &#34;required&#34;: true       },       &#34;key&#34;: &#34;creditsNeeded&#34;,       &#34;type&#34;: &#34;textfield&#34;,       &#34;input&#34;: true     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
           <zeebe:header key="title" value="Assigning participants" />
-          <zeebe:header key="assigneeSciperFieldName" value="programAssistantSciper" />
+          <zeebe:header key="assigneeSciperFieldName" value="created_by" />
         </zeebe:taskHeaders>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1p551fj</bpmn:incoming>
@@ -1094,23 +1094,6 @@
         <dc:Bounds x="530" y="100" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_04v2gmm_di" bpmnElement="TextAnnotation_04v2gmm">
-        <dc:Bounds x="630" y="770" width="100" height="30" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0j1km92_di" bpmnElement="TextAnnotation_0j1km92">
-        <dc:Bounds x="1109" y="1425" width="100" height="30" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1s4btpj" bpmnElement="TextAnnotation_1c8hagf">
-        <dc:Bounds x="1074" y="800" width="100" height="30" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0vy5jzl_di" bpmnElement="TextAnnotation_0vy5jzl">
-        <dc:Bounds x="1089" y="1133" width="100" height="30" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0qwyl9d_di" bpmnElement="TextAnnotation_0qwyl9d">
-        <dc:Bounds x="1594" y="1121" width="100" height="54" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1ra6519_di" bpmnElement="Gateway_1ra6519" isMarkerVisible="true">
         <dc:Bounds x="2620" y="1530" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -1168,16 +1151,33 @@
           <dc:Bounds x="4058" y="438" width="88" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0c3qeol_di" bpmnElement="Event_GED_Deposit_Student_Folder_Unfindable_Error">
-        <dc:Bounds x="3564" y="432" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="3591" y="466" width="82" height="27" />
-        </bpmndi:BPMNLabel>
+      <bpmndi:BPMNShape id="TextAnnotation_04v2gmm_di" bpmnElement="TextAnnotation_04v2gmm">
+        <dc:Bounds x="630" y="770" width="100" height="30" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0j1km92_di" bpmnElement="TextAnnotation_0j1km92">
+        <dc:Bounds x="1109" y="1425" width="100" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1s4btpj" bpmnElement="TextAnnotation_1c8hagf">
+        <dc:Bounds x="1074" y="800" width="100" height="30" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0vy5jzl_di" bpmnElement="TextAnnotation_0vy5jzl">
+        <dc:Bounds x="1089" y="1133" width="100" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0qwyl9d_di" bpmnElement="TextAnnotation_0qwyl9d">
+        <dc:Bounds x="1594" y="1121" width="100" height="54" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1ogv24m_di" bpmnElement="Event_GED_Deposit_Unreachable_Error">
         <dc:Bounds x="3524" y="432" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="3449" y="466" width="88" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0c3qeol_di" bpmnElement="Event_GED_Deposit_Student_Folder_Unfindable_Error">
+        <dc:Bounds x="3564" y="432" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3591" y="466" width="82" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0n5j6j2_di" bpmnElement="Flow_0n5j6j2">
@@ -1473,26 +1473,6 @@
         <di:waypoint x="650" y="160" />
         <di:waypoint x="630" y="160" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_033zd9d_di" bpmnElement="Association_033zd9d">
-        <di:waypoint x="629" y="749" />
-        <di:waypoint x="659" y="770" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_03p4xdz_di" bpmnElement="Association_03p4xdz">
-        <di:waypoint x="1116" y="1115" />
-        <di:waypoint x="1129" y="1133" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_10enfvy_di" bpmnElement="Association_10enfvy">
-        <di:waypoint x="1122" y="1395" />
-        <di:waypoint x="1147" y="1425" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_188cxvr_di" bpmnElement="Association_188cxvr">
-        <di:waypoint x="1124" y="800" />
-        <di:waypoint x="1124" y="755" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_0x6dd06_di" bpmnElement="Association_0x6dd06">
-        <di:waypoint x="1635" y="1115" />
-        <di:waypoint x="1637" y="1121" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1b37tsr_di" bpmnElement="Flow_1b37tsr">
         <di:waypoint x="2390" y="715" />
         <di:waypoint x="2500" y="715" />
@@ -1587,6 +1567,26 @@
         <di:waypoint x="3582" y="468" />
         <di:waypoint x="3582" y="510" />
         <di:waypoint x="3615" y="510" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_033zd9d_di" bpmnElement="Association_033zd9d">
+        <di:waypoint x="629" y="749" />
+        <di:waypoint x="659" y="770" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_03p4xdz_di" bpmnElement="Association_03p4xdz">
+        <di:waypoint x="1116" y="1115" />
+        <di:waypoint x="1129" y="1133" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_10enfvy_di" bpmnElement="Association_10enfvy">
+        <di:waypoint x="1122" y="1395" />
+        <di:waypoint x="1147" y="1425" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_188cxvr_di" bpmnElement="Association_188cxvr">
+        <di:waypoint x="1124" y="800" />
+        <di:waypoint x="1124" y="755" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0x6dd06_di" bpmnElement="Association_0x6dd06">
+        <di:waypoint x="1635" y="1115" />
+        <di:waypoint x="1637" y="1121" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
