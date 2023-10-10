@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.15.1">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <bpmn:collaboration id="Collaboration_13he9tk">
     <bpmn:participant id="Participant_0f1vwfj" name="PhD Assess" processRef="phdAssessProcess" />
   </bpmn:collaboration>
@@ -50,6 +50,7 @@
         <bpmn:flowNodeRef>Gateway_1f2dd1w</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_145opmc</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_0ykymbd</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0cbzwgd</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1kybckv" name="Thesis director">
         <bpmn:flowNodeRef>Gateway_Thesis_Director_Check1</bpmn:flowNodeRef>
@@ -67,7 +68,6 @@
         <bpmn:flowNodeRef>Gateway_1m9wltd</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_Thesis_Director_Collaborative_Review_To_Do</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0yid7oj</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Gateway_0aga7ka</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1rxjsuw</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_1gxye5u</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_09asryp</bpmn:flowNodeRef>
@@ -296,9 +296,10 @@
       <bpmn:outgoing>Flow_0pq7nor</bpmn:outgoing>
       <bpmn:outgoing>Flow_1o8eczd</bpmn:outgoing>
     </bpmn:parallelGateway>
-    <bpmn:exclusiveGateway id="Gateway_unsatisfactory_check" name="unsatisfactory ?">
+    <bpmn:exclusiveGateway id="Gateway_unsatisfactory_check" name="unsatisfactory ?" default="Flow_0nb0m4u">
       <bpmn:incoming>Flow_0pq7nor</bpmn:incoming>
       <bpmn:outgoing>Flow_1jkk0ln</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0nb0m4u</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:serviceTask id="Activity_Notify_Program_Director_Unsatisfacoty" name="Notify the Program Director">
       <bpmn:extensionElements>
@@ -409,7 +410,7 @@
       <bpmn:outgoing>Flow_0apc4au</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:parallelGateway id="Gateway_00y6ag1">
-      <bpmn:incoming>Flow_1ekbkz0</bpmn:incoming>
+      <bpmn:incoming>Flow_1o8eczd</bpmn:incoming>
       <bpmn:outgoing>Flow_16mxiow</bpmn:outgoing>
       <bpmn:outgoing>Flow_0pxr008</bpmn:outgoing>
     </bpmn:parallelGateway>
@@ -449,6 +450,7 @@
     <bpmn:exclusiveGateway id="Gateway_1f2dd1w" name="agree ?">
       <bpmn:incoming>Flow_16dwmbj</bpmn:incoming>
       <bpmn:outgoing>Flow_0bw508m</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0uof76a</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:parallelGateway id="Gateway_145opmc">
       <bpmn:incoming>Flow_0apc4au</bpmn:incoming>
@@ -468,11 +470,8 @@
       <bpmn:incoming>Flow_0bw508m</bpmn:incoming>
       <bpmn:outgoing>Flow_1tkcpjx</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:exclusiveGateway id="Gateway_0aga7ka">
-      <bpmn:incoming>Flow_1o8eczd</bpmn:incoming>
-      <bpmn:outgoing>Flow_1ekbkz0</bpmn:outgoing>
-    </bpmn:exclusiveGateway>
     <bpmn:exclusiveGateway id="Gateway_1rxjsuw" name="needs improvement ?" default="Flow_0mjuqeo">
+      <bpmn:incoming>Flow_0nb0m4u</bpmn:incoming>
       <bpmn:outgoing>Flow_04ae09c</bpmn:outgoing>
       <bpmn:outgoing>Flow_0mjuqeo</bpmn:outgoing>
     </bpmn:exclusiveGateway>
@@ -577,7 +576,7 @@
     <bpmn:sequenceFlow id="Flow_0r3q628" name="no" sourceRef="Gateway_Thesis_Director_Check2" targetRef="Gateway_1m9wltd" />
     <bpmn:sequenceFlow id="Flow_1sd2f0p" sourceRef="Activity_Thesis_Director_Collaborative_Review_Signs" targetRef="Gateway_1qftu4l" />
     <bpmn:sequenceFlow id="Flow_0pq7nor" sourceRef="Gateway_1qftu4l" targetRef="Gateway_unsatisfactory_check" />
-    <bpmn:sequenceFlow id="Flow_1o8eczd" sourceRef="Gateway_1qftu4l" targetRef="Gateway_0aga7ka" />
+    <bpmn:sequenceFlow id="Flow_1o8eczd" sourceRef="Gateway_1qftu4l" targetRef="Gateway_00y6ag1" />
     <bpmn:sequenceFlow id="Flow_1jkk0ln" name="Yes" sourceRef="Gateway_unsatisfactory_check" targetRef="Activity_153g1f0">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">= unsatisfactroy!= ""</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
@@ -591,7 +590,6 @@
     <bpmn:sequenceFlow id="Flow_1vcraeo" sourceRef="Activity_Post_Mentor_Meeting_Mentor_Signs" targetRef="Gateway_08kccwb" />
     <bpmn:sequenceFlow id="Flow_16mxiow" sourceRef="Gateway_00y6ag1" targetRef="Activity_PHD_Signs" />
     <bpmn:sequenceFlow id="Flow_0apc4au" sourceRef="Activity_PHD_Signs" targetRef="Gateway_145opmc" />
-    <bpmn:sequenceFlow id="Flow_1ekbkz0" sourceRef="Gateway_0aga7ka" targetRef="Gateway_00y6ag1" />
     <bpmn:sequenceFlow id="Flow_0pxr008" sourceRef="Gateway_00y6ag1" targetRef="Activity_Notify_PhDStudent_For_Signing" />
     <bpmn:sequenceFlow id="Flow_1lal03r" sourceRef="Activity_Notify_PhDStudent_For_Signing" targetRef="Event_0ykymbd" />
     <bpmn:sequenceFlow id="Flow_1tkcpjx" sourceRef="Activity_09hr2up" targetRef="Activity_Notify_Program_Director_For_Disagreement" />
@@ -776,6 +774,11 @@
     <bpmn:sequenceFlow id="Flow_03a8yu5" sourceRef="Gateway_1iu457q" targetRef="Event_PhD_Assess_Done" />
     <bpmn:sequenceFlow id="Flow_1no9et7" sourceRef="Event_GED_Deposit_Unreachable_Error" targetRef="Gateway_0s2fnb8" />
     <bpmn:sequenceFlow id="Flow_0ytaj1j" sourceRef="Event_GED_Deposit_Student_Folder_Unfindable_Error" targetRef="Gateway_0s2fnb8" />
+    <bpmn:sequenceFlow id="Flow_0nb0m4u" sourceRef="Gateway_unsatisfactory_check" targetRef="Gateway_1rxjsuw" />
+    <bpmn:endEvent id="Event_0cbzwgd" name="End_Activity_test_not_agree">
+      <bpmn:incoming>Flow_0uof76a</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0uof76a" sourceRef="Gateway_1f2dd1w" targetRef="Event_0cbzwgd" />
     <bpmn:textAnnotation id="TextAnnotation_04v2gmm">
       <bpmn:text>Section A, B</bpmn:text>
     </bpmn:textAnnotation>
@@ -1020,9 +1023,6 @@
       <bpmndi:BPMNShape id="Activity_09hr2up_di" bpmnElement="Activity_09hr2up">
         <dc:Bounds x="2148" y="1480" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0aga7ka_di" bpmnElement="Gateway_0aga7ka" isMarkerVisible="true">
-        <dc:Bounds x="1709" y="945" width="50" height="50" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_1k2asd0" bpmnElement="Gateway_1rxjsuw" isMarkerVisible="true">
         <dc:Bounds x="1840" y="1170" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -1155,6 +1155,12 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_0qwyl9d_di" bpmnElement="TextAnnotation_0qwyl9d">
         <dc:Bounds x="1594" y="1121" width="100" height="54" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_17m0jrp" bpmnElement="Event_0cbzwgd">
+        <dc:Bounds x="2292" y="817" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2272" y="860" width="82" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0c3qeol_di" bpmnElement="Event_GED_Deposit_Student_Folder_Unfindable_Error">
         <dc:Bounds x="3399" y="432" width="36" height="36" />
@@ -1342,13 +1348,14 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1o8eczd_di" bpmnElement="Flow_1o8eczd">
         <di:waypoint x="1734" y="1050" />
-        <di:waypoint x="1734" y="995" />
+        <di:waypoint x="1734" y="715" />
+        <di:waypoint x="1880" y="715" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1jkk0ln_di" bpmnElement="Flow_1jkk0ln">
         <di:waypoint x="1734" y="1220" />
         <di:waypoint x="1734" y="1490" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1755" y="1217" width="19" height="14" />
+          <dc:Bounds x="1741" y="1233" width="18" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_08rxq4y_di" bpmnElement="Flow_08rxq4y">
@@ -1391,11 +1398,6 @@
       <bpmndi:BPMNEdge id="Flow_0apc4au_di" bpmnElement="Flow_0apc4au">
         <di:waypoint x="2095" y="715" />
         <di:waypoint x="2173" y="715" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1ekbkz0_di" bpmnElement="Flow_1ekbkz0">
-        <di:waypoint x="1734" y="945" />
-        <di:waypoint x="1734" y="715" />
-        <di:waypoint x="1880" y="715" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0pxr008_di" bpmnElement="Flow_0pxr008">
         <di:waypoint x="1905" y="740" />
@@ -1563,6 +1565,14 @@
       <bpmndi:BPMNEdge id="Association_0x6dd06_di" bpmnElement="Association_0x6dd06">
         <di:waypoint x="1635" y="1115" />
         <di:waypoint x="1637" y="1121" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0nb0m4u_di" bpmnElement="Flow_0nb0m4u">
+        <di:waypoint x="1759" y="1195" />
+        <di:waypoint x="1840" y="1195" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0uof76a_di" bpmnElement="Flow_0uof76a">
+        <di:waypoint x="2223" y="835" />
+        <di:waypoint x="2292" y="835" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
