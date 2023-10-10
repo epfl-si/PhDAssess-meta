@@ -447,7 +447,7 @@
       <bpmn:incoming>Flow_1tkcpjx</bpmn:incoming>
       <bpmn:outgoing>Flow_1c6p1r4</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:exclusiveGateway id="Gateway_1f2dd1w" name="agree ?">
+    <bpmn:exclusiveGateway id="Gateway_1f2dd1w" name="agree ?" default="Flow_0uof76a">
       <bpmn:incoming>Flow_16dwmbj</bpmn:incoming>
       <bpmn:outgoing>Flow_0bw508m</bpmn:outgoing>
       <bpmn:outgoing>Flow_0uof76a</bpmn:outgoing>
