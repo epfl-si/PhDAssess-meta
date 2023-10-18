@@ -802,36 +802,6 @@
   </bpmn:process>
   <bpmn:error id="Error_0ysg2s5" name="Error_GED_Deposit_Unreachable" errorCode="504" />
   <bpmn:error id="Error_1yas1pq" name="Error_GED_Deposit_Student_Folder_Unfindable" errorCode="404" />
-  <bpmn:message id="Message_0qrt55s" name="Activity_PHD_fills_annual_report">
-    <bpmn:extensionElements>
-      <zeebe:subscription correlationKey="=&#34;Activity_PHD_fills_annual_report&#34;+UID" />
-    </bpmn:extensionElements>
-  </bpmn:message>
-  <bpmn:message id="Message_1afc20t" name="Activity_Thesis_Director_fills_annual_report">
-    <bpmn:extensionElements>
-      <zeebe:subscription correlationKey="=&#34;Activity_Thesis_Director_fills_annual_report&#34; +UID" />
-    </bpmn:extensionElements>
-  </bpmn:message>
-  <bpmn:message id="Message_2h3kj1r" name="Activity_Thesis_Co_Director_fills_annual_report">
-    <bpmn:extensionElements>
-      <zeebe:subscription correlationKey="=&#34;Activity_Thesis_Co_Director_fills_annual_report&#34; + UID" />
-    </bpmn:extensionElements>
-  </bpmn:message>
-  <bpmn:message id="Message_3ds8efv" name="Activity_Thesis_Director_Collaborative_Review_Signs">
-    <bpmn:extensionElements>
-      <zeebe:subscription correlationKey="=&#34;Activity_Thesis_Director_Collaborative_Review_Signs&#34; + UID" />
-    </bpmn:extensionElements>
-  </bpmn:message>
-  <bpmn:message id="Message_084a6gj" name="Activity_PHD_Signs">
-    <bpmn:extensionElements>
-      <zeebe:subscription correlationKey="=&#34;Activity_PHD_Signs&#34;+UID" />
-    </bpmn:extensionElements>
-  </bpmn:message>
-  <bpmn:message id="Message_28j8o6g" name="Activity_Post_Mentor_Meeting_Mentor_Signs">
-    <bpmn:extensionElements>
-      <zeebe:subscription correlationKey="=&#34;Activity_Post_Mentor_Meeting_Mentor_Signs&#34;+UID" />
-    </bpmn:extensionElements>
-  </bpmn:message>
   <bpmn:message id="Message_3fu63rf" name="Message_update_participants">
     <bpmn:extensionElements>
       <zeebe:subscription correlationKey="=uuid" />
