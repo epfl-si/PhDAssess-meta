@@ -39,6 +39,7 @@ interface _PhDAssessVariables {
   haveTheObjectivesChangedInThePastYearIfSoWhyAndHow: string | undefined;
   mentorDate: string | undefined;
   notAgree: string | undefined;
+  notificationLogs: [];
   PDF: string | undefined;
   phdComment: string | undefined;
   phdComment1: string | undefined;
