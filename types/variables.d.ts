@@ -8,6 +8,7 @@ import {StepsDefinition} from "./dashboards";
 // these are created at the start of the all instances
 interface _PhDAssessStartEventVariables {
   dashboardDefinition: StepsDefinition | undefined;  // defines the rules/flow of the dashboard
+  notificationLogs: string[]  // encrypted stack of NotificationLog entries
 }
 
 interface _PhDAssessVariables {
@@ -39,8 +40,7 @@ interface _PhDAssessVariables {
   haveTheObjectivesChangedInThePastYearIfSoWhyAndHow: string | undefined;
   mentorDate: string | undefined;
   notAgree: string | undefined;
-  notificationLogs: [];
-  PDF: string | undefined;
+  PDF: string | undefined;  // oldies, should not be anymore in the process instance variables in new versions
   phdComment: string | undefined;
   phdComment1: string | undefined;
   phdComment2: string | undefined;
