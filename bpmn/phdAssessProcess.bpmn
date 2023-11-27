@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.15.1">
   <bpmn:collaboration id="Collaboration_13he9tk">
     <bpmn:participant id="Participant_0f1vwfj" name="PhD Assess" processRef="phdAssessProcess" />
   </bpmn:collaboration>
@@ -85,7 +85,9 @@
         <bpmn:flowNodeRef>Event_GED_Deposit_Student_Folder_Unfindable_Error</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Event_GED_Deposit_Unreachable_Error</bpmn:flowNodeRef>
       </bpmn:lane>
-      <bpmn:lane id="Lane_admin" name="Admin" />
+      <bpmn:lane id="Lane_admin" name="Admin">
+        <bpmn:flowNodeRef>Activity_Edit_Participants</bpmn:flowNodeRef>
+      </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:parallelGateway id="Gateway_1hndi1s">
       <bpmn:incoming>Flow_08cun4v</bpmn:incoming>
@@ -105,6 +107,7 @@
       <bpmn:incoming>Flow_1lvnxkq</bpmn:incoming>
       <bpmn:outgoing>Flow_16matth</bpmn:outgoing>
       <bpmn:outgoing>Flow_16da4ed</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0rmrx8s</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:serviceTask id="Activity_PHD_fills_annual_report" name="PhD fills the annual report">
       <bpmn:extensionElements>
@@ -772,6 +775,14 @@
     <bpmn:endEvent id="Event_0lljjmb" name="No_coDir">
       <bpmn:incoming>Flow_05yfvxr</bpmn:incoming>
     </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0rmrx8s" sourceRef="Gateway_1vk6wu2" targetRef="Activity_Edit_Participants" />
+    <bpmn:receiveTask id="Activity_Edit_Participants" name="Edit participants" messageRef="Message_3fu63rf">
+      <bpmn:documentation>This task will stay along the workflow, to allow app admins to change the participants, excluding the PhD students. </bpmn:documentation>
+      <bpmn:incoming>Flow_0amshgl</bpmn:incoming>
+      <bpmn:incoming>Flow_0rmrx8s</bpmn:incoming>
+      <bpmn:outgoing>Flow_0amshgl</bpmn:outgoing>
+    </bpmn:receiveTask>
+    <bpmn:sequenceFlow id="Flow_0amshgl" sourceRef="Activity_Edit_Participants" targetRef="Activity_Edit_Participants" />
     <bpmn:textAnnotation id="TextAnnotation_0j1km92">
       <bpmn:text>Section C</bpmn:text>
     </bpmn:textAnnotation>
@@ -1102,6 +1113,10 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_04v2gmm_di" bpmnElement="TextAnnotation_04v2gmm">
         <dc:Bounds x="620" y="770" width="100" height="30" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ovkdgu_di" bpmnElement="Activity_Edit_Participants">
+        <dc:Bounds x="538" y="106" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1ogv24m_di" bpmnElement="Event_GED_Deposit_Unreachable_Error">
@@ -1509,6 +1524,17 @@
       <bpmndi:BPMNEdge id="Association_033zd9d_di" bpmnElement="Association_033zd9d">
         <di:waypoint x="627" y="752" />
         <di:waypoint x="651" y="770" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rmrx8s_di" bpmnElement="Flow_0rmrx8s">
+        <di:waypoint x="473" y="703" />
+        <di:waypoint x="588" y="590" />
+        <di:waypoint x="588" y="186" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0amshgl_di" bpmnElement="Flow_0amshgl">
+        <di:waypoint x="638" y="126" />
+        <di:waypoint x="658" y="126" />
+        <di:waypoint x="658" y="166" />
+        <di:waypoint x="638" y="166" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
