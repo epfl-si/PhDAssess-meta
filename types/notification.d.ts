@@ -1,5 +1,5 @@
 // selection of PDF flavors
-type PDFType =
+export type PDFType =
   undefined |  // no pdf, thank you
   string |  // can be any string, but the ones below means they are a defined structure
   'collaborativeReview' |
