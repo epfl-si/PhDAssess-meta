@@ -27,5 +27,17 @@ export interface NotificationLog {
     cc: string[]
     bcc: string[]
   }
-  fromElementId: string  // define which activity has called the notification
+
+  //
+  // Define which activity has called the notification
+  //
+  // When it is a reminder, the '_reminder' suffix is added.
+  // There are better ways to do it (like a flag), but it was the only solution at the time without
+  // changing the bpmn in production
+  fromElementId: string
+
+  // This flag marks if the notificationLog is one coming from a prediction or a really
+  // happened in Zeebe. This incertitude principle is introduced by the fact the notification process is
+  // a disconnected process and
+  isUnconfirmed?: string
 }
