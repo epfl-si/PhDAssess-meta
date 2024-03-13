@@ -2,6 +2,9 @@
 
 *Undeployed*
 
+*16* (2024-03-14)
+- Fix notifications text for the mentor
+
 *15* (2024-01-15)
 - Fix typo in the dashboard definition
 - Fix notifications text
