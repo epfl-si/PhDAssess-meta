@@ -1,6 +1,7 @@
 # CHANGELOG
 
 *Undeployed*
+- Add pushing student result into ISA
 
 *16* (2024-06-17)
 - Fix notifications text for the mentor
