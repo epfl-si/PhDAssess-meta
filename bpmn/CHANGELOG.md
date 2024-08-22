@@ -1,6 +1,6 @@
 # CHANGELOG
 
-*Undeployed*
+*17* (2024-08-22)
 - Add pushing student result into ISA
 
 *16* (2024-06-17)
