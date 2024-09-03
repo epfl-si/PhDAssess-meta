@@ -31,6 +31,7 @@ interface _PhDAssessVariables {
   dateOfCandidacyExam: string | undefined;
   dateOfEnrolment: string | undefined;
   dateSent: string | undefined;
+  dueDate: string | undefined;
   docLinkAnnualReport: string | undefined;
   doctoralProgramEmail: string | undefined;
   doctoralProgramName: string | undefined;
