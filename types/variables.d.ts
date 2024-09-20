@@ -23,15 +23,15 @@ interface _PhDAssessVariables {
   commonComment4: string | undefined;
   commonComment5: string | undefined;
   commonComment6: string | undefined;
-  created_at: string | undefined;
+  created_at: string | undefined;  // as ISO date
   created_by: string | undefined;
   creditsCompleted: string | undefined;
   creditsNeeded: string | undefined;
   creditsPlanned: string | undefined;
-  dateOfCandidacyExam: string | undefined;
-  dateOfEnrolment: string | undefined;
+  dateOfCandidacyExam: string | undefined;  // as dd.MM.yyyy
+  dateOfEnrolment: string | undefined;  // as dd.MM.yyyy
   dateSent: string | undefined;
-  dueDate: string | undefined;
+  dueDate: string | undefined;  // as dd.MM.yyyy
   docLinkAnnualReport: string | undefined;
   doctoralProgramEmail: string | undefined;
   doctoralProgramName: string | undefined;
@@ -83,8 +83,8 @@ interface _PhDAssessVariables {
   totalCreditsObtained: string | undefined;
   totalCreditsPlanned: string | undefined;
   uuid: string | undefined;
-  updated_at: string | undefined;
-  year: string | undefined;
+  updated_at: string | undefined;  // as ISO date
+  year: string | undefined;  // as custom text, ex. '2nd year'
 }
 
 export interface PhDAssessVariables extends
