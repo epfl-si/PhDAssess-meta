@@ -6,6 +6,13 @@ export type PDFType =
   'unsatisfactory' |
   'notAgree'
 
+/**
+ * What kind of notification is. If empty, default to 'pendingTask'
+ */
+type NotificationType =
+  'pending' |  // the first notification sent when we inform the user that a task is waiting for his input
+  'reminder' // when we remind the user about his task
+
 // Zeebe message format sent to the notifier service from the app
 // all entries are encrypted
 export interface NotificationStartMessage {
@@ -17,6 +24,7 @@ export interface NotificationStartMessage {
   fromElementId?: string  // source calling the notifier. Will be saved into logs
   pdfType?: PDFType  // in case a pdf is wanted
   pdfName?: string  // in case we want a custom name for this pdf
+  type?: NotificationType
 }
 
 // this one will be encrypted as a pack before being stack into notificationLogs by a bpmn Output
@@ -28,16 +36,7 @@ export interface NotificationLog {
     bcc: string[]
   }
 
-  //
   // Define which activity has called the notification
-  //
-  // When it is a reminder, the '_reminder' suffix is added.
-  // There are better ways to do it (like a flag), but it was the only solution at the time without
-  // changing the bpmn in production
   fromElementId: string
-
-  // This flag marks if the notificationLog is one coming from a prediction or a really
-  // happened in Zeebe. This incertitude principle is introduced by the fact the notification process is
-  // a disconnected process and
-  isUnconfirmed?: string
+  type: NotificationType
 }

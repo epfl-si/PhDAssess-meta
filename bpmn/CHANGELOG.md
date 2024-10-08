@@ -2,6 +2,7 @@
 
 *UNDEPLOYED* (2024-10-08)
 - Add dueDate field
+- Add a type to notifications
 
 *17* (2024-08-22)
 - Add pushing student result into ISA
