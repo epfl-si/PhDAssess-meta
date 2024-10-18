@@ -299,6 +299,45 @@
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear {{ doctoralProgramName }} doctoral program Director,&#60;/p&#62;  &#60;p&#62;Following up on the annual report of the doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, you may now confirm action and indicate any comment you may have. Please access the annual report by connecting via the link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;You will then receive a PDF copy of the report by email, and so will the people involved in this annual report.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62;EPFL Doctoral School&#60;/p&#62;" />
           <zeebe:header key="pdfName" value="PROVISIONAL_phd_annual_report" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=programDirectorDate" target="programDirectorDate" />
+          <zeebe:output source="=programDirectorCheckedAnnualReport" target="programDirectorCheckedAnnualReport" />
+          <zeebe:output source="=programDirectorComment" target="programDirectorComment" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1gko0zc</bpmn:incoming>
       <bpmn:outgoing>Flow_10ky1oc</bpmn:outgoing>
@@ -318,6 +357,45 @@
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear {{ doctoralProgramName }} doctoral program Director,&#60;/p&#62;  &#60;p&#62;Following up on the annual report of the doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, we kindly inform you that the doctoral candidate disagrees with the content (please see attached document):&#60;/p&#62;  &#60;p&#62;Doctoral candidate’s comment: &#60;br&#62; {{ phdComment }}&#60;/p&#62;  &#60;p&#62;A meeting with you, the doctoral candidate, and the thesis director (and the co-director if applicable) should be held, in order to seek appropriate measures to resolve possible problems and conflicts.&#60;/p&#62;  &#60;p&#62;To confirm action and indicate any comment you may have, please access the annual report of the doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, by connecting via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;You will then receive a PDF copy of the report by email, and so will the people involved in this annual report.&#60;/p&#62;  &#60;p&#62;Thank you for the follow-up and best regards,&#60;/p&#62;  &#60;p&#62;EPFL Doctoral School&#60;/p&#62;" />
           <zeebe:header key="pdfName" value="PROVISIONAL_phd_annual_report_not_approved" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=programDirectorDate" target="programDirectorDate" />
+          <zeebe:output source="=programDirectorCheckedAnnualReport" target="programDirectorCheckedAnnualReport" />
+          <zeebe:output source="=programDirectorComment" target="programDirectorComment" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_06dhg8v</bpmn:incoming>
       <bpmn:outgoing>Flow_1essbrc</bpmn:outgoing>
@@ -337,6 +415,45 @@
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear {{ doctoralProgramName }} doctoral program Director,&#60;/p&#62;  &#60;p&#62;Following up on the annual report of the doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, we kindly inform you that the doctoral candidate disagrees with the content (please see attached document):&#60;/p&#62;  &#60;p&#62;Doctoral candidate’s comment: &#60;br&#62; {{ phdComment }}&#60;/p&#62;  &#60;p&#62;If at your previous meeting you did not address the issue raised by the doctoral candidate, please meet again together with the thesis director (and the co-director if applicable), in order to seek appropriate measures to resolve possible problems and conflicts.&#60;/p&#62;  &#60;p&#62;To confirm action and indicate any comment you may have, please access the annual report of the doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, by connecting via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;You will then receive a PDF copy of the report by email, and so will the people involved in this annual report.&#60;/p&#62;  &#60;p&#62;Thank you for the follow-up and best regards,&#60;/p&#62;  &#60;p&#62;EPFL Doctoral School&#60;/p&#62;" />
           <zeebe:header key="pdfName" value="PROVISIONAL_phd_annual_report_not_approved" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=programDirectorDate" target="programDirectorDate" />
+          <zeebe:output source="=programDirectorCheckedAnnualReport" target="programDirectorCheckedAnnualReport" />
+          <zeebe:output source="=programDirectorComment" target="programDirectorComment" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_15kqz5j</bpmn:incoming>
       <bpmn:outgoing>Flow_01gxy0h</bpmn:outgoing>
@@ -364,6 +481,45 @@
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear {{ doctoralProgramName }} doctoral program Director,&#60;/p&#62;  &#60;p&#62;As part of their annual report, the doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, disagrees with the content (which you will find attached):&#60;/p&#62;  &#60;p&#62;Doctoral candidate’s comment: {{ phdComment }}&#60;/p&#62;  &#60;p&#62;A meeting with you, the doctoral candidate, and the thesis director (and the co-director if applicable) should be held, in order to seek appropriate measures to resolve possible problems and conflicts.&#60;/p&#62;  &#60;p&#62;To confirm action and indicate any comment you may have, please access the annual report by connecting via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;You will then receive a PDF copy of the report by email, and so will the people involved in this annual report.&#60;/p&#62;  &#60;p&#62;Thank you for the follow-up and best regards,&#60;/p&#62;  &#60;p&#62;EPFL Doctoral School&#60;/p&#62;" />
           <zeebe:header key="pdfName" value="PROVISIONAL_phd_annual_report_not_approved" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=programDirectorDate" target="programDirectorDate" />
+          <zeebe:output source="=programDirectorCheckedAnnualReport" target="programDirectorCheckedAnnualReport" />
+          <zeebe:output source="=programDirectorComment" target="programDirectorComment" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_04j2ayv</bpmn:incoming>
       <bpmn:outgoing>Flow_02llvqx</bpmn:outgoing>
@@ -382,6 +538,44 @@
           <zeebe:header key="notifySubject" value="Annual Report: meeting mentor-doctoral candidate {{ phdStudentName }} (sciper {{ phdStudentSciper }})" />
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear Mentor and dear Mentee,&#60;/p&#62;  &#60;p&#62;The doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, is currently working on the PhD annual report.&#60;/strong&#62;&#60;/p&#62;  &#60;p&#62;- The meeting between mentor and mentee is a mandatory element of the annual assessment&#60;br&#62; - The meeting can take place at any time in the process (e.g. before or after the discussion with the thesis director).&#60;br&#62; - The discussion between mentor and mentee is always kept &#60;strong&#62;confidential.&#60;/strong&#62;&#60;/p&#62;   &#60;p&#62;The doctoral candidate will propose meeting dates that ensure the whole assessment process can be completed within the time specified by the program, i.e. &#60;strong&#62;{{ dueDate }}&#60;/strong&#62;.&#60;/p&#62;  &#60;p&#62;The mentor has access to discussion topics for this meeting, by connecting to the tool via the following link:  &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;. Please confirm that the meeting has taken place, by checking the dedicated box in the tool.&#60;/p&#62;  &#60;p&#62;We kindly inform you that once the annual report process is complete, you will receive a PDF copy of the report by email.&#60;/p&#62;  &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find useful information on the annual report online tool: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;/p&#62;   &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName  }} doctoral program Director&#60;/p&#62;" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=mentorDate" target="mentorDate" />
+          <zeebe:output source="=mentorSignature" target="mentorSignature" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0aj96s2</bpmn:incoming>
       <bpmn:outgoing>Flow_1vcraeo</bpmn:outgoing>
@@ -397,6 +591,45 @@
           <zeebe:header key="notifySubject" value="Annual report of {{ phdStudentName }} (sciper {{ phdStudentSciper }}) to be completed" />
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear thesis co-Director,&#60;/p&#62;  &#60;p&#62;The doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, you co-supervise has submitted the research progress part of the annual report. Please review the information provided and complete your progress evaluation by logging in via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Please note that once started, data is automatically saved each time a field is filled in. Once a section has been submitted (submit button), it is no longer possible to edit the content.&#60;br&#62; The content you fill in is not confidential. It will be revealed to all parties (doctoral candidate, thesis director, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;  &#60;p&#62;Then, a meeting will be held between the doctoral candidate, the thesis director and you to discuss goals achieved and planned, and evaluate overall progress.&#60;/p&#62;  &#60;p&#62;We kindly inform you that once the annual report cycle is complete, everyone involved in it will receive a PDF copy of the report by email.&#60;/p&#62;  &#60;p&#62;&#60;strong&#62;The entire process is expected to be completed by {{ dueDate }}.&#60;/strong&#62;&#60;/p&#62;  &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find useful information on the annual report online tool: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorComment1" target="thesisCoDirectorComment1" />
+          <zeebe:output source="=thesisCoDirectorComment2" target="thesisCoDirectorComment2" />
+          <zeebe:output source="=thesisCoDirectorComment6" target="thesisCoDirectorComment6" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1qnxt97</bpmn:incoming>
       <bpmn:outgoing>Flow_1f0mux0</bpmn:outgoing>
@@ -590,6 +823,51 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
           <zeebe:header key="notifySubject" value="Validation of your annual report" />
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear {{ phdStudentName }},&#60;/p&#62;  &#60;p&#62;Following the collaborative review, please validate the final version of the annual report by connecting via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;If you disagree with part of the content of the annual report, please explain it by filling in the dedicated comment field.&#60;/p&#62;  &#60;p&#62;Thank you for confirming that you have met your mentor, by checking the dedicated box.&#60;/p&#62;  &#60;p&#62;&#60;strong&#62;The deadline for finalizing the entire process is {{ dueDate }}.&#60;/strong&#62;&#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=phdSignature" target="phdSignature" />
+          <zeebe:output source="=phdDateOfReview" target="phdDateOfReview" />
+          <zeebe:output source="=agreePhd" target="agreePhd" />
+          <zeebe:output source="=exceedAndDisagree" target="exceedAndDisagree" />
+          <zeebe:output source="=needsImprovementAndDisagree" target="needsImprovementAndDisagree" />
+          <zeebe:output source="=unsatisfactoryAndDisagree" target="unsatisfactoryAndDisagree" />
+          <zeebe:output source="=needsImprovementOrUnsatisfactoryAndAgree" target="needsImprovementOrUnsatisfactoryAndAgree" />
+          <zeebe:output source="=notifProgramDirector" target="notifProgramDirector" />
+          <zeebe:output source="=phdComment" target="phdComment" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1o8eczd</bpmn:incoming>
       <bpmn:outgoing>Flow_14uiesw</bpmn:outgoing>
@@ -613,6 +891,62 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
           <zeebe:header key="notifySubject" value="Annual report of {{ phdStudentName }} (sciper {{ phdStudentSciper }}): collaborative review" />
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear thesis Director,&#60;/p&#62;  &#60;p&#62;Regarding the annual report of your doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, now that everyone has completed the progress assessment, we thank you for organizing the meeting with your doctoral candidate (and the co-director if applicable) to review the information, discuss goals achieved and planned, and evaluate overall progress.&#60;/p&#62;   &#60;p&#62;During this meeting, only you, as the thesis Director, will be able to access the content to be edited and completed by logging in via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;In the meantime and in preparation for the meeting, you will find attached an extraction of what everyone – you, the doctoral candidate and the co-director if applicable – has completed.&#60;/p&#62;  &#60;p&#62;&#60;strong&#62;The deadline for finalizing the entire process is {{ dueDate }}.&#60;/strong&#62;&#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=dateOfEnrolment" target="dateOfEnrolment" />
+          <zeebe:output source="=year" target="year" />
+          <zeebe:output source="=tentativeThesisTitle" target="tentativeThesisTitle" />
+          <zeebe:output source="=dateOfCandidacyExam" target="dateOfCandidacyExam" />
+          <zeebe:output source="=taDutiesHoursAndOrCoursesCompleted" target="taDutiesHoursAndOrCoursesCompleted" />
+          <zeebe:output source="=totalCreditsObtained" target="totalCreditsObtained" />
+          <zeebe:output source="=totalCreditsPlanned" target="totalCreditsPlanned" />
+          <zeebe:output source="=goalsOfTheThesis" target="goalsOfTheThesis" />
+          <zeebe:output source="=researchProgressDuringThePastYear" target="researchProgressDuringThePastYear" />
+          <zeebe:output source="=haveTheObjectivesChangedInThePastYearIfSoWhyAndHow" target="haveTheObjectivesChangedInThePastYearIfSoWhyAndHow" />
+          <zeebe:output source="=researchObjectivesForTheNextYear" target="researchObjectivesForTheNextYear" />
+          <zeebe:output source="=scientificOutput" target="scientificOutput" />
+          <zeebe:output source="=educationalActivities" target="educationalActivities" />
+          <zeebe:output source="=commonComment1" target="commonComment1" />
+          <zeebe:output source="=commonComment2" target="commonComment2" />
+          <zeebe:output source="=commonComment6" target="commonComment6" />
+          <zeebe:output source="=generalAppraisalOfTheProgress" target="generalAppraisalOfTheProgress" />
+          <zeebe:output source="=programDirectorNotif" target="programDirectorNotif" />
+          <zeebe:output source="=needsImprovement" target="needsImprovement" />
+          <zeebe:output source="=unsatisfactory" target="unsatisfactory" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1a31ekj</bpmn:incoming>
       <bpmn:outgoing>Flow_1sd2f0p</bpmn:outgoing>
@@ -648,6 +982,44 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
           <zeebe:header key="notifySubject" value="Annual report of {{ phdStudentName }} (sciper {{ phdStudentSciper }}) to be completed" />
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear thesis Director,&#60;/p&#62;  &#60;p&#62;Your doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, has submitted the annual report. Please review the information provided and complete your progress evaluation by connecting in via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Please note that once started, data is automatically saved each time a field is filled in. Once a section has been submitted (submit button), it is no longer possible to edit the content.&#60;br&#62; The content you fill in is not confidential. It will be revealed to all parties (doctoral candidate, co-director if applicable, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;  &#60;p&#62;If the thesis is co-supervised, the co-director was notified at the same time to complete the progress evaluation.&#60;/p&#62;  &#60;p&#62;To discuss goals achieved and planned, and evaluate overall progress, you will be notified again to organize a meeting (collaborative review) with your doctoral candidate, and the co-director if applicable.&#60;/p&#62;  &#60;p&#62;We kindly inform you that once the annual report cycle is complete, everyone involved in it will receive a PDF copy of the report by email.&#60;/p&#62;  &#60;p&#62;&#60;strong&#62;The entire process is expected to be completed by {{ dueDate }}.&#60;/strong&#62;&#60;/p&#62;  &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find useful information on the annual report online tool: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=thesisDirectorComment1" target="thesisDirectorComment1" />
+          <zeebe:output source="=thesisDirectorComment2" target="thesisDirectorComment2" />
+          <zeebe:output source="=thesisDirectorComment6" target="thesisDirectorComment6" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0dhkieo</bpmn:incoming>
       <bpmn:outgoing>Flow_1q4fi07</bpmn:outgoing>
@@ -670,6 +1042,53 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
           <zeebe:header key="title" value="Assigning participants" />
           <zeebe:header key="assigneeSciperFieldName" value="created_by" />
         </zeebe:taskHeaders>
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLog" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=doctoralProgramName" target="doctoralProgramName" />
+          <zeebe:output source="=doctoralProgramEmail" target="doctoralProgramEmail" />
+          <zeebe:output source="=docLinkAnnualReport" target="docLinkAnnualReport" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=creditsNeeded" target="creditsNeeded" />
+          <zeebe:output source="=dueDate" target="dueDate" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1p551fj</bpmn:incoming>
       <bpmn:outgoing>Flow_1bi0oxc</bpmn:outgoing>
@@ -685,6 +1104,58 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear {{ phdStudentName }},&#60;/p&#62;  &#60;p&#62;Each year, you are required to submit a report to your thesis director (and co-director if applicable) on the state of progress of your work (art. 10 of the &#60;a href=&#34;https://www.epfl.ch/education/phd/regulations/&#34;&#62;Ordinance on the doctorate&#60;/a&#62;). You are requested to check and fill in three sections with your basic information, the research progress and self-assessment of your progress, by connecting via the following link: &#60;/p&#62;  &#60;p&#62;&#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Please note that once started, data is automatically saved each time a field is filled in. Once a section has been submitted (submit button), it is no longer possible to edit the content.&#60;br&#62;The content you fill in is not confidential. It will be revealed to all parties (thesis director, and co-director if applicable, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;  &#60;p&#62;Once you have completed all three sections and submitted your report, your thesis director (and co-director if applicable) will be notified to fill in their assessment of your progress. They will then contact you to arrange a meeting (collaborative review) to review the information, discuss goals achieved and planned, and evaluate overall progress.&#60;/p&#62;  &#60;p&#62;You are also asked to schedule a meeting with your mentor. This discussion and the name of your mentor are always kept &#60;strong&#62;confidential&#60;/strong&#62;. You can choose when you would like to meet with your mentor during the annual report process, to discuss the content or the assessment of progress, but at the latest by the time you are notified of the final validation of your report, after the collaborative review.&#60;/p&#62;  &#60;p&#62;We kindly inform you that once the annual report cycle is complete, everyone involved in it will receive a PDF copy of the report by email.&#60;/p&#62;  &#60;p&#62;&#60;strong&#62;You have until {{ dueDate }} to finalize the entire process.&#60;/strong&#62;&#60;/p&#62;  &#60;p&#62;On your doctoral program&#39;s webpage, you will find all the information you need to help you write your annual report: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;br&#62; &#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours sincerely,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
         </zeebe:taskHeaders>
         <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
+        <zeebe:ioMapping>
+          <zeebe:output source="=updated_at" target="updated_at" />
+          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
+          <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
+          <zeebe:output source="=programAssistantName" target="programAssistantName" />
+          <zeebe:output source="=programAssistantFirstNameUsage" target="programAssistantFirstNameUsage" />
+          <zeebe:output source="=programAssistantLastNameUsage" target="programAssistantLastNameUsage" />
+          <zeebe:output source="=phdStudentSciper" target="phdStudentSciper" />
+          <zeebe:output source="=phdStudentEmail" target="phdStudentEmail" />
+          <zeebe:output source="=phdStudentName" target="phdStudentName" />
+          <zeebe:output source="=phdStudentFirstNameUsage" target="phdStudentFirstNameUsage" />
+          <zeebe:output source="=phdStudentLastNameUsage" target="phdStudentLastNameUsage" />
+          <zeebe:output source="=phdStudentFirstName" target="phdStudentFirstName" />
+          <zeebe:output source="=phdStudentLastName" target="phdStudentLastName" />
+          <zeebe:output source="=thesisDirectorSciper" target="thesisDirectorSciper" />
+          <zeebe:output source="=thesisDirectorEmail" target="thesisDirectorEmail" />
+          <zeebe:output source="=thesisDirectorName" target="thesisDirectorName" />
+          <zeebe:output source="=thesisDirectorFirstNameUsage" target="thesisDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisDirectorLastNameUsage" target="thesisDirectorLastNameUsage" />
+          <zeebe:output source="=thesisCoDirectorSciper" target="thesisCoDirectorSciper" />
+          <zeebe:output source="=thesisCoDirectorEmail" target="thesisCoDirectorEmail" />
+          <zeebe:output source="=thesisCoDirectorName" target="thesisCoDirectorName" />
+          <zeebe:output source="=thesisCoDirectorFirstNameUsage" target="thesisCoDirectorFirstNameUsage" />
+          <zeebe:output source="=thesisCoDirectorLastNameUsage" target="thesisCoDirectorLastNameUsage" />
+          <zeebe:output source="=programDirectorSciper" target="programDirectorSciper" />
+          <zeebe:output source="=programDirectorEmail" target="programDirectorEmail" />
+          <zeebe:output source="=programDirectorName" target="programDirectorName" />
+          <zeebe:output source="=programDirectorFirstNameUsage" target="programDirectorFirstNameUsage" />
+          <zeebe:output source="=programDirectorLastNameUsage" target="programDirectorLastNameUsage" />
+          <zeebe:output source="=mentorSciper" target="mentorSciper" />
+          <zeebe:output source="=mentorEmail" target="mentorEmail" />
+          <zeebe:output source="=mentorName" target="mentorName" />
+          <zeebe:output source="=mentorFirstNameUsage" target="mentorFirstNameUsage" />
+          <zeebe:output source="=mentorLastNameUsage" target="mentorLastNameUsage" />
+          <zeebe:output source="=dateOfEnrolment" target="dateOfEnrolment" />
+          <zeebe:output source="=year" target="year" />
+          <zeebe:output source="=tentativeThesisTitle" target="tentativeThesisTitle" />
+          <zeebe:output source="=dateOfCandidacyExam" target="dateOfCandidacyExam" />
+          <zeebe:output source="=taDutiesHoursAndOrCoursesCompleted" target="taDutiesHoursAndOrCoursesCompleted" />
+          <zeebe:output source="=totalCreditsObtained" target="totalCreditsObtained" />
+          <zeebe:output source="=totalCreditsPlanned" target="totalCreditsPlanned" />
+          <zeebe:output source="=goalsOfTheThesis" target="goalsOfTheThesis" />
+          <zeebe:output source="=researchProgressDuringThePastYear" target="researchProgressDuringThePastYear" />
+          <zeebe:output source="=haveTheObjectivesChangedInThePastYearIfSoWhyAndHow" target="haveTheObjectivesChangedInThePastYearIfSoWhyAndHow" />
+          <zeebe:output source="=researchObjectivesForTheNextYear" target="researchObjectivesForTheNextYear" />
+          <zeebe:output source="=scientificOutput" target="scientificOutput" />
+          <zeebe:output source="=educationalActivities" target="educationalActivities" />
+          <zeebe:output source="=phdComment1" target="phdComment1" />
+          <zeebe:output source="=phdComment2" target="phdComment2" />
+          <zeebe:output source="=phdComment6" target="phdComment6" />
+        </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_16matth</bpmn:incoming>
       <bpmn:outgoing>Flow_08cun4v</bpmn:outgoing>
@@ -699,6 +1170,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         <zeebe:ioMapping>
           <zeebe:output source="=[&#10;  {&#10;    &#34;id&#34;: &#34;Activity_PHD_fills_annual_report&#34;,&#10;    &#34;label&#34;: &#34;Phd fills annual report&#34;,&#10;    &#34;parents&#34;: []&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Co_Director_fills_annual_report&#34;,&#10;    &#34;label&#34;: &#34;Co-Dir fills annual report&#34;,&#10;    &#34;activatedOnField&#34;: &#34;thesisCoDirectorSciper&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Director_fills_annual_report&#34;,&#10;    &#34;label&#34;: &#34;Thesis Dir fills annual report&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Director_Collaborative_Review_Signs&#34;,&#10;    &#34;label&#34;: &#34;Collaborative review&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_Thesis_Co_Director_fills_annual_report&#34;,&#10;      &#34;Activity_Thesis_Director_fills_annual_report&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Co_Director_Signs&#34;,&#10;    &#34;label&#34;: &#34;Co-Dir signature&#34;,&#10;    &#34;customContent&#34;: &#34;&#34;&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Thesis_Director_Signs&#34;,&#10;    &#34;label&#34;: &#34;Thesis Dir signature&#34;,&#10;    &#34;customContent&#34;: &#34;&#34;&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_PHD_Signs&#34;,&#10;    &#34;label&#34;: &#34;PhD signature&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_Thesis_Director_Collaborative_Review_Signs&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Post_Mentor_Meeting_Mentor_Signs&#34;,&#10;    &#34;label&#34;: &#34;Mentor signature&#34;,&#10;    &#34;switchOnField&#34;: &#34;mentorDate&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_fills_annual_report&#34;&#10;    ]&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Post_Mentor_Meeting_PHD_Signs&#34;,&#10;    &#34;label&#34;: &#34;PhD signature after mentor&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_Signs&#34;&#10;    ],&#10;    &#34;customContent&#34;: &#34;&#34;&#10;  },&#10;  {&#10;    &#34;id&#34;: &#34;Activity_Program_Director_Signs_Exceed_And_Disagree&#34;,&#10;    &#34;label&#34;: &#34;Program Director signature&#34;,&#10;    &#34;parents&#34;: [&#10;      &#34;Activity_PHD_Signs&#34;&#10;    ],&#10;    &#34;knownAs&#34;: [&#10;      &#34;Activity_Program_Director_Signs_Unsatisfactory_And_Disagree&#34;,&#10;      &#34;Activity_Program_Director_Signs_Needs_Improvement_And_Disagree&#34;,&#10;      &#34;Activity_Program_Director_Signs_Needs_Improvement_Or_Unsatisfactory_And_Agree&#34;&#10;    ]&#10;  }&#10;]" target="dashboardDefinition" />
           <zeebe:output source="=[]" target="notificationLogs" />
+          <zeebe:output source="=[]" target="activityLogs" />
         </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:outgoing>Flow_0ighe3r</bpmn:outgoing>
