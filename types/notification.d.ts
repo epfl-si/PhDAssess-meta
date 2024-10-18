@@ -7,10 +7,13 @@ export type PDFType =
   'notAgree'
 
 /**
- * What kind of notification is. If empty, default to 'pendingTask'
+ * What kind of notification is.
+ * For historical reason, the kind can be identified by the fromElementId, if it finishes with '_reminder'
+ * If empty, default to 'awaitingForm'
  */
 type NotificationType =
-  'pending' |  // the first notification sent when we inform the user that a task is waiting for his input
+// the first notification sent when we inform the user that a task is waiting for his input
+  'awaitingForm' |
   'reminder' // when we remind the user about his task
 
 // Zeebe message format sent to the notifier service from the app
