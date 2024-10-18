@@ -3,6 +3,7 @@
  */
 import {ParticipantsVariables} from "./participants";
 import {StepsDefinition} from "./dashboards";
+import {TDateISO, TFlatDate} from "./dates";
 
 
 // these are created at the start of the all instances
@@ -23,15 +24,15 @@ interface _PhDAssessVariables {
   commonComment4: string | undefined;
   commonComment5: string | undefined;
   commonComment6: string | undefined;
-  created_at: string | undefined;  // as ISO date
-  created_by: string | undefined;
+  created_at: TDateISO | undefined;
+  created_by: TDateISO | undefined;
   creditsCompleted: string | undefined;
   creditsNeeded: string | undefined;
   creditsPlanned: string | undefined;
-  dateOfCandidacyExam: string | undefined;  // as dd.MM.yyyy
-  dateOfEnrolment: string | undefined;  // as dd.MM.yyyy
+  dateOfCandidacyExam: TFlatDate | undefined;  // as dd.MM.yyyy
+  dateOfEnrolment: TFlatDate | undefined;  // as dd.MM.yyyy
   dateSent: string | undefined;
-  dueDate: string | undefined;  // as dd.MM.yyyy
+  dueDate: TFlatDate | undefined;  // as dd.MM.yyyy
   docLinkAnnualReport: string | undefined;
   doctoralProgramEmail: string | undefined;
   doctoralProgramName: string | undefined;
@@ -83,7 +84,7 @@ interface _PhDAssessVariables {
   totalCreditsObtained: string | undefined;
   totalCreditsPlanned: string | undefined;
   uuid: string | undefined;
-  updated_at: string | undefined;  // as ISO date
+  updated_at: TDateISO | undefined;  // as ISO date
   year: string | undefined;  // as custom text, ex. '2nd year'
 }
 
