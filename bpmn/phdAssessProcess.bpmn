@@ -301,7 +301,7 @@
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
@@ -359,7 +359,7 @@
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
@@ -417,7 +417,7 @@
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
@@ -483,7 +483,7 @@
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
@@ -540,7 +540,7 @@
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
@@ -593,7 +593,7 @@
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
@@ -825,7 +825,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
@@ -893,7 +893,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
@@ -983,7 +983,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
           <zeebe:header key="notifyMessage" value="&#60;p&#62;Dear thesis Director,&#60;/p&#62;  &#60;p&#62;Your doctoral candidate {{ phdStudentName }}, sciper {{ phdStudentSciper }}, has submitted the annual report. Please review the information provided and complete your progress evaluation by connecting in via the following link: &#60;a href=&#34;https://phd-annual-report.epfl.ch&#34;&#62;https://phd-annual-report.epfl.ch&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Please note that once started, data is automatically saved each time a field is filled in. Once a section has been submitted (submit button), it is no longer possible to edit the content.&#60;br&#62; The content you fill in is not confidential. It will be revealed to all parties (doctoral candidate, co-director if applicable, mentor and doctoral program) after the independent self-assessment.&#60;/p&#62;  &#60;p&#62;If the thesis is co-supervised, the co-director was notified at the same time to complete the progress evaluation.&#60;/p&#62;  &#60;p&#62;To discuss goals achieved and planned, and evaluate overall progress, you will be notified again to organize a meeting (collaborative review) with your doctoral candidate, and the co-director if applicable.&#60;/p&#62;  &#60;p&#62;We kindly inform you that once the annual report cycle is complete, everyone involved in it will receive a PDF copy of the report by email.&#60;/p&#62;  &#60;p&#62;&#60;strong&#62;The entire process is expected to be completed by {{ dueDate }}.&#60;/strong&#62;&#60;/p&#62;  &#60;p&#62;On the {{ doctoralProgramName }} doctoral program&#39;s webpage, you will find useful information on the annual report online tool: &#60;a href=&#34;{{ docLinkAnnualReport }}&#34;&#62;{{ docLinkAnnualReport }}&#60;/a&#62;&#60;/p&#62;  &#60;p&#62;Should you have any questions, please contact the &#60;a href=&#34;mailto:{{ doctoralProgramEmail }}&#34;&#62;doctoral program’s administrative office&#60;/a&#62;.&#60;/p&#62;  &#60;p&#62;Yours faithfully,&#60;/p&#62;  &#60;p&#62; {{ programDirectorName }} &#60;br&#62; {{ doctoralProgramName }} doctoral program Director&#60;/p&#62;" />
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
@@ -1106,7 +1106,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=activityLog" target="append(activityLogs, activityLog)" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
