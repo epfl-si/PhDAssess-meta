@@ -1044,7 +1044,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:output source="=updated_at" target="updated_at" />
-          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLog" />
+          <zeebe:output source="=append(activityLogs, activityLog)" target="activityLogs" />
           <zeebe:output source="=programAssistantSciper" target="programAssistantSciper" />
           <zeebe:output source="=programAssistantEmail" target="programAssistantEmail" />
           <zeebe:output source="=programAssistantName" target="programAssistantName" />
