@@ -3,7 +3,6 @@
 *UNDEPLOYED* (2024-10-08)
 - Add dueDate field
 - Add a type to notifications
-- Add the 'activityLog' output to fillForms tasks. The value is append to the 'activityLogs' array.
 
 *17* (2024-08-22)
 - Add pushing student result into ISA
