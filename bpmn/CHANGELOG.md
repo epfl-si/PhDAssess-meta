@@ -3,6 +3,7 @@
 *UNDEPLOYED* (2024-10-08)
 - Add dueDate field
 - Add a type to notifications
+- Add `reminderSubject` and `reminderMessage` on tasks
 
 *17* (2024-08-22)
 - Add pushing student result into ISA
