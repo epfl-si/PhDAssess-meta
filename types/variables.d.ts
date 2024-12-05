@@ -91,7 +91,11 @@ export interface PhDAssessCustomVariables {
   year: string | undefined;  // as custom text, ex. '2nd year'
 }
 
-export interface PhDAssessVariables extends
-  PhDAssessStartEventVariables,
+// the one we may want to edit
+export interface PhDAssessEditableVariables extends
   PhDAssessCustomVariables,
   ParticipantsVariables {}
+
+export interface PhDAssessVariables extends
+  PhDAssessStartEventVariables,
+  PhDAssessEditableVariables {}
