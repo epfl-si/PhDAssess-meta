@@ -7,7 +7,7 @@ import {TDateISO, TFlatDate} from "./dates";
 
 
 // these are created at the start of the all instances
-interface _PhDAssessStartEventVariables {
+export interface PhDAssessStartEventVariables {
   dashboardDefinition: StepsDefinition | undefined;  // defines the rules/flow of the dashboard
   // encrypted stack of NotificationLog entries. As it is encrypted, it is
   // a string. Once decrypted and JSON.parsed, it becomes
@@ -15,7 +15,7 @@ interface _PhDAssessStartEventVariables {
   notificationLogs: string[] | undefined;
 }
 
-interface _PhDAssessVariables {
+export interface PhDAssessCustomVariables {
   agreePhd: string | undefined;
   agreeThesisCoDirector: string | undefined;
   agreeThesisDirector: string | undefined;
@@ -92,6 +92,6 @@ interface _PhDAssessVariables {
 }
 
 export interface PhDAssessVariables extends
-  _PhDAssessStartEventVariables,
-  _PhDAssessVariables,
+  PhDAssessStartEventVariables,
+  PhDAssessCustomVariables,
   ParticipantsVariables {}
