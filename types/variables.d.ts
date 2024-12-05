@@ -54,6 +54,7 @@ interface _PhDAssessVariables {
   phdComment6: string | undefined;
   phdDate: string | undefined;
   phdDateOfReview: string | undefined;
+  programDirectorSciper: string | undefined;
   programDirectorComment: string | undefined;
   programDirectorDate: string | undefined;
   programDirectorName: string | undefined;
