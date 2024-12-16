@@ -1,9 +1,12 @@
 # CHANGELOG
 
-*UNDEPLOYED* (2024-10-08)
+*UNDEPLOYED* ()
+
+*18* (2024-12-16)
 - Add dueDate field
 - Add a type to notifications
-- Add `reminderSubject` and `reminderMessage` on tasks
+- Changed notifications content
+- Add notification 'Reminder' with his `reminderSubject` and `reminderMessage`
 
 *17* (2024-08-22)
 - Add pushing student result into ISA
