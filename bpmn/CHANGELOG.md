@@ -2,6 +2,9 @@
 
 *UNDEPLOYED* ()
 
+*19* (2025-01-30)
+- Change reminder notification signature
+
 *18* (2024-12-16)
 - Add dueDate field
 - Add a type to notifications
