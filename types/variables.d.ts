@@ -45,6 +45,7 @@ export interface PhDAssessCustomVariables {
   mentorDate: string | undefined;
   notAgree: string | undefined;
   PDF: string | undefined;  // oldies, should not be anymore in the process instance variables in new versions
+  pdfFileRelativePathOnGed: string | undefined;  // if a file has been provided, it will be found with this name
   phdComment: string | undefined;
   phdComment1: string | undefined;
   phdComment2: string | undefined;
