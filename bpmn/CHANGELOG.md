@@ -1,6 +1,7 @@
 # CHANGELOG
 
 *UNDEPLOYED* ()
+- Fix calendar widgets having dateFormat set to the wrong format, as it was necessary only for FormIO <=4.14.8
 
 *20* (2025-03-07)
 - Change student's message comment if not agree
