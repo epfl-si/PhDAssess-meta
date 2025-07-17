@@ -19,3 +19,6 @@ Then use it in your project like this:
 #### Update `./bpmn/CHANGELOG.md`
 - when changing something on the bpmn -> add the text change to "Undeployed"
 - when pushing into prod, set "Undeployed" to the new version number and readd the "Undeployed" title 
+
+#### Lint
+- Run `bpmnlint ./bpmn/phdAssessProcess.bpmn`

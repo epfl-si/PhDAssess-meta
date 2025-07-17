@@ -9,6 +9,7 @@
   "author": "",
   "types": "index",
   "devDependencies": {
+    "bpmnlint": "^11.6.0",
     "typescript": "^5.2.2",
     "zeebe-node": "^8.2.5"
   }
