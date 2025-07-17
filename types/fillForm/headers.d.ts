@@ -5,8 +5,8 @@ import {ICustomHeaders} from "zeebe-node";
 export class PhDCustomHeaderShape implements ICustomHeaders {
   groups?: string[]  // manage permission groupwise
   title?: string  // title shown for this task
-  formIO?: string  // the formIO JSON
-  // define where to find the sciper. Can have multiple values, separated by comma
+  formIO?: string  // formIO definition in JSON format
+  // define where to find the sciper. It can have multiple values, separated by comma
   assigneeSciperFieldName? : string
 
   //

@@ -1,6 +1,6 @@
 # PhD Assess Meta
 
-Provide the associated Typescript types to PhDAssess consumers.
+Provide the associated TypeScript types to PhDAssess consumers.
 
 ## Install the types
 
@@ -17,8 +17,9 @@ Then use it in your project like this:
 ### DO
 
 #### Update `./bpmn/CHANGELOG.md`
-- when changing something on the bpmn -> add the text change to "Undeployed"
-- when pushing into prod, set "Undeployed" to the new version number and readd the "Undeployed" title 
+- when changing something on the bpmn → add the text change to "Undeployed"
+- when pushing into prod, set the "Undeployed" title to the new version number, 
+  and re-add the "Undeployed" title
 
 #### Lint
 - Run `bpmnlint ./bpmn/phdAssessProcess.bpmn`

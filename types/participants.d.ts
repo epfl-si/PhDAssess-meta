@@ -13,7 +13,7 @@ export interface ParticipantsVariables {
   phdStudentFirstNameUsage: string | undefined;
   phdStudentLastNameUsage: string | undefined;
   /*
-   * Save additional data when we crawl students info.
+   * Save additional data when we crawl student's info.
    * Mainly used to generate the correct GED path.
    * These are the official names
    */

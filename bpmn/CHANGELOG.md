@@ -15,10 +15,10 @@
 - Add notification 'Reminder' with his `reminderSubject` and `reminderMessage`
 
 *17* (2024-08-22)
-- Add pushing student result into ISA
+- Add pushing student results into ISA
 
 *16* (2024-06-17)
-- Fix notifications text for the mentor
+- Fix notification text for the mentor
 - Add the result of the assessment to the final notification
 
 *15* (2024-01-15)

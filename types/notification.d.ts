@@ -1,6 +1,6 @@
 // selection of PDF flavors
 export type PDFType =
-  undefined |  // no pdf, thank you
+  undefined |  // no PDF, thank you
   string |  // can be any string, but the ones below means they are a defined structure
   'collaborativeReview' |
   'unsatisfactory' |
@@ -24,9 +24,9 @@ export interface NotificationStartMessage {
   bcc?: string | string[]
   subject?: string
   message?: string
-  fromElementId?: string  // source calling the notifier. Will be saved into logs
-  pdfType?: PDFType  // in case a pdf is wanted
-  pdfName?: string  // in case we want a custom name for this pdf
+  fromElementId?: string  // source calling the notifier; it will be saved into logs
+  pdfType?: PDFType  // in case a PDF is wanted
+  pdfName?: string  // in case we want a custom name for this PDF
   type?: NotificationType
 }
 
