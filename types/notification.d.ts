@@ -27,6 +27,7 @@ export interface NotificationStartMessage {
   fromElementId?: string  // source calling the notifier; it will be saved into logs
   pdfType?: PDFType  // in case a PDF is wanted
   pdfName?: string  // in case we want a custom name for this PDF
+  pdfAnnexPath?: string  // when an annex can be downloaded
   type?: NotificationType
 }
 

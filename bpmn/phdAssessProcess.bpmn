@@ -435,6 +435,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
           <zeebe:input source="=null" target="sentLog" />
           <zeebe:input source="=null" target="PDF" />
           <zeebe:input source="=null" target="type" />
+          <zeebe:input source="=null" target="pdfAnnexPath" />
           <zeebe:output source="=append(notificationLogs, sentLog)" target="notificationLogs" />
         </zeebe:ioMapping>
         <zeebe:properties>
