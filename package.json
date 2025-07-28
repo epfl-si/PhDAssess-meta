@@ -1,16 +1,20 @@
 {
   "name": "phd-assess-meta",
-  "version": "0.5.2",
+  "version": "1.0.0",
   "description": "Provide the BPMN and associated types to PhDAssess apps",
-  "main": "types/index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "types": "index",
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  },
   "devDependencies": {
+    "@tsconfig/node22": "^22.0.2",
     "bpmnlint": "^11.6.0",
-    "typescript": "^5.2.2",
+    "typescript": "^5.8.3",
     "zeebe-node": "^8.3.2"
   }
 }
