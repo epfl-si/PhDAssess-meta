@@ -14,5 +14,9 @@
     "declaration": true,
     "module": "NodeNext",
     "composite": true
-  }
+  },
+  "include": [
+    "src/**/*",
+    "types/**/*"
+  ]
 }
