@@ -1,6 +1,6 @@
 {
   "name": "phd-assess-meta",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Provide the BPMN and associated types to PhDAssess apps",
   "main": "types/index.js",
   "scripts": {
