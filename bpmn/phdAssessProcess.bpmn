@@ -768,7 +768,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         <zeebe:taskDefinition type="notification" />
         <zeebe:taskHeaders>
           <zeebe:header key="subject" value="Annual report - {{ doctoralProgramName }} -  Mentor {{ meetingWithMentor }} - {{ generalAppraisalOfTheProgress }}" />
-          <zeebe:header key="message" />
+          <zeebe:header key="message" value="Annual report - {{ doctoralProgramName }} -  Mentor {{ meetingWithMentor }} - {{ generalAppraisalOfTheProgress }}" />
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:input source="=&#34;U2FsdGVkX18QPcuDJSjHazMOODKtC5X3xu106wMn7F+Dd9+Lu7vigNpsX4y+tvDsj8BAJZdwH0lJ0KmUR4yu/g==&#34;" target="to" />
