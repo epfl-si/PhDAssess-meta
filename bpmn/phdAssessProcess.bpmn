@@ -364,7 +364,7 @@
         <zeebe:taskDefinition type="phdAssessFillForm" retries="100000" />
         <zeebe:taskHeaders>
           <zeebe:header key="title" value="Collaborative review" />
-          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;6094ea003614a90bb3112cc5&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a091e390b9fa6e626d355&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Annual Progress Report&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [         &#34;605a093a1964dcf6c669c8dd&#34;,         &#34;605a093a1964dc7db769c8de&#34;,         &#34;605a093a1964dcd89969c8df&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     }   ],   &#34;submissionAccess&#34;: [],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;annualProgressReport&#34;,   &#34;path&#34;: &#34;annualprogressreport&#34;,   &#34;project&#34;: &#34;605a093a1964dca89369c8dc&#34;,   &#34;created&#34;: &#34;2021-05-07T07:19:28.829Z&#34;,   &#34;modified&#34;: &#34;2021-05-11T15:57:35.231Z&#34;,   &#34;machineName&#34;: &#34;mcvvtebnveuvysz:annualProgressReport&#34;,   &#34;components&#34;: [     {       &#34;label&#34;: &#34;HTML&#34;,       &#34;attrs&#34;: [         {           &#34;attr&#34;: &#34;&#34;,           &#34;value&#34;: &#34;&#34;         }       ],       &#34;content&#34;: &#34;&#60;a href=\&#34;https://www.epfl.ch/education/phd/annual_report/post_mentor_meeting_mentor_signs\&#34; target=\&#34;_blank\&#34;&#62;&#60;img src=\&#34;https://www.epfl.ch/education/phd/wp-content/uploads/2023/11/manual.png\&#34; width=\&#34;50\&#34; &#62;&#60;/a&#62;&#34;,       &#34;refreshOnChange&#34;: false,       &#34;key&#34;: &#34;html&#34;,       &#34;type&#34;: &#34;htmlelement&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false     },     {       &#34;title&#34;: &#34;&#60;b&#62;Annual meeting with the mentor (confidential)&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Panel&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Name of doctoral candidate:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = Meteor.user().tequila.displayname;&#34;,           &#34;key&#34;: &#34;phdStudentName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Doctoral Program:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;doctoralProgramName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of enrolment:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;dd.MM.yyyy&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfEnrolment&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Annual report of&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;1st year (tick only if candidacy exam not yet passed)&#34;,               &#34;value&#34;: &#34;1st year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;2nd year&#34;,               &#34;value&#34;: &#34;2nd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;3rd year&#34;,               &#34;value&#34;: &#34;3rd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;4th year&#34;,               &#34;value&#34;: &#34;4th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;5th year&#34;,               &#34;value&#34;: &#34;5th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;6th year&#34;,               &#34;value&#34;: &#34;6th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;year&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Section 1: Basic information&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;disabled&#34;: true,       &#34;key&#34;: &#34;panel&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section A: Basic information&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Tentative thesis title:&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;tentativeThesisTitle&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of candidacy exam:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;dd.MM.yyyy&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfCandidacyExam&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;TA activities completed:&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;taDutiesHoursAndOrCoursesCompleted&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Credits needed for this program:&#34;,           &#34;inputMask&#34;: &#34;99&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;persistent&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;creditsNeeded&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits obtained:&#34;,           &#34;mask&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;totalCreditsObtained&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits planned for the coming year (next 365 days):&#34;,           &#34;mask&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;key&#34;: &#34;totalCreditsPlanned&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Section 2: Research progress&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionBResearchProgress1&#34;,       &#34;conditional&#34;: {         &#34;show&#34;: false,         &#34;when&#34;: &#34;year&#34;,         &#34;eq&#34;: &#34;1st year&#34;       },       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section B: Research progress&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;To be completed first by the doctoral candidate and then discussed with the thesis director (and co-director if applicable) during a meeting (collaborative review).  Future objectives are meant to provide guidance in the thesis and should thus be as realistic as possible. Achieved and planned objectives should be discussed and agreed upon by the doctoral candidate and thesis director(s) before approving the Annual Report.&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Open the PDF appendix&#34;,           &#34;action&#34;: &#34;event&#34;,           &#34;showValidations&#34;: false,           &#34;theme&#34;: &#34;info&#34;,           &#34;block&#34;: true,           &#34;rightIcon&#34;: &#34;fa fa-external-link&#34;,           &#34;tableView&#34;: false,           &#34;key&#34;: &#34;openAnnexPdf&#34;,           &#34;customConditional&#34;: &#34;show = !!data.pdfAnnexPath&#34;,           &#34;type&#34;: &#34;button&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;1. Overall goals of the thesis&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;goalsOfTheThesis&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true,           &#34;disabled&#34;: true         },         {           &#34;label&#34;: &#34;2. Research progress during the past year &#60;br&#62;&#60;i&#62;(i.e. describe which objectives are completed and elaborate if any difficulties have been encountered since the last annual report)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchProgressDuringThePastYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true,           &#34;disabled&#34;: true         },         {           &#34;label&#34;: &#34;3. Have the objectives changed in the past year? If so, why and how? &#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;haveTheObjectivesChangedInThePastYearIfSoWhyAndHow&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true,           &#34;disabled&#34;: true         },         {           &#34;label&#34;: &#34;4. Research objectives for the next year, with approximate timeline (next 365 days)&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchObjectivesForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true,           &#34;disabled&#34;: true         },         {           &#34;label&#34;: &#34;5. Scientific output&#60;br&#62;&#60;i&#62;(i.e. journal and conference papers, patents, software, etc. published, submitted or in preparation)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;scientificOutput&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true,           &#34;disabled&#34;: true         },         {           &#34;label&#34;: &#34;6. Educational activities&#60;br&#62;&#60;i&#62;(i.e. mention oral or poster presentations, outreach and any specific training)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;educationalActivities&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true,           &#34;disabled&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Mentor confirmation of the mentor-doctoral candidate meeting&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionDOverallAppraisalAndSignatures&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section D: Overall appraisal and signatures&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;The role of the mentor is to provide confidential advice from an independent/different angle to the doctoral candidate on how best to progress in the PhD studies. The mentor and mentee meet once a year (or more often if the doctoral candidate/mentor so desires and agrees upon) and discuss the annual report.&#60;/p&#62;\n&#60;p&#62;The following topics could be discussed between mentor and mentee:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62; Advancing as a researcher (what has gone well, less well, how to improve, goal setting, which resources are needed, …)&#60;/li&#62;\n&#60;li&#62; Facets of career-building (contributions to the community, conferences, awards, networking opportunities, participating in possible soft skill courses on writing, communicating, managing, spin-off training, …)&#60;/li&#62;\n&#60;li&#62; Work-life balance&#60;/li&#62;\n&#60;li&#62; Communication (within the laboratory, with the thesis director(s) and other lab members, matching expectations in terms of progress and future goals, ...)&#60;/li&#62;\n&#60;li&#62; Life after the PhD (what kind of career options are there and how to explore them, ...)&#60;/li&#62;\n&#60;/ul&#62;\n&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html8&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Mentor date of confirmation:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: false,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;dd.MM.yyyy&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = moment().format(&#39;DD.MM.YYYY&#39;);&#34;,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;mentorDate&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Yes we have met&#34;,           &#34;tableView&#34;: false,           &#34;defaultValue&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;mentorSignature&#34;,           &#34;type&#34;: &#34;checkbox&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
+          <zeebe:header key="formIO" value="{   &#34;_id&#34;: &#34;6094ea003614a90bb31a12cc5&#34;,   &#34;type&#34;: &#34;form&#34;,   &#34;tags&#34;: [],   &#34;owner&#34;: &#34;605a091e390b9fa6e626d355&#34;,   &#34;revisions&#34;: &#34;&#34;,   &#34;_vid&#34;: 0,   &#34;title&#34;: &#34;Annual Progress Report&#34;,   &#34;display&#34;: &#34;form&#34;,   &#34;access&#34;: [     {       &#34;roles&#34;: [         &#34;605a093a1964dcf6c669c8dd&#34;,         &#34;605a093a1964dc7db769c8de&#34;,         &#34;605a093a1964dcd89969c8df&#34;       ],       &#34;type&#34;: &#34;read_all&#34;     }   ],   &#34;submissionAccess&#34;: [],   &#34;controller&#34;: &#34;&#34;,   &#34;properties&#34;: {},   &#34;settings&#34;: {},   &#34;name&#34;: &#34;annualProgressReport&#34;,   &#34;path&#34;: &#34;annualprogressreport&#34;,   &#34;project&#34;: &#34;605a093a1964dca89369c8dc&#34;,   &#34;created&#34;: &#34;2021-05-07T07:19:28.829Z&#34;,   &#34;modified&#34;: &#34;2021-05-11T15:57:35.231Z&#34;,   &#34;machineName&#34;: &#34;mcvvtebnveuvysz:annualProgressReport&#34;,   &#34;components&#34;: [     {       &#34;label&#34;: &#34;HTML&#34;,       &#34;attrs&#34;: [         {           &#34;attr&#34;: &#34;&#34;,           &#34;value&#34;: &#34;&#34;         }       ],       &#34;content&#34;: &#34;&#60;a href=\&#34;https://www.epfl.ch/education/phd/annual_report/collaborative_review_fills_annual_report\&#34; target=\&#34;_blank\&#34;&#62;&#60;img src=\&#34;https://www.epfl.ch/education/phd/wp-content/uploads/2023/11/manual.png\&#34; width=\&#34;50\&#34; &#62;&#60;/a&#62;&#34;,       &#34;refreshOnChange&#34;: false,       &#34;key&#34;: &#34;html9&#34;,       &#34;type&#34;: &#34;htmlelement&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false     },     {       &#34;title&#34;: &#34;&#60;b&#62;Annual Report&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;panel1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Panel&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Doctoral Program:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;doctoralProgramName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of enrolment:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;dd.MM.yyyy&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true,             &#34;custom&#34;: &#34;let m = moment();\nlet p = moment(input, \&#34;DD.MM.YYYY\&#34;);\nvalid = (m &#62; p) ? true : \&#34;date must not be in the future\&#34;;&#34;           },           &#34;key&#34;: &#34;dateOfEnrolment&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Annual report of&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;1st year (tick only if candidacy exam not yet passed)&#34;,               &#34;value&#34;: &#34;1st year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;2nd year&#34;,               &#34;value&#34;: &#34;2nd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;3rd year&#34;,               &#34;value&#34;: &#34;3rd year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;4th year&#34;,               &#34;value&#34;: &#34;4th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;5th year&#34;,               &#34;value&#34;: &#34;5th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;6th year&#34;,               &#34;value&#34;: &#34;6th year&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;year&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Section 1: Basic information&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;panel&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section A: Basic information&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;Name of doctoral candidate:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;customDefaultValue&#34;: &#34;value = Meteor.user().tequila.displayname;&#34;,           &#34;key&#34;: &#34;phdStudentName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Tentative thesis title:&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;tentativeThesisTitle&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director:&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorName&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Date of candidacy exam:&#34;,           &#34;widget&#34;: {             &#34;type&#34;: &#34;calendar&#34;,             &#34;altInput&#34;: true,             &#34;allowInput&#34;: true,             &#34;clickOpens&#34;: true,             &#34;enableDate&#34;: true,             &#34;enableTime&#34;: false,             &#34;mode&#34;: &#34;single&#34;,             &#34;noCalendar&#34;: false,             &#34;format&#34;: &#34;dd.MM.yyyy&#34;,             &#34;dateFormat&#34;: &#34;dd.MM.yyyy&#34;,             &#34;useLocaleSettings&#34;: false,             &#34;hourIncrement&#34;: 1,             &#34;minuteIncrement&#34;: 5,             &#34;time_24hr&#34;: false,             &#34;saveAs&#34;: &#34;text&#34;,             &#34;locale&#34;: &#34;en&#34;,             &#34;displayInTimezone&#34;: &#34;viewer&#34;           },           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;dateOfCandidacyExam&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;TA activities completed:&#60;br&#62;&#60;i&#62;Estimated hours and/or courses completed, supervision of project, ...&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;taDutiesHoursAndOrCoursesCompleted&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Credits needed for this program:&#34;,           &#34;inputMask&#34;: &#34;99&#34;,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;persistent&#34;: false,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;creditsNeeded&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits obtained:&#34;,           &#34;mask&#34;: false,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;totalCreditsObtained&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Number of credits planned for the coming year (next 365 days):&#34;,           &#34;mask&#34;: false,           &#34;tableView&#34;: true,           &#34;delimiter&#34;: false,           &#34;requireDecimal&#34;: false,           &#34;inputFormat&#34;: &#34;plain&#34;,           &#34;truncateMultipleSpaces&#34;: false,           &#34;calculateServer&#34;: true,           &#34;key&#34;: &#34;totalCreditsPlanned&#34;,           &#34;type&#34;: &#34;number&#34;,           &#34;inputType&#34;: &#34;number&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Section 2: Research progress&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionBResearchProgress1&#34;,       &#34;conditional&#34;: {         &#34;show&#34;: false,         &#34;when&#34;: &#34;year&#34;,         &#34;eq&#34;: &#34;1st year&#34;       },       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section B: Research progress&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;To be completed first by the doctoral candidate and then discussed with the thesis director (and co-director if applicable) during a meeting (collaborative review).  Future objectives are meant to provide guidance in the thesis and should thus be as realistic as possible. Achieved and planned objectives should be discussed and agreed upon by the doctoral candidate and thesis director(s) before approving the Annual Report. &#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;1. Overall goals of the thesis &#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;goalsOfTheThesis&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;2. Research progress during the past year&#60;br&#62;&#60;i&#62;(i.e. describe which objectives are completed and elaborate if any difficulties have been encountered since the last annual report)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchProgressDuringThePastYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;3. Have the objectives changed in the past year? If so, why and how? &#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;haveTheObjectivesChangedInThePastYearIfSoWhyAndHow&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;4. Research objectives for the next year, with approximate timeline (next 365 days)&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;researchObjectivesForTheNextYear&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;5. Scientific output&#60;br&#62;&#60;i&#62;(i.e. journal and conference papers, patents, software, etc. published, submitted or in preparation)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;scientificOutput&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;6. Educational activities&#60;br&#62;&#60;i&#62;(i.e. mention oral or poster presentations, outreach and any specific training)&#60;/i&#62;&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;educationalActivities&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Open the PDF appendix&#34;,           &#34;action&#34;: &#34;event&#34;,           &#34;showValidations&#34;: false,           &#34;theme&#34;: &#34;info&#34;,           &#34;block&#34;: true,           &#34;rightIcon&#34;: &#34;fa fa-external-link&#34;,           &#34;tableView&#34;: false,           &#34;key&#34;: &#34;openAnnexPdf&#34;,           &#34;customConditional&#34;: &#34;show = !!data.pdfAnnexPath&#34;,           &#34;type&#34;: &#34;button&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Section 3: Progress assessment&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionCProgressAssessment1&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section C: Progress assessment&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;To be completed independently by the doctoral candidate and thesis director (and co-director if applicable), then discussed and approved by both during a meeting (collaborative review). The goal is to have their respective perspective on the same topic, e.g. how the doctoral candidate views the supervision they receive and how the thesis director(s) views the supervision they give.&#60;br&#62;&#60;br&#62;The progress assessment is not confidential: each person’s comments initially remain hidden in order to provide all participants with the opportunity to express their view independently. When all parties have completed the self-assessment, comments are revealed to everyone so that they can prepare for the collaborative review. &#38;nbsp;&#60;/p&#62;\n&#60;p&#62;Aims on the doctoral candidate side:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62;to assess how the doctoral candidate views their own progress and skills&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to identify and communicate to the thesis director(s) in which areas the doctoral candidate seeks more input or help&#60;/li&#62;\n&#60;/ul&#62;\n&#60;p&#62;Aims on the thesis director (and co-director if applicable) side:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62;to ensure that the doctoral candidate knows how they are performing overall according to the thesis director’s expectations&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to communicate what the doctoral candidate’s strengths and weaknesses towards completing a PhD&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to communicate which areas need improvement&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;to ensure that career issues are discussed at least once per year&#38;nbsp;&#60;/li&#62;\n&#60;/ul&#62;\n&#60;p&#62;The comments box should be used to briefly assess the progress and further elaborate any specific issues.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html1&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;br&#62;&#60;b&#62;1. Progress in the thesis and development as a researcher:&#60;/b&#62;\n&#60;p&#62;Please comment on:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62;Doctoral candidate’s engagement in the thesis (satisfaction, motivation, commitment, initiative, independence, …);&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;Thesis progress (quality of results, critical thinking, vision, timeline, organization, planning, …); &#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;Doctoral candidate’s scientific and career development (training, acquired skills – writing, presenting – teaching load, conferences and networking, after-PhD planning, …);&#60;/li&#62;\n&#60;/ul&#62; &#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html2&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment1&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment1&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment1&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;Comment1CoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;Comment1Action&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;customClass&#34;: &#34;epfl-formio-component-textarea-large&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment1&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;b&#62;2. Context of the thesis and support available:&#60;/b&#62;\n&#60;p&#62;Please comment on:&#60;/p&#62;\n&#60;ul&#62;\n&#60;li&#62;Thesis director’s (and co-director if applicable) supervision (availability, coaching, support, resources, training and conferences, …);&#60;/li&#62;\n&#60;/ul&#62;\n&#60;ul&#62;\n&#60;li&#62;Laboratory environment (support from colleagues and own collegiality, open communication and atmosphere, balance in collaborative projects, resources availability, …)&#60;/li&#62;\n&#60;/ul&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html3&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;phdComment2&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisDirectorComment2&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;thesisCoDirectorComment2&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;CommentCoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;CommentAction&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;customClass&#34;: &#34;epfl-formio-component-textarea-large&#34;,           &#34;tableView&#34;: true,           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;commonComment2&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;&#60;strong&#62;Any other specific points:&#60;/strong&#62;&#60;br&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html7&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Doctoral candidate comment hide&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;hidden&#34;: true,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;calculateValue&#34;: &#34;\n&#34;,           &#34;key&#34;: &#34;phdComment6&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Doctoral candidate comment&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;calculateValue&#34;: &#34;value = data.phdComment6;&#34;,           &#34;key&#34;: &#34;phdComment66&#34;,           &#34;conditional&#34;: {             &#34;show&#34;: false,             &#34;when&#34;: &#34;phdComment6&#34;           },           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment hide&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;hidden&#34;: true,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisDirectorComment6&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis director comment&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;clearOnHide&#34;: false,           &#34;calculateValue&#34;: &#34;value = data.thesisDirectorComment6;&#34;,           &#34;key&#34;: &#34;thesisDirectorComment7&#34;,           &#34;conditional&#34;: {             &#34;show&#34;: false,             &#34;when&#34;: &#34;thesisDirectorComment6&#34;           },           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment hide&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;hidden&#34;: true,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;thesisCoDirectorComment6&#34;,           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;CommentCoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;CommentAction&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Thesis co-director comment&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;disabled&#34;: true,           &#34;tableView&#34;: true,           &#34;calculateValue&#34;: &#34;value = data.thesisCoDirectorComment6;&#34;,           &#34;key&#34;: &#34;thesisCoDirectorComment7&#34;,           &#34;conditional&#34;: {             &#34;show&#34;: false,             &#34;when&#34;: &#34;thesisCoDirectorComment6&#34;           },           &#34;logic&#34;: [             {               &#34;name&#34;: &#34;CommentCoDirectorLogic&#34;,               &#34;trigger&#34;: {                 &#34;type&#34;: &#34;simple&#34;,                 &#34;simple&#34;: {                   &#34;show&#34;: true,                   &#34;when&#34;: &#34;thesisCoDirectorName&#34;,                   &#34;eq&#34;: &#34;&#34;                 }               },               &#34;actions&#34;: [                 {                   &#34;name&#34;: &#34;CommentAction&#34;,                   &#34;type&#34;: &#34;property&#34;,                   &#34;property&#34;: {                     &#34;label&#34;: &#34;Hidden&#34;,                     &#34;value&#34;: &#34;hidden&#34;,                     &#34;type&#34;: &#34;boolean&#34;                   },                   &#34;state&#34;: true                 }               ]             }           ],           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Common comment&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;autoExpand&#34;: false,           &#34;tableView&#34;: true,           &#34;key&#34;: &#34;commonComment6&#34;,           &#34;type&#34;: &#34;textarea&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;title&#34;: &#34;&#60;b&#62;Section 4: Overall appraisal&#60;/b&#62;&#34;,       &#34;collapsible&#34;: false,       &#34;key&#34;: &#34;sectionDOverallAppraisalAndSignatures&#34;,       &#34;type&#34;: &#34;panel&#34;,       &#34;label&#34;: &#34;Section D: Overall appraisal and signatures&#34;,       &#34;input&#34;: false,       &#34;tableView&#34;: false,       &#34;components&#34;: [         {           &#34;label&#34;: &#34;HTM&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;&#60;strong&#62;For the doctoral candidate:&#60;/strong&#62; Your thesis director(s) is responsible for guiding you in your research and for coaching you to reach the scientific level of a PhD. The critical feedback of your thesis director(s) plays a key role in this process and also for your success beyond. The collaborative review stage allows you to discussed with your thesis director(s), understand expectations for improvement in the areas identified, and agreed on the plan to reach these milestones and assess your progress.&#60;/p&#62;\n&#60;p&#62;&#60;strong&#62;For the thesis director(s):&#60;/strong&#62; Rating and submitting the annual report indicates that you have discussed all the above points with your doctoral candidate, considered their feedback regarding any potential problem, explained their expectations for improvement, when appropriate, including mechanisms for intermediate progress assessments, discussed a plan for timely publication of the results and for the thesis defence, and thus approves the current report.&#60;/p&#62;\n&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html&#34;,           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;&#60;b&#62;General appraisal of the progress&#60;/b&#62;&#34;,           &#34;optionsLabelPosition&#34;: &#34;right&#34;,           &#34;inline&#34;: false,           &#34;tableView&#34;: false,           &#34;values&#34;: [             {               &#34;label&#34;: &#34;&#60;b&#62;exceeds expectations&#60;/b&#62;: the progress made during the previous year is exceptionally good; the thesis is on track; only a few doctoral candidates will receive this rating during their PhD.&#34;,               &#34;value&#34;: &#34;exceeds expectations&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;&#60;b&#62;meets expectations&#60;/b&#62;: the progress during the previous year is good; the thesis is on track; this is the most common rating.&#34;,               &#34;value&#34;: &#34;meets expectations&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;&#60;b&#62;needs some improvement&#60;/b&#62;: the progress made during the previous year is short of expectations; the thesis can get back on track if the doctoral candidate follows the feedback received; an intervention by the doctoral program director is not needed; some doctoral candidates may receive this rating during their PhD.&#34;,               &#34;value&#34;: &#34;needs some improvement&#34;,               &#34;shortcut&#34;: &#34;&#34;             },             {               &#34;label&#34;: &#34;&#60;b&#62;unsatisfactory&#60;/b&#62;: the progress made during the previous year was insufficient; this signals a serious risk of failure; an intervention by the doctoral program director is necessary; this assessment is rare.&#34;,               &#34;value&#34;: &#34;unsatisfactory&#34;,               &#34;shortcut&#34;: &#34;&#34;             }           ],           &#34;validate&#34;: {             &#34;required&#34;: true           },           &#34;key&#34;: &#34;generalAppraisalOfTheProgress&#34;,           &#34;type&#34;: &#34;radio&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p style=\&#34;color:red;\&#34;&#62;In case the annual report is unsatisfactory, the program director is informed and will seek a meeting with the doctoral candidate and the thesis director(s), to set goals and appropriate timelines for completion.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html8&#34;,           &#34;conditional&#34;: {             &#34;show&#34;: true,             &#34;when&#34;: &#34;generalAppraisalOfTheProgress&#34;,             &#34;eq&#34;: &#34;unsatisfactory&#34;           },           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;HTML&#34;,           &#34;attrs&#34;: [             {               &#34;attr&#34;: &#34;&#34;,               &#34;value&#34;: &#34;&#34;             }           ],           &#34;content&#34;: &#34;&#60;p&#62;In case the annual report is rated as needs some improvement, the doctoral program director will be invited to check the report and indicate any comment they may have.&#60;/p&#62;&#34;,           &#34;refreshOnChange&#34;: false,           &#34;key&#34;: &#34;html10&#34;,           &#34;conditional&#34;: {             &#34;show&#34;: true,             &#34;when&#34;: &#34;generalAppraisalOfTheProgress&#34;,             &#34;eq&#34;: &#34;needs some improvement&#34;           },           &#34;type&#34;: &#34;htmlelement&#34;,           &#34;input&#34;: false,           &#34;tableView&#34;: false         },         {           &#34;label&#34;: &#34;Program Director notif&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;hidden&#34;: true,           &#34;tableView&#34;: true,           &#34;clearOnHide&#34;: false,           &#34;calculateValue&#34;: &#34;\nif (data.generalAppraisalOfTheProgress != \&#34;unsatisfactory\&#34; &#38;&#38; data.generalAppraisalOfTheProgress != \&#34;needs some improvement\&#34;) {\n  value = \&#34;\&#34; ;\n} else {\n  value = \&#34;notif\&#34;; \n}&#34;,           &#34;key&#34;: &#34;programDirectorNotif&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Needs Improvement&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;hidden&#34;: true,           &#34;tableView&#34;: true,           &#34;clearOnHide&#34;: false,           &#34;calculateValue&#34;: &#34;\nif (data.generalAppraisalOfTheProgress != \&#34;needs some improvement\&#34;) {\n  value = \&#34;\&#34; ;\n} else {\n  value = \&#34;true\&#34;; \n}&#34;,           &#34;key&#34;: &#34;needsImprovement&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         },         {           &#34;label&#34;: &#34;Unsatisfactory&#34;,           &#34;applyMaskOn&#34;: &#34;change&#34;,           &#34;hidden&#34;: true,           &#34;tableView&#34;: true,           &#34;clearOnHide&#34;: false,           &#34;calculateValue&#34;: &#34;\nif (data.generalAppraisalOfTheProgress != \&#34;unsatisfactory\&#34;) {\n  value = \&#34;\&#34; ;\n} else {\n  value = \&#34;true\&#34;; \n}&#34;,           &#34;key&#34;: &#34;unsatisfactory&#34;,           &#34;type&#34;: &#34;textfield&#34;,           &#34;input&#34;: true         }       ]     },     {       &#34;type&#34;: &#34;button&#34;,       &#34;label&#34;: &#34;Submit&#34;,       &#34;key&#34;: &#34;submit&#34;,       &#34;disableOnInvalid&#34;: true,       &#34;input&#34;: true,       &#34;tableView&#34;: false     },     {       &#34;label&#34;: &#34;Cancel&#34;,       &#34;action&#34;: &#34;event&#34;,       &#34;showValidations&#34;: false,       &#34;theme&#34;: &#34;secondary&#34;,       &#34;tableView&#34;: false,       &#34;key&#34;: &#34;cancel&#34;,       &#34;type&#34;: &#34;button&#34;,       &#34;input&#34;: true,       &#34;event&#34;: &#34;cancelClicked&#34;     }   ] }" />
           <zeebe:header key="assigneeSciperFieldName" value="thesisDirectorSciper" />
           <zeebe:header key="notifyTo" value="thesisDirectorEmail" />
           <zeebe:header key="notifyCc" value="[phdStudentEmail, thesisCoDirectorEmail]" />
@@ -862,113 +862,128 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         <dc:Bounds x="190" y="372" width="4310" height="163" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_10y2s0x_di" bpmnElement="Event_PhD_Assess_Done">
-        <dc:Bounds x="4426" y="772" width="36" height="36" />
+      <bpmndi:BPMNShape id="Activity_0etdbm8_di" bpmnElement="Activity_Build_PDF">
+        <dc:Bounds x="3190" y="600" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0yvxukr_di" bpmnElement="Gateway_1iu457q" isMarkerVisible="true">
+        <dc:Bounds x="3735" y="765" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0sot685" bpmnElement="Gateway_0icbpp8" isMarkerVisible="true">
+        <dc:Bounds x="3391" y="615" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="4400" y="735" width="88" height="27" />
+          <dc:Bounds x="3360" y="663" width="52" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0yeky97_di" bpmnElement="Gateway_0yeky97" isMarkerVisible="true">
-        <dc:Bounds x="3104" y="615" width="50" height="50" />
+      <bpmndi:BPMNShape id="Activity_0jbwxb1_di" bpmnElement="Activity_Notify_With_PDF_ProgramDirector_And_Office">
+        <dc:Bounds x="3458" y="660" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0ov766g_di" bpmnElement="Event_End_Activity_Notify_Program_Director_Unsatisfacoty">
-        <dc:Bounds x="1766" y="2196" width="36" height="36" />
+      <bpmndi:BPMNShape id="BPMNShape_09miawa" bpmnElement="Activity_0tz9wrz">
+        <dc:Bounds x="3460" y="540" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1vrzdys_di" bpmnElement="Gateway_1vrzdys" isMarkerVisible="true">
+        <dc:Bounds x="3573" y="615" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1234dlc_di" bpmnElement="Activity_Notify_Ask_For_Manual_Deposit">
+        <dc:Bounds x="3632" y="840" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0s2fnb8_di" bpmnElement="Gateway_0s2fnb8" isMarkerVisible="true">
+        <dc:Bounds x="3545" y="855" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0e3v8s8_di" bpmnElement="Gateway_0hp9bfx">
+        <dc:Bounds x="3315" y="615" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0vwjqq9_di" bpmnElement="Activity_GED_Deposit">
+        <dc:Bounds x="3452" y="750" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1rbjt5y_di" bpmnElement="Gateway_1hndi1s">
+        <dc:Bounds x="775" y="1020" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1okn0bp_di" bpmnElement="Event_PhD_Assess_Start">
+        <dc:Bounds x="267" y="767" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="244" y="810" width="84" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1vk6wu2_di" bpmnElement="Gateway_1vk6wu2">
+        <dc:Bounds x="485" y="1020" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0bcd10c_di" bpmnElement="Activity_PHD_fills_annual_report">
+        <dc:Bounds x="580" y="1005" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0a9n280_di" bpmnElement="Activity_Program_Assistant_Assigns_Participants">
+        <dc:Bounds x="460" y="745" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1stz7w5_di" bpmnElement="Gateway_1stz7w5" isMarkerVisible="true">
+        <dc:Bounds x="485" y="910" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1vxeb07_di" bpmnElement="Gateway_1vxeb07" isMarkerVisible="true">
+        <dc:Bounds x="357" y="760" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="351" y="731" width="74" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_10ceb5k_di" bpmnElement="Activity_Thesis_Director_fills_annual_report">
+        <dc:Bounds x="1089" y="1365" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0w5d3x0_di" bpmnElement="Gateway_0w5d3x0">
+        <dc:Bounds x="1403" y="1380" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1osgngt_di" bpmnElement="Gateway_Thesis_Director_Check2" isMarkerVisible="true">
+        <dc:Bounds x="1313" y="1380" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1298" y="1444" width="81" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1qftu4l_di" bpmnElement="Gateway_1qftu4l">
+        <dc:Bounds x="1759" y="1380" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_00hc0r3_di" bpmnElement="Gateway_unsatisfactory_check" isMarkerVisible="true">
+        <dc:Bounds x="1759" y="1500" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1803" y="1498" width="78" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1s43jmr_di" bpmnElement="Activity_Thesis_Director_Collaborative_Review_Signs">
+        <dc:Bounds x="1624" y="1365" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1m9wltd_di" bpmnElement="Gateway_1m9wltd" isMarkerVisible="true">
+        <dc:Bounds x="1479" y="1380" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_078nd42_di" bpmnElement="Activity_PHD_Signs">
+        <dc:Bounds x="2045" y="1005" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1k2asd0" bpmnElement="Gateway_1rxjsuw" isMarkerVisible="true">
+        <dc:Bounds x="1890" y="1500" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1933" y="1486" width="73" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1yg0uz7" bpmnElement="Event_0rnj0nm">
+        <dc:Bounds x="2057" y="1507" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2032" y="1550" width="90" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ovkdgu_di" bpmnElement="Activity_Edit_Participants">
+        <dc:Bounds x="588" y="416" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_163s1qh" bpmnElement="Activity_0w39omc">
+        <dc:Bounds x="760" y="2440" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_08fgbr6" bpmnElement="Activity_0maboy0">
+        <dc:Bounds x="1040" y="2440" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0o2995l" bpmnElement="Event_05o7fhd">
+        <dc:Bounds x="1212" y="2462" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1742" y="2226" width="86" height="53" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0f9a79j_di" bpmnElement="Event_End_Activity_Notify_Program_Director_NeedsImprovement">
-        <dc:Bounds x="1897" y="2196" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1873" y="2226" width="85" height="53" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_153g1f0_di" bpmnElement="Activity_153g1f0">
-        <dc:Bounds x="1734" y="1952" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1fj0roi" bpmnElement="Activity_1pwsglk">
-        <dc:Bounds x="1865" y="1952" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0yicexh" bpmnElement="Activity_Notify_Program_Director_NeedsImprovement">
-        <dc:Bounds x="1865" y="2075" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0nvflgj_di" bpmnElement="Activity_Notify_Program_Director_Unsatisfacoty">
-        <dc:Bounds x="1734" y="2075" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1yx3vqf" bpmnElement="Activity_Program_Director_Signs_Needs_Improvement_Or_Unsatisfactory_And_Agree">
-        <dc:Bounds x="2901" y="2242" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0jgf1gh" bpmnElement="Activity_Program_Director_Signs_Unsatisfactory_And_Disagree">
-        <dc:Bounds x="2901" y="1980" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0fqxcvk" bpmnElement="Activity_Program_Director_Signs_Needs_Improvement_And_Disagree">
-        <dc:Bounds x="2901" y="2111" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0h7uk2x" bpmnElement="Gateway_03d8aj5" isMarkerVisible="true">
-        <dc:Bounds x="2735" y="2054" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2667" y="2102" width="85" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1mwo40u_di" bpmnElement="Activity_Program_Director_Signs_Exceed_And_Disagree">
-        <dc:Bounds x="2901" y="1847" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0lljjmb_di" bpmnElement="Event_0lljjmb">
-        <dc:Bounds x="782" y="1772" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="778" y="1808" width="46" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1nl6gt1_di" bpmnElement="Activity_Thesis_Co_Director_fills_annual_report">
-        <dc:Bounds x="1089" y="1680" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1u8sie4_di" bpmnElement="Gateway_Thesis_Director_Check1" isMarkerVisible="true">
-        <dc:Bounds x="775" y="1695" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="684" y="1706" width="81" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1snmot9" bpmnElement="Gateway_13uipzu" isMarkerVisible="true">
-        <dc:Bounds x="585" y="1380" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="504" y="1391" width="62" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_15b1lul" bpmnElement="Event_0zn4b28">
-        <dc:Bounds x="702" y="1387" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="691" y="1433" width="60" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_03mlw3f_di" bpmnElement="Gateway_1n0eifr">
-        <dc:Bounds x="3905" y="765" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_15lcia3" bpmnElement="Activity_00f1pzz">
-        <dc:Bounds x="3810" y="600" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0pelgwh_di" bpmnElement="Activity_Notify_With_PDF_PhDStudent">
-        <dc:Bounds x="3660" y="600" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0lqkv0c" bpmnElement="Activity_post_ISA_student_result">
-        <dc:Bounds x="3990" y="750" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0pn5ptt" bpmnElement="Activity_1jsjztg">
-        <dc:Bounds x="4300" y="750" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_06q0z4h" bpmnElement="Activity_Notify_Can_not_post_student_result_on_ISA">
-        <dc:Bounds x="4120" y="830" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0sckhmh" bpmnElement="Gateway_1k9v23g" isMarkerVisible="true">
-        <dc:Bounds x="4225" y="765" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_05vfeae_di" bpmnElement="Activity_notifier_service_subprocess" isExpanded="true">
         <dc:Bounds x="714" y="103" width="501" height="250" />
@@ -1012,141 +1027,132 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         <di:waypoint x="1055" y="278" />
         <di:waypoint x="1055" y="181" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="BPMNShape_0o2995l" bpmnElement="Event_05o7fhd">
-        <dc:Bounds x="1212" y="2462" width="36" height="36" />
+      <bpmndi:BPMNShape id="BPMNShape_15b1lul" bpmnElement="Event_0zn4b28">
+        <dc:Bounds x="702" y="1387" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="691" y="1433" width="60" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1snmot9" bpmnElement="Gateway_13uipzu" isMarkerVisible="true">
+        <dc:Bounds x="585" y="1380" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="504" y="1391" width="62" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1u8sie4_di" bpmnElement="Gateway_Thesis_Director_Check1" isMarkerVisible="true">
+        <dc:Bounds x="775" y="1695" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="684" y="1706" width="81" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1nl6gt1_di" bpmnElement="Activity_Thesis_Co_Director_fills_annual_report">
+        <dc:Bounds x="1089" y="1680" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0lljjmb_di" bpmnElement="Event_0lljjmb">
+        <dc:Bounds x="782" y="1772" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="778" y="1808" width="46" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mwo40u_di" bpmnElement="Activity_Program_Director_Signs_Exceed_And_Disagree">
+        <dc:Bounds x="2901" y="1847" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0h7uk2x" bpmnElement="Gateway_03d8aj5" isMarkerVisible="true">
+        <dc:Bounds x="2735" y="2054" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2667" y="2102" width="85" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0fqxcvk" bpmnElement="Activity_Program_Director_Signs_Needs_Improvement_And_Disagree">
+        <dc:Bounds x="2901" y="2111" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0jgf1gh" bpmnElement="Activity_Program_Director_Signs_Unsatisfactory_And_Disagree">
+        <dc:Bounds x="2901" y="1980" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1yx3vqf" bpmnElement="Activity_Program_Director_Signs_Needs_Improvement_Or_Unsatisfactory_And_Agree">
+        <dc:Bounds x="2901" y="2242" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0nvflgj_di" bpmnElement="Activity_Notify_Program_Director_Unsatisfacoty">
+        <dc:Bounds x="1734" y="2075" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0yicexh" bpmnElement="Activity_Notify_Program_Director_NeedsImprovement">
+        <dc:Bounds x="1865" y="2075" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1fj0roi" bpmnElement="Activity_1pwsglk">
+        <dc:Bounds x="1865" y="1952" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_153g1f0_di" bpmnElement="Activity_153g1f0">
+        <dc:Bounds x="1734" y="1952" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0f9a79j_di" bpmnElement="Event_End_Activity_Notify_Program_Director_NeedsImprovement">
+        <dc:Bounds x="1897" y="2196" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1873" y="2226" width="85" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ov766g_di" bpmnElement="Event_End_Activity_Notify_Program_Director_Unsatisfacoty">
+        <dc:Bounds x="1766" y="2196" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1742" y="2226" width="86" height="53" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_08fgbr6" bpmnElement="Activity_0maboy0">
-        <dc:Bounds x="1040" y="2440" width="100" height="80" />
+      <bpmndi:BPMNShape id="Gateway_0yeky97_di" bpmnElement="Gateway_0yeky97" isMarkerVisible="true">
+        <dc:Bounds x="3104" y="615" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_10y2s0x_di" bpmnElement="Event_PhD_Assess_Done">
+        <dc:Bounds x="4426" y="772" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="4400" y="735" width="88" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_03mlw3f_di" bpmnElement="Gateway_1n0eifr">
+        <dc:Bounds x="3905" y="765" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_15lcia3" bpmnElement="Activity_00f1pzz">
+        <dc:Bounds x="3810" y="600" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_163s1qh" bpmnElement="Activity_0w39omc">
-        <dc:Bounds x="760" y="2440" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_0pelgwh_di" bpmnElement="Activity_Notify_With_PDF_PhDStudent">
+        <dc:Bounds x="3660" y="600" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0lqkv0c" bpmnElement="Activity_post_ISA_student_result">
+        <dc:Bounds x="3990" y="750" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1ovkdgu_di" bpmnElement="Activity_Edit_Participants">
-        <dc:Bounds x="588" y="416" width="100" height="80" />
+      <bpmndi:BPMNShape id="BPMNShape_0pn5ptt" bpmnElement="Activity_1jsjztg">
+        <dc:Bounds x="4300" y="750" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1yg0uz7" bpmnElement="Event_0rnj0nm">
-        <dc:Bounds x="2057" y="1507" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2032" y="1550" width="90" height="53" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1k2asd0" bpmnElement="Gateway_1rxjsuw" isMarkerVisible="true">
-        <dc:Bounds x="1890" y="1500" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1933" y="1486" width="73" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_078nd42_di" bpmnElement="Activity_PHD_Signs">
-        <dc:Bounds x="2045" y="1005" width="100" height="80" />
+      <bpmndi:BPMNShape id="BPMNShape_06q0z4h" bpmnElement="Activity_Notify_Can_not_post_student_result_on_ISA">
+        <dc:Bounds x="4120" y="830" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1m9wltd_di" bpmnElement="Gateway_1m9wltd" isMarkerVisible="true">
-        <dc:Bounds x="1479" y="1380" width="50" height="50" />
+      <bpmndi:BPMNShape id="BPMNShape_0sckhmh" bpmnElement="Gateway_1k9v23g" isMarkerVisible="true">
+        <dc:Bounds x="4225" y="765" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1s43jmr_di" bpmnElement="Activity_Thesis_Director_Collaborative_Review_Signs">
-        <dc:Bounds x="1624" y="1365" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_00hc0r3_di" bpmnElement="Gateway_unsatisfactory_check" isMarkerVisible="true">
-        <dc:Bounds x="1759" y="1500" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1803" y="1498" width="78" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1qftu4l_di" bpmnElement="Gateway_1qftu4l">
-        <dc:Bounds x="1759" y="1380" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1osgngt_di" bpmnElement="Gateway_Thesis_Director_Check2" isMarkerVisible="true">
-        <dc:Bounds x="1313" y="1380" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1298" y="1444" width="81" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0w5d3x0_di" bpmnElement="Gateway_0w5d3x0">
-        <dc:Bounds x="1403" y="1380" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_10ceb5k_di" bpmnElement="Activity_Thesis_Director_fills_annual_report">
-        <dc:Bounds x="1089" y="1365" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1vxeb07_di" bpmnElement="Gateway_1vxeb07" isMarkerVisible="true">
-        <dc:Bounds x="357" y="760" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="351" y="731" width="74" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1stz7w5_di" bpmnElement="Gateway_1stz7w5" isMarkerVisible="true">
-        <dc:Bounds x="485" y="910" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0a9n280_di" bpmnElement="Activity_Program_Assistant_Assigns_Participants">
-        <dc:Bounds x="460" y="745" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0bcd10c_di" bpmnElement="Activity_PHD_fills_annual_report">
-        <dc:Bounds x="580" y="1005" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1vk6wu2_di" bpmnElement="Gateway_1vk6wu2">
-        <dc:Bounds x="485" y="1020" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1okn0bp_di" bpmnElement="Event_PhD_Assess_Start">
-        <dc:Bounds x="267" y="767" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="244" y="810" width="84" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1rbjt5y_di" bpmnElement="Gateway_1hndi1s">
-        <dc:Bounds x="775" y="1020" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0vwjqq9_di" bpmnElement="Activity_GED_Deposit">
-        <dc:Bounds x="3452" y="750" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0e3v8s8_di" bpmnElement="Gateway_0hp9bfx">
-        <dc:Bounds x="3315" y="615" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0s2fnb8_di" bpmnElement="Gateway_0s2fnb8" isMarkerVisible="true">
-        <dc:Bounds x="3545" y="855" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1234dlc_di" bpmnElement="Activity_Notify_Ask_For_Manual_Deposit">
-        <dc:Bounds x="3632" y="840" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1vrzdys_di" bpmnElement="Gateway_1vrzdys" isMarkerVisible="true">
-        <dc:Bounds x="3573" y="615" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_09miawa" bpmnElement="Activity_0tz9wrz">
-        <dc:Bounds x="3460" y="540" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0jbwxb1_di" bpmnElement="Activity_Notify_With_PDF_ProgramDirector_And_Office">
-        <dc:Bounds x="3458" y="660" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_0sot685" bpmnElement="Gateway_0icbpp8" isMarkerVisible="true">
-        <dc:Bounds x="3391" y="615" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="3360" y="663" width="52" height="40" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_0yvxukr_di" bpmnElement="Gateway_1iu457q" isMarkerVisible="true">
-        <dc:Bounds x="3735" y="765" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0etdbm8_di" bpmnElement="Activity_Build_PDF">
-        <dc:Bounds x="3190" y="600" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0vy5jzl_di" bpmnElement="TextAnnotation_0vy5jzl">
-        <dc:Bounds x="1180" y="1463" width="100" height="30" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0j1km92_di" bpmnElement="TextAnnotation_0j1km92">
-        <dc:Bounds x="1200" y="1760" width="100" height="30" />
+      <bpmndi:BPMNShape id="TextAnnotation_0qwyl9d_di" bpmnElement="TextAnnotation_0qwyl9d">
+        <dc:Bounds x="1644" y="1451" width="100" height="54" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_04v2gmm_di" bpmnElement="TextAnnotation_04v2gmm">
         <dc:Bounds x="670" y="1100" width="100" height="30" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0qwyl9d_di" bpmnElement="TextAnnotation_0qwyl9d">
-        <dc:Bounds x="1644" y="1451" width="100" height="54" />
+      <bpmndi:BPMNShape id="TextAnnotation_0j1km92_di" bpmnElement="TextAnnotation_0j1km92">
+        <dc:Bounds x="1200" y="1760" width="100" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0vy5jzl_di" bpmnElement="TextAnnotation_0vy5jzl">
+        <dc:Bounds x="1180" y="1463" width="100" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_10r7lh4" bpmnElement="Event_ISA_error">
+        <dc:Bounds x="4022" y="812" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3988" y="846" width="44" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1ogv24m_di" bpmnElement="Event_GED_Deposit_Unreachable_Error">
         <dc:Bounds x="3454" y="812" width="36" height="36" />
@@ -1160,227 +1166,90 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
           <dc:Bounds x="3525" y="836" width="82" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_10r7lh4" bpmnElement="Event_ISA_error">
-        <dc:Bounds x="4022" y="812" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="3988" y="846" width="44" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_01oofq1_di" bpmnElement="Flow_01oofq1">
-        <di:waypoint x="4040" y="848" />
-        <di:waypoint x="4040" y="870" />
-        <di:waypoint x="4120" y="870" />
+      <bpmndi:BPMNEdge id="Flow_0ekihzw_di" bpmnElement="Flow_0ekihzw">
+        <di:waypoint x="3955" y="790" />
+        <di:waypoint x="3990" y="790" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1e7pk9a_di" bpmnElement="Flow_1e7pk9a">
-        <di:waypoint x="4090" y="790" />
-        <di:waypoint x="4225" y="790" />
+      <bpmndi:BPMNEdge id="Flow_0q3cohb_di" bpmnElement="Flow_0q3cohb">
+        <di:waypoint x="3785" y="790" />
+        <di:waypoint x="3905" y="790" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0egw7oo_di" bpmnElement="Flow_0egw7oo">
-        <di:waypoint x="4220" y="870" />
-        <di:waypoint x="4250" y="870" />
-        <di:waypoint x="4250" y="815" />
+      <bpmndi:BPMNEdge id="Flow_181w5as_di" bpmnElement="Flow_181w5as">
+        <di:waypoint x="3416" y="665" />
+        <di:waypoint x="3416" y="700" />
+        <di:waypoint x="3458" y="700" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1am8g24_di" bpmnElement="Flow_1am8g24">
-        <di:waypoint x="3154" y="640" />
-        <di:waypoint x="3190" y="640" />
+      <bpmndi:BPMNEdge id="Flow_120auo8_di" bpmnElement="Flow_120auo8">
+        <di:waypoint x="3416" y="615" />
+        <di:waypoint x="3416" y="580" />
+        <di:waypoint x="3460" y="580" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0557sk9_di" bpmnElement="Flow_0557sk9">
-        <di:waypoint x="1915" y="2155" />
-        <di:waypoint x="1915" y="2196" />
+      <bpmndi:BPMNEdge id="Flow_19hd8zh_di" bpmnElement="Flow_19hd8zh">
+        <di:waypoint x="3558" y="700" />
+        <di:waypoint x="3598" y="700" />
+        <di:waypoint x="3598" y="665" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0cktx9y_di" bpmnElement="Flow_0cktx9y">
-        <di:waypoint x="1915" y="2032" />
-        <di:waypoint x="1915" y="2075" />
+      <bpmndi:BPMNEdge id="Flow_148rsbl_di" bpmnElement="Flow_148rsbl">
+        <di:waypoint x="3560" y="580" />
+        <di:waypoint x="3598" y="580" />
+        <di:waypoint x="3598" y="615" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_10b5pmi_di" bpmnElement="Flow_10b5pmi">
-        <di:waypoint x="1784" y="2155" />
-        <di:waypoint x="1784" y="2196" />
+      <bpmndi:BPMNEdge id="Flow_02b8gg5_di" bpmnElement="Flow_02b8gg5">
+        <di:waypoint x="3760" y="640" />
+        <di:waypoint x="3810" y="640" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_08rxq4y_di" bpmnElement="Flow_08rxq4y">
-        <di:waypoint x="1784" y="2032" />
-        <di:waypoint x="1784" y="2075" />
+      <bpmndi:BPMNEdge id="Flow_104zsqz_di" bpmnElement="Flow_104zsqz">
+        <di:waypoint x="3623" y="640" />
+        <di:waypoint x="3660" y="640" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_10ky1oc_di" bpmnElement="Flow_10ky1oc">
-        <di:waypoint x="3001" y="2282" />
-        <di:waypoint x="3129" y="2282" />
-        <di:waypoint x="3129" y="665" />
+      <bpmndi:BPMNEdge id="Flow_0qltexw_di" bpmnElement="Flow_0qltexw">
+        <di:waypoint x="3732" y="880" />
+        <di:waypoint x="3760" y="880" />
+        <di:waypoint x="3760" y="815" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1essbrc_di" bpmnElement="Flow_1essbrc">
-        <di:waypoint x="3001" y="2020" />
-        <di:waypoint x="3129" y="2020" />
-        <di:waypoint x="3129" y="665" />
+      <bpmndi:BPMNEdge id="Flow_1fl8szj_di" bpmnElement="Flow_1fl8szj">
+        <di:waypoint x="3595" y="880" />
+        <di:waypoint x="3632" y="880" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_01gxy0h_di" bpmnElement="Flow_01gxy0h">
-        <di:waypoint x="3001" y="2151" />
-        <di:waypoint x="3129" y="2151" />
-        <di:waypoint x="3129" y="665" />
+      <bpmndi:BPMNEdge id="Flow_1no9et7_di" bpmnElement="Flow_1no9et7">
+        <di:waypoint x="3472" y="848" />
+        <di:waypoint x="3472" y="930" />
+        <di:waypoint x="3570" y="930" />
+        <di:waypoint x="3570" y="905" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0q747kf_di" bpmnElement="Flow_0q747kf">
-        <di:waypoint x="2740" y="2074" />
-        <di:waypoint x="2740" y="640" />
-        <di:waypoint x="3104" y="640" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2666" y="1973" width="67" height="14" />
-        </bpmndi:BPMNLabel>
+      <bpmndi:BPMNEdge id="Flow_0ytaj1j_di" bpmnElement="Flow_0ytaj1j">
+        <di:waypoint x="3512" y="848" />
+        <di:waypoint x="3512" y="880" />
+        <di:waypoint x="3545" y="880" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1gko0zc_di" bpmnElement="Flow_1gko0zc">
-        <di:waypoint x="2760" y="2104" />
-        <di:waypoint x="2760" y="2282" />
-        <di:waypoint x="2901" y="2282" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2792" y="2288" width="77" height="53" />
-        </bpmndi:BPMNLabel>
+      <bpmndi:BPMNEdge id="Flow_0bkc875_di" bpmnElement="Flow_0bkc875">
+        <di:waypoint x="3365" y="640" />
+        <di:waypoint x="3391" y="640" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_06dhg8v_di" bpmnElement="Flow_06dhg8v">
-        <di:waypoint x="2760" y="2054" />
-        <di:waypoint x="2760" y="2020" />
-        <di:waypoint x="2901" y="2020" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2796" y="2026" width="70" height="27" />
-        </bpmndi:BPMNLabel>
+      <bpmndi:BPMNEdge id="Flow_0b0vfwv_di" bpmnElement="Flow_0b0vfwv">
+        <di:waypoint x="3290" y="640" />
+        <di:waypoint x="3315" y="640" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_15kqz5j_di" bpmnElement="Flow_15kqz5j">
-        <di:waypoint x="2760" y="2104" />
-        <di:waypoint x="2760" y="2151" />
-        <di:waypoint x="2901" y="2151" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2788" y="2157" width="85" height="40" />
-        </bpmndi:BPMNLabel>
+      <bpmndi:BPMNEdge id="Flow_1uvq6qs_di" bpmnElement="Flow_1uvq6qs">
+        <di:waypoint x="3552" y="790" />
+        <di:waypoint x="3735" y="790" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_02llvqx_di" bpmnElement="Flow_02llvqx">
-        <di:waypoint x="3001" y="1887" />
-        <di:waypoint x="3129" y="1887" />
-        <di:waypoint x="3129" y="665" />
+      <bpmndi:BPMNEdge id="Flow_0z5b27w_di" bpmnElement="Flow_0z5b27w">
+        <di:waypoint x="3340" y="665" />
+        <di:waypoint x="3340" y="790" />
+        <di:waypoint x="3452" y="790" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_04j2ayv_di" bpmnElement="Flow_04j2ayv">
-        <di:waypoint x="2760" y="2054" />
-        <di:waypoint x="2760" y="1887" />
-        <di:waypoint x="2901" y="1887" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="2801" y="1893" width="59" height="27" />
-        </bpmndi:BPMNLabel>
+      <bpmndi:BPMNEdge id="Flow_08cun4v_di" bpmnElement="Flow_08cun4v">
+        <di:waypoint x="680" y="1045" />
+        <di:waypoint x="775" y="1045" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_05yfvxr_di" bpmnElement="Flow_05yfvxr">
-        <di:waypoint x="800" y="1745" />
-        <di:waypoint x="800" y="1772" />
+      <bpmndi:BPMNEdge id="Flow_16matth_di" bpmnElement="Flow_16matth">
+        <di:waypoint x="535" y="1045" />
+        <di:waypoint x="580" y="1045" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1qnxt97_di" bpmnElement="Flow_1qnxt97">
-        <di:waypoint x="825" y="1720" />
-        <di:waypoint x="1089" y="1720" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="951" y="1703" width="18" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0uoihx2_di" bpmnElement="Flow_0uoihx2">
-        <di:waypoint x="635" y="1405" />
-        <di:waypoint x="702" y="1405" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="662" y="1387" width="13" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1cbuuz3_di" bpmnElement="Flow_1cbuuz3">
-        <di:waypoint x="1140" y="2480" />
-        <di:waypoint x="1212" y="2480" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ff5tuo_di" bpmnElement="Flow_0ff5tuo">
-        <di:waypoint x="860" y="2480" />
-        <di:waypoint x="1040" y="2480" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1rczu4y_di" bpmnElement="Flow_1rczu4y">
-        <di:waypoint x="610" y="1430" />
-        <di:waypoint x="610" y="2480" />
-        <di:waypoint x="760" y="2480" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="579" y="1453" width="18" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0amshgl_di" bpmnElement="Flow_0amshgl">
-        <di:waypoint x="688" y="436" />
-        <di:waypoint x="708" y="436" />
-        <di:waypoint x="708" y="476" />
-        <di:waypoint x="688" y="476" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_04ae09c_di" bpmnElement="Flow_04ae09c">
-        <di:waypoint x="1915" y="1550" />
-        <di:waypoint x="1915" y="1952" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1923" y="1564" width="18" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0mjuqeo_di" bpmnElement="Flow_0mjuqeo">
-        <di:waypoint x="1940" y="1525" />
-        <di:waypoint x="2057" y="1525" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_14uiesw_di" bpmnElement="Flow_14uiesw">
-        <di:waypoint x="2145" y="1045" />
-        <di:waypoint x="2450" y="1045" />
-        <di:waypoint x="2450" y="2079" />
-        <di:waypoint x="2735" y="2079" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1a31ekj_di" bpmnElement="Flow_1a31ekj">
-        <di:waypoint x="1529" y="1405" />
-        <di:waypoint x="1624" y="1405" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1jkk0ln_di" bpmnElement="Flow_1jkk0ln">
-        <di:waypoint x="1784" y="1550" />
-        <di:waypoint x="1784" y="1952" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1792" y="1564" width="18" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0nb0m4u_di" bpmnElement="Flow_0nb0m4u">
-        <di:waypoint x="1809" y="1525" />
-        <di:waypoint x="1890" y="1525" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1o8eczd_di" bpmnElement="Flow_1o8eczd">
-        <di:waypoint x="1784" y="1380" />
-        <di:waypoint x="1784" y="1045" />
-        <di:waypoint x="2045" y="1045" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0pq7nor_di" bpmnElement="Flow_0pq7nor">
-        <di:waypoint x="1784" y="1430" />
-        <di:waypoint x="1784" y="1500" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1sd2f0p_di" bpmnElement="Flow_1sd2f0p">
-        <di:waypoint x="1724" y="1405" />
-        <di:waypoint x="1759" y="1405" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0r3q628_di" bpmnElement="Flow_0r3q628">
-        <di:waypoint x="1338" y="1380" />
-        <di:waypoint x="1338" y="1320" />
-        <di:waypoint x="1504" y="1320" />
-        <di:waypoint x="1504" y="1380" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1348" y="1343" width="13" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0yg2ypo_di" bpmnElement="Flow_0yg2ypo">
-        <di:waypoint x="1453" y="1405" />
-        <di:waypoint x="1479" y="1405" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1f0mux0_di" bpmnElement="Flow_1f0mux0">
-        <di:waypoint x="1189" y="1720" />
-        <di:waypoint x="1428" y="1720" />
-        <di:waypoint x="1428" y="1430" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1gy2m7j_di" bpmnElement="Flow_1gy2m7j">
-        <di:waypoint x="1363" y="1405" />
-        <di:waypoint x="1403" y="1405" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1374" y="1387" width="18" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1q4fi07_di" bpmnElement="Flow_1q4fi07">
-        <di:waypoint x="1189" y="1405" />
-        <di:waypoint x="1313" y="1405" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1abdc6g_di" bpmnElement="Flow_1abdc6g">
-        <di:waypoint x="382" y="810" />
-        <di:waypoint x="382" y="935" />
-        <di:waypoint x="485" y="935" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="388" y="870" width="18" height="14" />
-        </bpmndi:BPMNLabel>
+      <bpmndi:BPMNEdge id="Flow_1lvnxkq_di" bpmnElement="Flow_1lvnxkq">
+        <di:waypoint x="510" y="960" />
+        <di:waypoint x="510" y="1020" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1bi0oxc_di" bpmnElement="Flow_1bi0oxc">
         <di:waypoint x="510" y="825" />
@@ -1393,128 +1262,243 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
           <dc:Bounds x="427" y="767" width="13" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0rmrx8s_di" bpmnElement="Flow_0rmrx8s">
-        <di:waypoint x="523" y="1033" />
-        <di:waypoint x="638" y="920" />
-        <di:waypoint x="638" y="496" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_16matth_di" bpmnElement="Flow_16matth">
-        <di:waypoint x="535" y="1045" />
-        <di:waypoint x="580" y="1045" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1lvnxkq_di" bpmnElement="Flow_1lvnxkq">
-        <di:waypoint x="510" y="960" />
-        <di:waypoint x="510" y="1020" />
+      <bpmndi:BPMNEdge id="Flow_1abdc6g_di" bpmnElement="Flow_1abdc6g">
+        <di:waypoint x="382" y="810" />
+        <di:waypoint x="382" y="935" />
+        <di:waypoint x="485" y="935" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="388" y="870" width="18" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0ighe3r_di" bpmnElement="Flow_0ighe3r">
         <di:waypoint x="303" y="785" />
         <di:waypoint x="357" y="785" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0n5j6j2_di" bpmnElement="Flow_0n5j6j2">
-        <di:waypoint x="800" y="1070" />
-        <di:waypoint x="800" y="1695" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_14wav4t_di" bpmnElement="Flow_14wav4t">
-        <di:waypoint x="790" y="1060" />
-        <di:waypoint x="610" y="1380" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0dhkieo_di" bpmnElement="Flow_0dhkieo">
         <di:waypoint x="825" y="1045" />
         <di:waypoint x="1139" y="1045" />
         <di:waypoint x="1139" y="1365" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_08cun4v_di" bpmnElement="Flow_08cun4v">
-        <di:waypoint x="680" y="1045" />
-        <di:waypoint x="775" y="1045" />
+      <bpmndi:BPMNEdge id="Flow_1gy2m7j_di" bpmnElement="Flow_1gy2m7j">
+        <di:waypoint x="1363" y="1405" />
+        <di:waypoint x="1403" y="1405" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1374" y="1387" width="18" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0z5b27w_di" bpmnElement="Flow_0z5b27w">
-        <di:waypoint x="3340" y="665" />
-        <di:waypoint x="3340" y="790" />
-        <di:waypoint x="3452" y="790" />
+      <bpmndi:BPMNEdge id="Flow_1q4fi07_di" bpmnElement="Flow_1q4fi07">
+        <di:waypoint x="1189" y="1405" />
+        <di:waypoint x="1313" y="1405" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1uvq6qs_di" bpmnElement="Flow_1uvq6qs">
-        <di:waypoint x="3552" y="790" />
-        <di:waypoint x="3735" y="790" />
+      <bpmndi:BPMNEdge id="Flow_0pq7nor_di" bpmnElement="Flow_0pq7nor">
+        <di:waypoint x="1784" y="1430" />
+        <di:waypoint x="1784" y="1500" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0b0vfwv_di" bpmnElement="Flow_0b0vfwv">
-        <di:waypoint x="3290" y="640" />
-        <di:waypoint x="3315" y="640" />
+      <bpmndi:BPMNEdge id="Flow_1sd2f0p_di" bpmnElement="Flow_1sd2f0p">
+        <di:waypoint x="1724" y="1405" />
+        <di:waypoint x="1759" y="1405" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0bkc875_di" bpmnElement="Flow_0bkc875">
-        <di:waypoint x="3365" y="640" />
-        <di:waypoint x="3391" y="640" />
+      <bpmndi:BPMNEdge id="Flow_1a31ekj_di" bpmnElement="Flow_1a31ekj">
+        <di:waypoint x="1529" y="1405" />
+        <di:waypoint x="1624" y="1405" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ytaj1j_di" bpmnElement="Flow_0ytaj1j">
-        <di:waypoint x="3512" y="848" />
-        <di:waypoint x="3512" y="880" />
-        <di:waypoint x="3545" y="880" />
+      <bpmndi:BPMNEdge id="Flow_0yg2ypo_di" bpmnElement="Flow_0yg2ypo">
+        <di:waypoint x="1453" y="1405" />
+        <di:waypoint x="1479" y="1405" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1no9et7_di" bpmnElement="Flow_1no9et7">
-        <di:waypoint x="3472" y="848" />
-        <di:waypoint x="3472" y="930" />
-        <di:waypoint x="3570" y="930" />
-        <di:waypoint x="3570" y="905" />
+      <bpmndi:BPMNEdge id="Flow_0r3q628_di" bpmnElement="Flow_0r3q628">
+        <di:waypoint x="1338" y="1380" />
+        <di:waypoint x="1338" y="1320" />
+        <di:waypoint x="1504" y="1320" />
+        <di:waypoint x="1504" y="1380" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1348" y="1343" width="13" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1fl8szj_di" bpmnElement="Flow_1fl8szj">
-        <di:waypoint x="3595" y="880" />
-        <di:waypoint x="3632" y="880" />
+      <bpmndi:BPMNEdge id="Flow_1o8eczd_di" bpmnElement="Flow_1o8eczd">
+        <di:waypoint x="1784" y="1380" />
+        <di:waypoint x="1784" y="1045" />
+        <di:waypoint x="2045" y="1045" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0qltexw_di" bpmnElement="Flow_0qltexw">
-        <di:waypoint x="3732" y="880" />
-        <di:waypoint x="3760" y="880" />
-        <di:waypoint x="3760" y="815" />
+      <bpmndi:BPMNEdge id="Flow_0nb0m4u_di" bpmnElement="Flow_0nb0m4u">
+        <di:waypoint x="1809" y="1525" />
+        <di:waypoint x="1890" y="1525" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_104zsqz_di" bpmnElement="Flow_104zsqz">
-        <di:waypoint x="3623" y="640" />
-        <di:waypoint x="3660" y="640" />
+      <bpmndi:BPMNEdge id="Flow_0mjuqeo_di" bpmnElement="Flow_0mjuqeo">
+        <di:waypoint x="1940" y="1525" />
+        <di:waypoint x="2057" y="1525" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_02b8gg5_di" bpmnElement="Flow_02b8gg5">
-        <di:waypoint x="3760" y="640" />
-        <di:waypoint x="3810" y="640" />
+      <bpmndi:BPMNEdge id="Flow_0rmrx8s_di" bpmnElement="Flow_0rmrx8s">
+        <di:waypoint x="523" y="1033" />
+        <di:waypoint x="638" y="920" />
+        <di:waypoint x="638" y="496" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_148rsbl_di" bpmnElement="Flow_148rsbl">
-        <di:waypoint x="3560" y="580" />
-        <di:waypoint x="3598" y="580" />
-        <di:waypoint x="3598" y="615" />
+      <bpmndi:BPMNEdge id="Flow_0amshgl_di" bpmnElement="Flow_0amshgl">
+        <di:waypoint x="688" y="436" />
+        <di:waypoint x="708" y="436" />
+        <di:waypoint x="708" y="476" />
+        <di:waypoint x="688" y="476" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_19hd8zh_di" bpmnElement="Flow_19hd8zh">
-        <di:waypoint x="3558" y="700" />
-        <di:waypoint x="3598" y="700" />
-        <di:waypoint x="3598" y="665" />
+      <bpmndi:BPMNEdge id="Flow_0ff5tuo_di" bpmnElement="Flow_0ff5tuo">
+        <di:waypoint x="860" y="2480" />
+        <di:waypoint x="1040" y="2480" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_120auo8_di" bpmnElement="Flow_120auo8">
-        <di:waypoint x="3416" y="615" />
-        <di:waypoint x="3416" y="580" />
-        <di:waypoint x="3460" y="580" />
+      <bpmndi:BPMNEdge id="Flow_1cbuuz3_di" bpmnElement="Flow_1cbuuz3">
+        <di:waypoint x="1140" y="2480" />
+        <di:waypoint x="1212" y="2480" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_181w5as_di" bpmnElement="Flow_181w5as">
-        <di:waypoint x="3416" y="665" />
-        <di:waypoint x="3416" y="700" />
-        <di:waypoint x="3458" y="700" />
+      <bpmndi:BPMNEdge id="Flow_1rczu4y_di" bpmnElement="Flow_1rczu4y">
+        <di:waypoint x="610" y="1430" />
+        <di:waypoint x="610" y="2480" />
+        <di:waypoint x="760" y="2480" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="579" y="1453" width="18" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0q3cohb_di" bpmnElement="Flow_0q3cohb">
-        <di:waypoint x="3785" y="790" />
-        <di:waypoint x="3905" y="790" />
+      <bpmndi:BPMNEdge id="Flow_0uoihx2_di" bpmnElement="Flow_0uoihx2">
+        <di:waypoint x="635" y="1405" />
+        <di:waypoint x="702" y="1405" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="662" y="1387" width="13" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ekihzw_di" bpmnElement="Flow_0ekihzw">
-        <di:waypoint x="3955" y="790" />
-        <di:waypoint x="3990" y="790" />
+      <bpmndi:BPMNEdge id="Flow_14wav4t_di" bpmnElement="Flow_14wav4t">
+        <di:waypoint x="790" y="1060" />
+        <di:waypoint x="610" y="1380" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_10enfvy_di" bpmnElement="Association_10enfvy">
-        <di:waypoint x="1189" y="1744" />
-        <di:waypoint x="1221" y="1760" />
+      <bpmndi:BPMNEdge id="Flow_0n5j6j2_di" bpmnElement="Flow_0n5j6j2">
+        <di:waypoint x="800" y="1070" />
+        <di:waypoint x="800" y="1695" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_0x6dd06_di" bpmnElement="Association_0x6dd06">
-        <di:waypoint x="1685" y="1445" />
-        <di:waypoint x="1687" y="1451" />
+      <bpmndi:BPMNEdge id="Flow_1f0mux0_di" bpmnElement="Flow_1f0mux0">
+        <di:waypoint x="1189" y="1720" />
+        <di:waypoint x="1428" y="1720" />
+        <di:waypoint x="1428" y="1430" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_03p4xdz_di" bpmnElement="Association_03p4xdz">
-        <di:waypoint x="1185" y="1442" />
-        <di:waypoint x="1212" y="1463" />
+      <bpmndi:BPMNEdge id="Flow_1qnxt97_di" bpmnElement="Flow_1qnxt97">
+        <di:waypoint x="825" y="1720" />
+        <di:waypoint x="1089" y="1720" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="951" y="1703" width="18" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Association_033zd9d_di" bpmnElement="Association_033zd9d">
-        <di:waypoint x="677" y="1082" />
-        <di:waypoint x="701" y="1100" />
+      <bpmndi:BPMNEdge id="Flow_05yfvxr_di" bpmnElement="Flow_05yfvxr">
+        <di:waypoint x="800" y="1745" />
+        <di:waypoint x="800" y="1772" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04j2ayv_di" bpmnElement="Flow_04j2ayv">
+        <di:waypoint x="2760" y="2054" />
+        <di:waypoint x="2760" y="1887" />
+        <di:waypoint x="2901" y="1887" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2801" y="1893" width="59" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14uiesw_di" bpmnElement="Flow_14uiesw">
+        <di:waypoint x="2145" y="1045" />
+        <di:waypoint x="2450" y="1045" />
+        <di:waypoint x="2450" y="2079" />
+        <di:waypoint x="2735" y="2079" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15kqz5j_di" bpmnElement="Flow_15kqz5j">
+        <di:waypoint x="2760" y="2104" />
+        <di:waypoint x="2760" y="2151" />
+        <di:waypoint x="2901" y="2151" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2788" y="2157" width="85" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06dhg8v_di" bpmnElement="Flow_06dhg8v">
+        <di:waypoint x="2760" y="2054" />
+        <di:waypoint x="2760" y="2020" />
+        <di:waypoint x="2901" y="2020" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2796" y="2026" width="70" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gko0zc_di" bpmnElement="Flow_1gko0zc">
+        <di:waypoint x="2760" y="2104" />
+        <di:waypoint x="2760" y="2282" />
+        <di:waypoint x="2901" y="2282" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2792" y="2288" width="77" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0cktx9y_di" bpmnElement="Flow_0cktx9y">
+        <di:waypoint x="1915" y="2032" />
+        <di:waypoint x="1915" y="2075" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04ae09c_di" bpmnElement="Flow_04ae09c">
+        <di:waypoint x="1915" y="1550" />
+        <di:waypoint x="1915" y="1952" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1923" y="1564" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08rxq4y_di" bpmnElement="Flow_08rxq4y">
+        <di:waypoint x="1784" y="2032" />
+        <di:waypoint x="1784" y="2075" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jkk0ln_di" bpmnElement="Flow_1jkk0ln">
+        <di:waypoint x="1784" y="1550" />
+        <di:waypoint x="1784" y="1952" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1792" y="1564" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0557sk9_di" bpmnElement="Flow_0557sk9">
+        <di:waypoint x="1915" y="2155" />
+        <di:waypoint x="1915" y="2196" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10b5pmi_di" bpmnElement="Flow_10b5pmi">
+        <di:waypoint x="1784" y="2155" />
+        <di:waypoint x="1784" y="2196" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1am8g24_di" bpmnElement="Flow_1am8g24">
+        <di:waypoint x="3154" y="640" />
+        <di:waypoint x="3190" y="640" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02llvqx_di" bpmnElement="Flow_02llvqx">
+        <di:waypoint x="3001" y="1887" />
+        <di:waypoint x="3129" y="1887" />
+        <di:waypoint x="3129" y="665" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q747kf_di" bpmnElement="Flow_0q747kf">
+        <di:waypoint x="2740" y="2074" />
+        <di:waypoint x="2740" y="640" />
+        <di:waypoint x="3104" y="640" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2666" y="1973" width="67" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01gxy0h_di" bpmnElement="Flow_01gxy0h">
+        <di:waypoint x="3001" y="2151" />
+        <di:waypoint x="3129" y="2151" />
+        <di:waypoint x="3129" y="665" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1essbrc_di" bpmnElement="Flow_1essbrc">
+        <di:waypoint x="3001" y="2020" />
+        <di:waypoint x="3129" y="2020" />
+        <di:waypoint x="3129" y="665" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10ky1oc_di" bpmnElement="Flow_10ky1oc">
+        <di:waypoint x="3001" y="2282" />
+        <di:waypoint x="3129" y="2282" />
+        <di:waypoint x="3129" y="665" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0egw7oo_di" bpmnElement="Flow_0egw7oo">
+        <di:waypoint x="4220" y="870" />
+        <di:waypoint x="4250" y="870" />
+        <di:waypoint x="4250" y="815" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01oofq1_di" bpmnElement="Flow_01oofq1">
+        <di:waypoint x="4040" y="848" />
+        <di:waypoint x="4040" y="870" />
+        <di:waypoint x="4120" y="870" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1e7pk9a_di" bpmnElement="Flow_1e7pk9a">
+        <di:waypoint x="4090" y="790" />
+        <di:waypoint x="4225" y="790" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0negveo_di" bpmnElement="Flow_0negveo">
         <di:waypoint x="3910" y="640" />
@@ -1528,6 +1512,22 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
       <bpmndi:BPMNEdge id="Flow_0t8cdxp_di" bpmnElement="Flow_0t8cdxp">
         <di:waypoint x="4275" y="790" />
         <di:waypoint x="4300" y="790" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_033zd9d_di" bpmnElement="Association_033zd9d">
+        <di:waypoint x="677" y="1082" />
+        <di:waypoint x="701" y="1100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_03p4xdz_di" bpmnElement="Association_03p4xdz">
+        <di:waypoint x="1185" y="1442" />
+        <di:waypoint x="1212" y="1463" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0x6dd06_di" bpmnElement="Association_0x6dd06">
+        <di:waypoint x="1685" y="1445" />
+        <di:waypoint x="1687" y="1451" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_10enfvy_di" bpmnElement="Association_10enfvy">
+        <di:waypoint x="1189" y="1744" />
+        <di:waypoint x="1221" y="1760" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
