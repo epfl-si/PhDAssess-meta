@@ -43,6 +43,7 @@ export interface PhDAssessCustomVariables {
   goalsOfTheThesis: string | undefined;
   haveTheObjectivesChangedInThePastYearIfSoWhyAndHow: string | undefined;
   mentorDate: string | undefined;
+  meetingMentor: string | undefined;
   notAgree: string | undefined;
   PDF: string | undefined;  // oldies, should not be anymore in the process instance variables in new versions
   pdfAnnexPath: string | undefined;  // if a PDF annex file has been provided, it will be found with this path
