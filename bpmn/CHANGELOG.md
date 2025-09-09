@@ -1,8 +1,13 @@
 # CHANGELOG
 
 *UNDEPLOYED* ()
+
+*21* (2025-09-09)
+- Change the mentor's meeting to be facultative
+- Allow adding an appendix PDF
 - Fix calendar widgets having dateFormat set to the wrong format, as it was necessary only for FormIO <=4.14.8
 - Fix the wrong notification message for the "PhD Signs" step
+- Fix some notification messages
 
 *20* (2025-03-07)
 - Change student's message comment if not agree
