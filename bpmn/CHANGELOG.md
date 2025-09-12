@@ -2,6 +2,9 @@
 
 *UNDEPLOYED* ()
 
+*22* (2025-09-12)
+- Fix sending the PDF for the last steps
+
 *21* (2025-09-09)
 - Change the mentor's meeting to be facultative
 - Allow adding an appendix PDF

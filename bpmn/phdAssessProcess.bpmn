@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="Definitions_0o87biy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
   <bpmn:collaboration id="Collaboration_13he9tk">
     <bpmn:participant id="Participant_0f1vwfj" name="PhD Assess" processRef="phdAssessProcess" />
   </bpmn:collaboration>
@@ -30,11 +30,11 @@
         <bpmn:flowNodeRef>Gateway_1n0eifr</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_00f1pzz</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_With_PDF_PhDStudent</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_post_ISA_student_result</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_ISA_error</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1jsjztg</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_Notify_Can_not_post_student_result_on_ISA</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_1k9v23g</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_post_ISA_student_result</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_ISA_error</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1kybckv" name="Thesis director">
         <bpmn:flowNodeRef>Gateway_13uipzu</bpmn:flowNodeRef>
@@ -752,17 +752,6 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
       <bpmn:outgoing>Flow_02b8gg5</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_13kq8nt" sourceRef="Activity_1jsjztg" targetRef="Event_PhD_Assess_Done" />
-    <bpmn:serviceTask id="Activity_post_ISA_student_result" name="Post student result on ISA">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="phdISAPostStudentResult" />
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0ekihzw</bpmn:incoming>
-      <bpmn:outgoing>Flow_1e7pk9a</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:boundaryEvent id="Event_ISA_error" name="ISA error" attachedToRef="Activity_post_ISA_student_result">
-      <bpmn:outgoing>Flow_01oofq1</bpmn:outgoing>
-      <bpmn:errorEventDefinition id="ErrorEventDefinition_0wkzube" errorRef="Error_15ik5fi" />
-    </bpmn:boundaryEvent>
     <bpmn:serviceTask id="Activity_1jsjztg" name="Notify PhD school">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="notification" />
@@ -772,6 +761,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:input source="=&#34;U2FsdGVkX18QPcuDJSjHazMOODKtC5X3xu106wMn7F+Dd9+Lu7vigNpsX4y+tvDsj8BAJZdwH0lJ0KmUR4yu/g==&#34;" target="to" />
+          <zeebe:input source="=&#34;&#34;" target="PDF" />
         </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0t8cdxp</bpmn:incoming>
@@ -786,6 +776,7 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
         </zeebe:taskHeaders>
         <zeebe:ioMapping>
           <zeebe:input source="= doctoralProgramEmail" target="to" />
+          <zeebe:input source="=&#34;&#34;" target="PDF" />
         </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_01oofq1</bpmn:incoming>
@@ -797,6 +788,17 @@ At the end of the notify, we sent data to notificationLogs</bpmn:documentation>
       <bpmn:outgoing>Flow_0t8cdxp</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_0t8cdxp" sourceRef="Gateway_1k9v23g" targetRef="Activity_1jsjztg" />
+    <bpmn:boundaryEvent id="Event_ISA_error" name="ISA error" attachedToRef="Activity_post_ISA_student_result">
+      <bpmn:outgoing>Flow_01oofq1</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="ErrorEventDefinition_0wkzube" errorRef="Error_15ik5fi" />
+    </bpmn:boundaryEvent>
+    <bpmn:serviceTask id="Activity_post_ISA_student_result" name="Post student result on ISA">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="phdISAPostStudentResult" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0ekihzw</bpmn:incoming>
+      <bpmn:outgoing>Flow_1e7pk9a</bpmn:outgoing>
+    </bpmn:serviceTask>
     <bpmn:textAnnotation id="TextAnnotation_0qwyl9d">
       <bpmn:text>with the PhD Common Section C</bpmn:text>
     </bpmn:textAnnotation>
