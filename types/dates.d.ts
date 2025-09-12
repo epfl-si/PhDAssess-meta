@@ -5,7 +5,7 @@
 export type TDateISO = string;
 
 /**
- * A simple date as string, without time, in ch-fr localized.
+ * A simple date as a string, without time, in ch-fr localized.
  * A string like `01.12.2021`
  */
 export type TFlatDate = string;

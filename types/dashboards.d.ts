@@ -1,7 +1,7 @@
 interface StepBase {
   id: string;  // identify the step
   label: string;  // column header label
-  alias?: string[]; // identify the other step that has got be finished to get a green color
+  alias?: string[]; // identify the other step that has got to be finished to get a green color
   parents?: string[];  // to manage the advancing flow, meaning we know the parents should be green
   knownAs?: string[];  // if this step has aliases that can trigger the color, of the tasks itself or when checking for parents
 }

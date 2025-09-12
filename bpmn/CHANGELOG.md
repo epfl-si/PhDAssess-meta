@@ -19,9 +19,9 @@
 - Change reminder notification signature
 
 *18* (2024-12-16)
-- Add dueDate field
+- Add the dueDate field
 - Add a type to notifications
-- Changed notifications content
+- Changed some notification contents
 - Add notification 'Reminder' with his `reminderSubject` and `reminderMessage`
 
 *17* (2024-08-22)

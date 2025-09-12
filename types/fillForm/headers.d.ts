@@ -6,7 +6,7 @@ export class PhDCustomHeaderShape implements ICustomHeaders {
   groups?: string[]  // manage permission groupwise
   title?: string  // title shown for this task
   formIO?: string  // formIO definition in JSON format
-  // define where to find the sciper. It can have multiple values, separated by comma
+  // next field defines where to find the sciper. It can have multiple values, separated by comma
   assigneeSciperFieldName? : string
 
   //

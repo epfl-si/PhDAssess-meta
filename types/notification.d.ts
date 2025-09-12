@@ -8,7 +8,7 @@ export type PDFType =
 
 /**
  * What kind of notification is.
- * For historical reason, the kind can be identified by the fromElementId, if it finishes with '_reminder'
+ * For historical reasons, the kind can be identified by the fromElementId if it finishes with '_reminder'
  * If empty, default to 'awaitingForm'
  */
 type NotificationType =
